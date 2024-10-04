@@ -6,7 +6,7 @@
   <link href="https://netpersker.github.io/atom.xml" rel="self"/>
   
   <link href="https://netpersker.github.io/"/>
-  <updated>2024-09-14T15:57:43.206Z</updated>
+  <updated>2024-10-04T09:14:36.652Z</updated>
   <id>https://netpersker.github.io/</id>
   
   <author>
@@ -15,6 +15,69 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>哲学笔记</title>
+    <link href="https://netpersker.github.io/2024/10/02/%E5%93%B2%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>https://netpersker.github.io/2024/10/02/%E5%93%B2%E5%AD%A6%E7%AC%94%E8%AE%B0/</id>
+    <published>2024-10-02T09:16:50.000Z</published>
+    <updated>2024-10-04T09:14:36.652Z</updated>
+    
+    
+    
+    
+    
+    <category term="note" scheme="https://netpersker.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>./missing/semester</title>
+    <link href="https://netpersker.github.io/2024/10/02/missing-semester/"/>
+    <id>https://netpersker.github.io/2024/10/02/missing-semester/</id>
+    <published>2024-10-02T09:04:22.000Z</published>
+    <updated>2024-10-04T09:15:13.615Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本篇作为学习./missing/semster的笔记、记录及补充。&lt;br&gt;&lt;br&gt;&lt;br&gt;Duration: 2024-09-24</summary>
+        
+      
+    
+    
+    
+    
+    <category term="note" scheme="https://netpersker.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>视频格式从mkv转至mp4+加入ass字幕文件</title>
+    <link href="https://netpersker.github.io/2024/09/27/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E4%BB%8Emkv%E8%BD%AC%E8%87%B3mp4-%E5%8A%A0%E5%85%A5ass%E5%AD%97%E5%B9%95%E6%96%87%E4%BB%B6/"/>
+    <id>https://netpersker.github.io/2024/09/27/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E4%BB%8Emkv%E8%BD%AC%E8%87%B3mp4-%E5%8A%A0%E5%85%A5ass%E5%AD%97%E5%B9%95%E6%96%87%E4%BB%B6/</id>
+    <published>2024-09-27T17:53:11.000Z</published>
+    <updated>2024-10-04T09:15:03.479Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在网上下载到mkv格式的视频文件，一般无法被设备的默认播放器打开。而网络上的格式转换又相当不方便，于是就有了这篇短文，用以记录自己解决这个小问题的过程（记性不太好，不立刻在当日记录下来，没过多久就忘了）&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;以下是步骤:</summary>
+        
+      
+    
+    
+    
+    
+    <category term="guide" scheme="https://netpersker.github.io/tags/guide/"/>
+    
+  </entry>
   
   <entry>
     <title>开学</title>
@@ -44,14 +107,14 @@
     <link href="https://netpersker.github.io/2024/09/12/Zorich%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B8%8B%E5%86%8CPag385n-2/"/>
     <id>https://netpersker.github.io/2024/09/12/Zorich%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B8%8B%E5%86%8CPag385n-2/</id>
     <published>2024-09-12T15:02:58.000Z</published>
-    <updated>2024-09-12T16:00:09.214Z</updated>
+    <updated>2024-10-04T09:14:48.185Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;只是记录一下关于Pag.385中n.2的c)的解决方法, 题目见书.&lt;br&gt;&lt;br&gt;&lt;br&gt;注意到&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; display=&quot;true&quot;&gt;&lt;svg style=&quot;vertical-align:</summary>
+    <summary type="html">&lt;p&gt;记录一下关于Pag.385中n.2的c)的解决方法, 题目见书.&lt;br&gt;&lt;br&gt;&lt;br&gt;注意到&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot; display=&quot;true&quot;&gt;&lt;svg style=&quot;vertical-align:</summary>
         
       
     
