@@ -3,11 +3,11 @@
   <title>Record</title>
   <icon>https://www.gravatar.com/avatar/852bc8aa07ebacae7016ae65462cb230</icon>
   
-  <link href="https://netpersker.github.io/atom.xml" rel="self"/>
+  <link href="https://vesaluna.github.io/atom.xml" rel="self"/>
   
-  <link href="https://netpersker.github.io/"/>
-  <updated>2024-10-04T09:14:36.652Z</updated>
-  <id>https://netpersker.github.io/</id>
+  <link href="https://vesaluna.github.io/"/>
+  <updated>2024-10-04T09:16:44.672Z</updated>
+  <id>https://vesaluna.github.io/</id>
   
   <author>
     <name>Vesaluna</name>
@@ -17,9 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>《中国哲学史》冯友兰</title>
+    <link href="https://vesaluna.github.io/2024/10/04/%E3%80%8A%E4%B8%AD%E5%9B%BD%E5%93%B2%E5%AD%A6%E5%8F%B2%E3%80%8B%E5%86%AF%E5%8F%8B%E5%85%B0/"/>
+    <id>https://vesaluna.github.io/2024/10/04/%E3%80%8A%E4%B8%AD%E5%9B%BD%E5%93%B2%E5%AD%A6%E5%8F%B2%E3%80%8B%E5%86%AF%E5%8F%8B%E5%85%B0/</id>
+    <published>2024-10-04T09:16:44.000Z</published>
+    <updated>2024-10-04T09:16:44.672Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>个人Anki记忆方法</title>
+    <link href="https://vesaluna.github.io/2024/10/04/%E4%B8%AA%E4%BA%BAAnki%E8%AE%B0%E5%BF%86%E6%96%B9%E6%B3%95/"/>
+    <id>https://vesaluna.github.io/2024/10/04/%E4%B8%AA%E4%BA%BAAnki%E8%AE%B0%E5%BF%86%E6%96%B9%E6%B3%95/</id>
+    <published>2024-10-04T09:16:01.000Z</published>
+    <updated>2024-10-04T09:16:02.006Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>哲学笔记</title>
-    <link href="https://netpersker.github.io/2024/10/02/%E5%93%B2%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
-    <id>https://netpersker.github.io/2024/10/02/%E5%93%B2%E5%AD%A6%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://vesaluna.github.io/2024/10/02/%E5%93%B2%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
+    <id>https://vesaluna.github.io/2024/10/02/%E5%93%B2%E5%AD%A6%E7%AC%94%E8%AE%B0/</id>
     <published>2024-10-02T09:16:50.000Z</published>
     <updated>2024-10-04T09:14:36.652Z</updated>
     
@@ -27,37 +53,38 @@
     
     
     
-    <category term="note" scheme="https://netpersker.github.io/tags/note/"/>
+    <category term="note" scheme="https://vesaluna.github.io/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>./missing/semester</title>
-    <link href="https://netpersker.github.io/2024/10/02/missing-semester/"/>
-    <id>https://netpersker.github.io/2024/10/02/missing-semester/</id>
+    <link href="https://vesaluna.github.io/2024/10/02/missing-semester/"/>
+    <id>https://vesaluna.github.io/2024/10/02/missing-semester/</id>
     <published>2024-10-02T09:04:22.000Z</published>
-    <updated>2024-10-04T09:15:13.615Z</updated>
+    <updated>2024-10-04T16:04:33.098Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;本篇作为学习./missing/semster的笔记、记录及补充。&lt;br&gt;&lt;br&gt;&lt;br&gt;Duration: 2024-09-24</summary>
+    <summary type="html">&lt;p&gt;本篇作为学习./missing/semster的笔记、记录及补充（虽然有点像讲义的copy）&lt;br&gt;&lt;br&gt;&lt;br&gt;Duration: 2024-09-24 ~&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&quot;3-Vim&quot;&gt;&lt;a href=&quot;#3-Vim&quot;</summary>
         
       
     
     
     
     
-    <category term="note" scheme="https://netpersker.github.io/tags/note/"/>
+    <category term="note" scheme="https://vesaluna.github.io/tags/note/"/>
     
   </entry>
   
   <entry>
     <title>视频格式从mkv转至mp4+加入ass字幕文件</title>
-    <link href="https://netpersker.github.io/2024/09/27/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E4%BB%8Emkv%E8%BD%AC%E8%87%B3mp4-%E5%8A%A0%E5%85%A5ass%E5%AD%97%E5%B9%95%E6%96%87%E4%BB%B6/"/>
-    <id>https://netpersker.github.io/2024/09/27/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E4%BB%8Emkv%E8%BD%AC%E8%87%B3mp4-%E5%8A%A0%E5%85%A5ass%E5%AD%97%E5%B9%95%E6%96%87%E4%BB%B6/</id>
+    <link href="https://vesaluna.github.io/2024/09/27/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E4%BB%8Emkv%E8%BD%AC%E8%87%B3mp4-%E5%8A%A0%E5%85%A5ass%E5%AD%97%E5%B9%95%E6%96%87%E4%BB%B6/"/>
+    <id>https://vesaluna.github.io/2024/09/27/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E4%BB%8Emkv%E8%BD%AC%E8%87%B3mp4-%E5%8A%A0%E5%85%A5ass%E5%AD%97%E5%B9%95%E6%96%87%E4%BB%B6/</id>
     <published>2024-09-27T17:53:11.000Z</published>
     <updated>2024-10-04T09:15:03.479Z</updated>
     
@@ -75,14 +102,14 @@
     
     
     
-    <category term="guide" scheme="https://netpersker.github.io/tags/guide/"/>
+    <category term="guide" scheme="https://vesaluna.github.io/tags/guide/"/>
     
   </entry>
   
   <entry>
     <title>开学</title>
-    <link href="https://netpersker.github.io/2024/09/14/%E5%BC%80%E5%AD%A6/"/>
-    <id>https://netpersker.github.io/2024/09/14/%E5%BC%80%E5%AD%A6/</id>
+    <link href="https://vesaluna.github.io/2024/09/14/%E5%BC%80%E5%AD%A6/"/>
+    <id>https://vesaluna.github.io/2024/09/14/%E5%BC%80%E5%AD%A6/</id>
     <published>2024-09-14T15:56:53.000Z</published>
     <updated>2024-09-14T15:57:43.206Z</updated>
     
@@ -98,14 +125,14 @@
     
     
     
-    <category term="thought" scheme="https://netpersker.github.io/tags/thought/"/>
+    <category term="thought" scheme="https://vesaluna.github.io/tags/thought/"/>
     
   </entry>
   
   <entry>
     <title>Zorich数学分析下册Pag385n.2</title>
-    <link href="https://netpersker.github.io/2024/09/12/Zorich%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B8%8B%E5%86%8CPag385n-2/"/>
-    <id>https://netpersker.github.io/2024/09/12/Zorich%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B8%8B%E5%86%8CPag385n-2/</id>
+    <link href="https://vesaluna.github.io/2024/09/12/Zorich%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B8%8B%E5%86%8CPag385n-2/"/>
+    <id>https://vesaluna.github.io/2024/09/12/Zorich%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B8%8B%E5%86%8CPag385n-2/</id>
     <published>2024-09-12T15:02:58.000Z</published>
     <updated>2024-10-04T09:14:48.185Z</updated>
     
@@ -121,16 +148,16 @@
     
     
     
-    <category term="Zorich数学分析" scheme="https://netpersker.github.io/tags/Zorich%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    <category term="Zorich数学分析" scheme="https://vesaluna.github.io/tags/Zorich%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
     
-    <category term="exercise" scheme="https://netpersker.github.io/tags/exercise/"/>
+    <category term="exercise" scheme="https://vesaluna.github.io/tags/exercise/"/>
     
   </entry>
   
   <entry>
     <title>如何开始时间管理</title>
-    <link href="https://netpersker.github.io/2024/09/03/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
-    <id>https://netpersker.github.io/2024/09/03/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</id>
+    <link href="https://vesaluna.github.io/2024/09/03/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
+    <id>https://vesaluna.github.io/2024/09/03/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</id>
     <published>2024-09-03T14:08:53.000Z</published>
     <updated>2024-09-12T16:15:53.309Z</updated>
     
@@ -147,14 +174,14 @@
     
     
     
-    <category term="guide" scheme="https://netpersker.github.io/tags/guide/"/>
+    <category term="guide" scheme="https://vesaluna.github.io/tags/guide/"/>
     
   </entry>
   
   <entry>
     <title>The first step</title>
-    <link href="https://netpersker.github.io/2024/06/30/The%20first%20step/"/>
-    <id>https://netpersker.github.io/2024/06/30/The%20first%20step/</id>
+    <link href="https://vesaluna.github.io/2024/06/30/The%20first%20step/"/>
+    <id>https://vesaluna.github.io/2024/06/30/The%20first%20step/</id>
     <published>2024-06-30T09:47:47.000Z</published>
     <updated>2024-09-14T15:59:22.182Z</updated>
     
@@ -170,7 +197,7 @@
     
     
     
-    <category term="thought" scheme="https://netpersker.github.io/tags/thought/"/>
+    <category term="thought" scheme="https://vesaluna.github.io/tags/thought/"/>
     
   </entry>
   
