@@ -6,7 +6,7 @@
   <link href="https://vesaluna.github.io/atom.xml" rel="self"/>
   
   <link href="https://vesaluna.github.io/"/>
-  <updated>2024-10-04T09:16:44.672Z</updated>
+  <updated>2024-10-04T09:15:03.479Z</updated>
   <id>https://vesaluna.github.io/</id>
   
   <author>
@@ -15,71 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>《中国哲学史》冯友兰</title>
-    <link href="https://vesaluna.github.io/2024/10/04/%E3%80%8A%E4%B8%AD%E5%9B%BD%E5%93%B2%E5%AD%A6%E5%8F%B2%E3%80%8B%E5%86%AF%E5%8F%8B%E5%85%B0/"/>
-    <id>https://vesaluna.github.io/2024/10/04/%E3%80%8A%E4%B8%AD%E5%9B%BD%E5%93%B2%E5%AD%A6%E5%8F%B2%E3%80%8B%E5%86%AF%E5%8F%8B%E5%85%B0/</id>
-    <published>2024-10-04T09:16:44.000Z</published>
-    <updated>2024-10-04T09:16:44.672Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>个人Anki记忆方法</title>
-    <link href="https://vesaluna.github.io/2024/10/04/%E4%B8%AA%E4%BA%BAAnki%E8%AE%B0%E5%BF%86%E6%96%B9%E6%B3%95/"/>
-    <id>https://vesaluna.github.io/2024/10/04/%E4%B8%AA%E4%BA%BAAnki%E8%AE%B0%E5%BF%86%E6%96%B9%E6%B3%95/</id>
-    <published>2024-10-04T09:16:01.000Z</published>
-    <updated>2024-10-04T09:16:02.006Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>哲学笔记</title>
-    <link href="https://vesaluna.github.io/2024/10/02/%E5%93%B2%E5%AD%A6%E7%AC%94%E8%AE%B0/"/>
-    <id>https://vesaluna.github.io/2024/10/02/%E5%93%B2%E5%AD%A6%E7%AC%94%E8%AE%B0/</id>
-    <published>2024-10-02T09:16:50.000Z</published>
-    <updated>2024-10-04T09:14:36.652Z</updated>
-    
-    
-    
-    
-    
-    <category term="note" scheme="https://vesaluna.github.io/tags/note/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>./missing/semester</title>
-    <link href="https://vesaluna.github.io/2024/10/02/missing-semester/"/>
-    <id>https://vesaluna.github.io/2024/10/02/missing-semester/</id>
-    <published>2024-10-02T09:04:22.000Z</published>
-    <updated>2024-10-04T16:04:33.098Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本篇作为学习./missing/semster的笔记、记录及补充（虽然有点像讲义的copy）&lt;br&gt;&lt;br&gt;&lt;br&gt;Duration: 2024-09-24 ~&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h2 id=&quot;3-Vim&quot;&gt;&lt;a href=&quot;#3-Vim&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="note" scheme="https://vesaluna.github.io/tags/note/"/>
-    
-  </entry>
   
   <entry>
     <title>视频格式从mkv转至mp4+加入ass字幕文件</title>
