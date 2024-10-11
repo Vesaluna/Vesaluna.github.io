@@ -6,7 +6,7 @@
   <link href="https://vesaluna.github.io/atom.xml" rel="self"/>
   
   <link href="https://vesaluna.github.io/"/>
-  <updated>2024-10-04T09:15:03.479Z</updated>
+  <updated>2024-10-11T17:14:03.969Z</updated>
   <id>https://vesaluna.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文学、历史与民族</title>
+    <link href="https://vesaluna.github.io/2024/10/11/%E6%96%87%E5%AD%A6%E3%80%81%E5%8E%86%E5%8F%B2%E4%B8%8E%E6%B0%91%E6%97%8F/"/>
+    <id>https://vesaluna.github.io/2024/10/11/%E6%96%87%E5%AD%A6%E3%80%81%E5%8E%86%E5%8F%B2%E4%B8%8E%E6%B0%91%E6%97%8F/</id>
+    <published>2024-10-11T17:00:50.000Z</published>
+    <updated>2024-10-11T17:14:03.969Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一国民族之文学与历史最能体现其民族的方方面面。&lt;br&gt;&lt;br&gt;&lt;br&gt;一国民族之性格，来源于其群体之文化，文化又由地理环境、社会制度等诸多条件影响形成，若非天然生长于这种文化氛围之中，难以捕捉藏于其后的民族性格。不过，仍是存在便捷之路的，通过阅读其民族经典的文学作品，就得以</summary>
+        
+      
+    
+    
+    
+    
+    <category term="想法" scheme="https://vesaluna.github.io/tags/%E6%83%B3%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>视频格式从mkv转至mp4+加入ass字幕文件</title>
     <link href="https://vesaluna.github.io/2024/09/27/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E4%BB%8Emkv%E8%BD%AC%E8%87%B3mp4-%E5%8A%A0%E5%85%A5ass%E5%AD%97%E5%B9%95%E6%96%87%E4%BB%B6/"/>
     <id>https://vesaluna.github.io/2024/09/27/%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E4%BB%8Emkv%E8%BD%AC%E8%87%B3mp4-%E5%8A%A0%E5%85%A5ass%E5%AD%97%E5%B9%95%E6%96%87%E4%BB%B6/</id>
     <published>2024-09-27T17:53:11.000Z</published>
-    <updated>2024-10-04T09:15:03.479Z</updated>
+    <updated>2024-10-11T17:14:03.109Z</updated>
     
     
       
@@ -37,7 +60,7 @@
     
     
     
-    <category term="guide" scheme="https://vesaluna.github.io/tags/guide/"/>
+    <category term="指南" scheme="https://vesaluna.github.io/tags/%E6%8C%87%E5%8D%97/"/>
     
   </entry>
   
@@ -46,7 +69,7 @@
     <link href="https://vesaluna.github.io/2024/09/14/%E5%BC%80%E5%AD%A6/"/>
     <id>https://vesaluna.github.io/2024/09/14/%E5%BC%80%E5%AD%A6/</id>
     <published>2024-09-14T15:56:53.000Z</published>
-    <updated>2024-09-14T15:57:43.206Z</updated>
+    <updated>2024-10-11T17:14:01.216Z</updated>
     
     
       
@@ -60,7 +83,7 @@
     
     
     
-    <category term="thought" scheme="https://vesaluna.github.io/tags/thought/"/>
+    <category term="想法" scheme="https://vesaluna.github.io/tags/%E6%83%B3%E6%B3%95/"/>
     
   </entry>
   
@@ -69,7 +92,7 @@
     <link href="https://vesaluna.github.io/2024/09/12/Zorich%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B8%8B%E5%86%8CPag385n-2/"/>
     <id>https://vesaluna.github.io/2024/09/12/Zorich%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E4%B8%8B%E5%86%8CPag385n-2/</id>
     <published>2024-09-12T15:02:58.000Z</published>
-    <updated>2024-10-04T09:14:48.185Z</updated>
+    <updated>2024-10-11T17:14:05.510Z</updated>
     
     
       
@@ -83,9 +106,9 @@
     
     
     
-    <category term="Zorich数学分析" scheme="https://vesaluna.github.io/tags/Zorich%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    <category term="习题" scheme="https://vesaluna.github.io/tags/%E4%B9%A0%E9%A2%98/"/>
     
-    <category term="exercise" scheme="https://vesaluna.github.io/tags/exercise/"/>
+    <category term="数学" scheme="https://vesaluna.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -94,7 +117,7 @@
     <link href="https://vesaluna.github.io/2024/09/03/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/"/>
     <id>https://vesaluna.github.io/2024/09/03/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</id>
     <published>2024-09-03T14:08:53.000Z</published>
-    <updated>2024-09-12T16:15:53.309Z</updated>
+    <updated>2024-10-11T17:14:02.295Z</updated>
     
     
       
@@ -109,7 +132,7 @@
     
     
     
-    <category term="guide" scheme="https://vesaluna.github.io/tags/guide/"/>
+    <category term="指南" scheme="https://vesaluna.github.io/tags/%E6%8C%87%E5%8D%97/"/>
     
   </entry>
   
@@ -118,7 +141,7 @@
     <link href="https://vesaluna.github.io/2024/06/30/The%20first%20step/"/>
     <id>https://vesaluna.github.io/2024/06/30/The%20first%20step/</id>
     <published>2024-06-30T09:47:47.000Z</published>
-    <updated>2024-09-14T15:59:22.182Z</updated>
+    <updated>2024-10-11T17:14:04.670Z</updated>
     
     
       
@@ -132,7 +155,7 @@
     
     
     
-    <category term="thought" scheme="https://vesaluna.github.io/tags/thought/"/>
+    <category term="想法" scheme="https://vesaluna.github.io/tags/%E6%83%B3%E6%B3%95/"/>
     
   </entry>
   
