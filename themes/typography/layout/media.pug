@@ -1,0 +1,67 @@
+extends partial/layout
+
+block site_title
+    != page.title + " · " + config.title
+
+block description
+    - var desc = page.desc || strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
+    meta(name="description", content=desc)
+
+block content
+    .autopagerize_page_element
+        .content.media-page
+            h1.media-page-title= page.title
+            if page.content
+                .media-page-intro!= page.content
+            - var items = media_items(page);
+            .media-filters(role="group", aria-label=page.title)
+                button.media-filter.is-active(type="button", data-media-filter="all", aria-pressed="true")= __('All')
+                button.media-filter(type="button", data-media-filter="book", aria-pressed="false")= __('Books')
+                button.media-filter(type="button", data-media-filter="game", aria-pressed="false")= __('Games')
+                button.media-filter(type="button", data-media-filter="movie", aria-pressed="false")= __('Movies')
+            if items.length
+                .media-grid
+                    each item in items
+                        button.media-card(type="button", data-media-type=item.type, data-media-target='media-dialog-' + item.id, aria-label=__('OpenReview', item.title))
+                            if item.cover
+                                img.media-cover(src=item.cover, alt=item.title, width="320", height="480", loading="lazy", decoding="async")
+                            else
+                                span.media-cover-placeholder= item.title
+                            span.media-card-title= item.title
+                each item in items
+                    dialog.media-dialog(id='media-dialog-' + item.id, aria-labelledby='media-title-' + item.id)
+                        .media-dialog-inner
+                            button.media-dialog-close(type="button", aria-label=__('Close')) ×
+                            .media-dialog-layout
+                                if item.cover
+                                    img.media-dialog-cover(src=item.cover, alt="", width="320", height="480", loading="lazy", decoding="async")
+                                .media-dialog-copy
+                                    h2(id='media-title-' + item.id)= item.title
+                                    if item.originalTitle
+                                        p.media-detail
+                                            strong= __('OriginalTitle') + ': '
+                                            = item.originalTitle
+                                    if item.creator
+                                        p.media-detail
+                                            strong= __('Creator') + ': '
+                                            = item.creator
+                                    if item.year
+                                        p.media-detail
+                                            strong= __('Year') + ': '
+                                            = item.year
+                                    if item.finishedOn
+                                        p.media-detail
+                                            strong= __('FinishedOn') + ': '
+                                            = item.finishedOn
+                                    if item.tags.length
+                                        ul.media-tags(aria-label=__('Tags'))
+                                            each tag in item.tags
+                                                li= tag
+                                    if item.reviewFallback
+                                        p.media-fallback= __('ChineseOnly')
+                                    p.media-review= item.review
+                                    if item.link
+                                        p
+                                            a(href=item.link, target="_blank", rel="noopener noreferrer")= __('MoreInfo')
+            else
+                p.media-empty= __('EmptyMedia')

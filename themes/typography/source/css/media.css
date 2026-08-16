@@ -1,0 +1,162 @@
+.language-switcher {
+  display: flex !important;
+  gap: 0.45rem;
+  align-items: center;
+  margin-top: 0.8rem !important;
+  font-size: 0.78em !important;
+}
+
+.language-switcher .current,
+.language-switcher a,
+.language-unavailable {
+  display: inline-block;
+  line-height: 1.35;
+}
+
+.language-unavailable {
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+
+.media-page-title { margin-bottom: 0.4em; }
+.media-page-intro { max-width: 48rem; margin-bottom: 2rem; }
+.media-filters { display: flex; flex-wrap: wrap; gap: 0.65rem; margin: 1.5rem 0 2rem; }
+
+.media-filter,
+.media-card,
+.media-dialog-close { color: #2e405b; font: inherit; }
+
+.media-filter {
+  border: 1px solid rgba(46, 64, 91, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+}
+
+.media-filter:hover,
+.media-filter:focus-visible,
+.media-filter.is-active { color: #fff; background: #2e405b; outline: none; }
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+  gap: 1.8rem 1.25rem;
+}
+
+.media-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.65rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.media-card[hidden] { display: none; }
+
+.media-cover,
+.media-cover-placeholder {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border: 1px solid rgba(46, 64, 91, 0.18);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 24px rgba(46, 64, 91, 0.08);
+  object-fit: cover;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.media-cover-placeholder { display: grid; place-items: center; padding: 1rem; }
+
+.media-card:hover .media-cover,
+.media-card:focus-visible .media-cover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(46, 64, 91, 0.16);
+}
+
+.media-card:focus-visible { outline: 2px solid #2e405b; outline-offset: 5px; }
+.media-card-title { font-weight: 600; line-height: 1.35; }
+.media-empty { padding: 2rem 0; color: rgba(46, 64, 91, 0.62); }
+
+.media-dialog {
+  width: min(720px, calc(100vw - 2rem));
+  max-height: min(82vh, 760px);
+  border: 0;
+  border-radius: 6px;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 28px 80px rgba(23, 34, 50, 0.3);
+}
+
+.media-dialog::backdrop { background: rgba(23, 34, 50, 0.45); backdrop-filter: blur(2px); }
+.media-dialog-inner { position: relative; padding: 2rem; }
+
+.media-dialog-close {
+  position: absolute;
+  z-index: 1;
+  top: 0.65rem;
+  right: 0.8rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.media-dialog-close:hover,
+.media-dialog-close:focus-visible { color: #fff; background: #2e405b; outline: none; }
+
+.media-dialog-layout {
+  display: grid;
+  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.media-dialog-cover { width: 100%; aspect-ratio: 2 / 3; border-radius: 3px; object-fit: cover; }
+.media-dialog-copy h2 { margin: 0 2rem 1rem 0; }
+.media-detail { margin: 0.35rem 0; font-size: 0.92em; }
+
+.media-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.media-tags li {
+  margin: 0;
+  border: 1px solid rgba(46, 64, 91, 0.25);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.78em;
+}
+
+.media-fallback { color: rgba(46, 64, 91, 0.62); font-size: 0.85em; font-style: italic; }
+.media-review { white-space: pre-wrap; }
+
+@media (max-width: 768px) {
+  .language-switcher { display: inline-flex !important; margin: 0 0.25rem !important; }
+  .media-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem 1rem; }
+  .media-dialog {
+    width: 100vw;
+    max-width: none;
+    max-height: 88vh;
+    margin: auto 0 0;
+    border-radius: 14px 14px 0 0;
+  }
+  .media-dialog-inner { padding: 1.4rem; overflow-y: auto; }
+  .media-dialog-layout { grid-template-columns: 90px minmax(0, 1fr); gap: 1.1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media-cover { transition: none; }
+}

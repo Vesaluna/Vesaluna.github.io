@@ -1,0 +1,13 @@
+title: Notes
+subtitle:
+description: Personal notes on life, study and thought
+language: en
+url: https://vesaluna.com/en
+root: /en/
+source_dir: source-en
+public_dir: public/en
+
+theme_config:
+  title_primary: "Timid Girl"
+  title_secondary: "Personal Blog"
+

@@ -1,0 +1,35 @@
+share: Share
+prev: Previous
+next: Next
+prev_post: Previous post
+next_post: Next post
+Home: Home
+Albums: Albums
+Categories: Categories
+Archive: Archive
+Tags: Tags
+About: About
+Links: Links
+Comments: Comments
+posted_at: Posted at
+TagCount: '%d tags'
+ArchiveCount: '%d post'
+CategoriesCount: '%d post'
+PageCount: '%d'
+PageNumber: 'Page %d'
+Works: Works
+All: All
+Books: Books
+Games: Games
+Movies: Films
+OpenReview: 'Read the note on “%s”'
+Close: Close
+FinishedOn: Finished on
+Year: Year
+Creator: Author / creator
+OriginalTitle: Original title
+ChineseOnly: Currently available in Chinese only
+EmptyMedia: No works have been added yet. Real entries will appear here once recorded.
+MoreInfo: More information
+LanguageUnavailable: Not translated yet
+NoTranslatedPosts: There are no translated articles in this language yet. You can still browse the About and Works pages.

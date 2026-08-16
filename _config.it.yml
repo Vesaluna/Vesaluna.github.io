@@ -1,0 +1,13 @@
+title: Appunti
+subtitle:
+description: Appunti personali sulla vita, lo studio e il pensiero
+language: it
+url: https://vesaluna.com/it
+root: /it/
+source_dir: source-it
+public_dir: public/it
+
+theme_config:
+  title_primary: "Ragazza timida"
+  title_secondary: "Blog personale"
+

@@ -1,0 +1,35 @@
+share: Condividi
+prev: Precedente
+next: Successiva
+prev_post: Articolo precedente
+next_post: Articolo successivo
+Home: Home
+Albums: Album
+Categories: Categorie
+Archive: Archivio
+Tags: Etichette
+About: Chi sono
+Links: Link
+Comments: Commenti
+posted_at: Pubblicato il
+TagCount: '%d etichette'
+ArchiveCount: '%d articoli'
+CategoriesCount: '%d articoli'
+PageCount: '%d'
+PageNumber: 'Pagina %d'
+Works: Opere
+All: Tutte
+Books: Libri
+Games: Giochi
+Movies: Film
+OpenReview: 'Leggi la nota su “%s”'
+Close: Chiudi
+FinishedOn: Completato il
+Year: Anno
+Creator: Autore / creatore
+OriginalTitle: Titolo originale
+ChineseOnly: Attualmente disponibile solo in cinese
+EmptyMedia: Non è stata ancora aggiunta alcuna opera. Le voci reali appariranno qui dopo essere state registrate.
+MoreInfo: Altre informazioni
+LanguageUnavailable: Non ancora tradotto
+NoTranslatedPosts: Non ci sono ancora articoli tradotti in questa lingua. Puoi comunque consultare le pagine Chi sono e Opere.

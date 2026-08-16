@@ -1,0 +1,21 @@
+# Add only real books, games and films here. Cover files belong in
+# source/images/media/ and should be small WebP or AVIF images.
+#
+# - id: unique-slug
+#   type: book # book | game | movie
+#   title:
+#     zh-cn: 中文标题
+#     en: English title
+#     it: Titolo italiano
+#   original_title: Optional original title
+#   creator: Optional author, director or developer
+#   cover: /images/media/unique-slug.webp
+#   year: 2026
+#   finished_on: 2026-08-16
+#   tags: [文学]
+#   link: https://example.com/
+#   review:
+#     zh-cn: 中文短评
+#     en:
+#     it:
+[]
