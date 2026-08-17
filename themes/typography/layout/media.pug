@@ -66,6 +66,14 @@ block content
                                         p.media-detail
                                             strong= __('FinishedOn') + ': '
                                             = item.finishedOn
+                                    if item.playtime
+                                        p.media-detail
+                                            strong= __('SteamPlaytime') + ': '
+                                            = item.playtime
+                                    if item.lastPlayedOn
+                                        p.media-detail
+                                            strong= __('LastPlayedOn') + ': '
+                                            = item.lastPlayedOn
                                     if item.completedCount > 1
                                         p.media-detail
                                             strong= __('CompletedCount') + ': '

@@ -93,14 +93,21 @@ check(translatedPostCount === 26, `Expected 26 translated posts, found ${transla
 
 const media = yaml.load(readFileSync(resolve(root, 'data/media.yml'), 'utf8')) || [];
 const mediaPage = readFileSync(join(output, 'works/index.html'), 'utf8');
+const steamGames = media.filter((item) => item.type === 'game' && item.steam_appid);
 check(mediaPage.includes('2025 年第一季度'), 'Works page is missing quarterly grouping.');
 check(mediaPage.includes('日期未记录'), 'Works page is missing the undated group.');
+check(mediaPage.includes('Steam 游戏时长'), 'Works page is missing Steam playtime details.');
+check(steamGames.length === 16, `Expected 16 Steam library entries, found ${steamGames.length}.`);
 for (const item of media) {
   if (item.cover.startsWith('/')) {
     const cover = resolve(output, item.cover.replace(/^\//, ''));
     check(existsSync(cover), `Missing generated cover: ${item.cover}`);
   }
   check(mediaPage.includes(item.cover), `Works page does not reference cover: ${item.id}`);
+}
+for (const item of steamGames) {
+  check(item.id === `steam-${item.steam_appid}`, `Steam id mismatch: ${item.id}`);
+  check(item.link === `https://store.steampowered.com/app/${item.steam_appid}`, `Steam link mismatch: ${item.id}`);
 }
 
 check(readFileSync(join(output, 'CNAME'), 'utf8').trim() === 'vesaluna.com', 'CNAME changed unexpectedly');

@@ -25,6 +25,8 @@ Movies: Film & TV
 OpenReview: 'Open “%s”'
 Close: Close
 FinishedOn: Finished on
+SteamPlaytime: Steam playtime
+LastPlayedOn: Last played
 CompletedCount: Times completed
 Year: Year
 Creator: Author / creator

@@ -2175,3 +2175,483 @@
     zh-cn: ''
     en: ''
     it: ''
+- id: steam-281990
+  type: game
+  steam_appid: '281990'
+  title:
+    zh-cn: Stellaris
+    en: Stellaris
+    it: Stellaris
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-281990.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/281990/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: '2026-01-02'
+  playtime_minutes: 15534
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/281990
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-219740
+  type: game
+  steam_appid: '219740'
+  title:
+    zh-cn: 饥荒
+    en: Don't Starve
+    it: Don't Starve
+  original_title:
+    zh-cn: Don't Starve
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-219740.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/219740/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: '2026-02-05'
+  playtime_minutes: 7068
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/219740
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-1451940
+  type: game
+  steam_appid: '1451940'
+  title:
+    zh-cn: 主播女孩重度依赖
+    en: NEEDY STREAMER OVERLOAD
+    it: NEEDY STREAMER OVERLOAD
+  original_title:
+    zh-cn: NEEDY STREAMER OVERLOAD
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-1451940.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1451940/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: '2025-04-20'
+  playtime_minutes: 6036
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/1451940
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-322330
+  type: game
+  steam_appid: '322330'
+  title:
+    zh-cn: 饥荒联机版
+    en: Don't Starve Together
+    it: Don't Starve Together
+  original_title:
+    zh-cn: Don't Starve Together
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-322330.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/322330/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: '2026-01-17'
+  playtime_minutes: 5316
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/322330
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-413150
+  type: game
+  steam_appid: '413150'
+  title:
+    zh-cn: Stardew Valley
+    en: Stardew Valley
+    it: Stardew Valley
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-413150.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/413150/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: '2026-08-16'
+  playtime_minutes: 4170
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/413150
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-4000
+  type: game
+  steam_appid: '4000'
+  title:
+    zh-cn: Garry's Mod
+    en: Garry's Mod
+    it: Garry's Mod
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-4000.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4000/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: '2026-05-02'
+  playtime_minutes: 1428
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/4000
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-1325860
+  type: game
+  steam_appid: '1325860'
+  title:
+    zh-cn: VTube Studio
+    en: VTube Studio
+    it: VTube Studio
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-1325860.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1325860/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: '2025-09-19'
+  playtime_minutes: 810
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/1325860
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-105600
+  type: game
+  steam_appid: '105600'
+  title:
+    zh-cn: Terraria
+    en: Terraria
+    it: Terraria
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-105600.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/105600/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: '2026-07-19'
+  playtime_minutes: 264
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/105600
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-616720
+  type: game
+  steam_appid: '616720'
+  title:
+    zh-cn: Live2DViewerEX
+    en: Live2DViewerEX
+    it: Live2DViewerEX
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-616720.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/616720/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: '2025-09-26'
+  playtime_minutes: 12
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/616720
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-1091500
+  type: game
+  steam_appid: '1091500'
+  title:
+    zh-cn: 赛博朋克 2077
+    en: Cyberpunk 2077
+    it: Cyberpunk 2077
+  original_title:
+    zh-cn: Cyberpunk 2077
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-1091500.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: ''
+  playtime_minutes: 0
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/1091500
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-1238810
+  type: game
+  steam_appid: '1238810'
+  title:
+    zh-cn: 《战地风云 5》
+    en: Battlefield V
+    it: Battlefield V
+  original_title:
+    zh-cn: Battlefield V
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-1238810.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1238810/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: ''
+  playtime_minutes: 0
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/1238810
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-606150
+  type: game
+  steam_appid: '606150'
+  title:
+    zh-cn: Moonlighter
+    en: Moonlighter
+    it: Moonlighter
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-606150.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/606150/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: ''
+  playtime_minutes: 0
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/606150
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-289070
+  type: game
+  steam_appid: '289070'
+  title:
+    zh-cn: Sid Meier's Civilization VI
+    en: Sid Meier's Civilization VI
+    it: Sid Meier's Civilization VI
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-289070.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/289070/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: ''
+  playtime_minutes: 0
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/289070
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-4012810
+  type: game
+  steam_appid: '4012810'
+  title:
+    zh-cn: STEINS;GATE RE:BOOT
+    en: STEINS;GATE RE:BOOT
+    it: STEINS;GATE RE:BOOT
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-4012810.webp
+  cover_source: https://store.steampowered.com/app/4012810
+  year: ''
+  finished_on: ''
+  last_played_on: ''
+  playtime_minutes: 0
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/4012810
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-738520
+  type: game
+  steam_appid: '738520'
+  title:
+    zh-cn: 呼吸边缘
+    en: Breathedge
+    it: Breathedge
+  original_title:
+    zh-cn: Breathedge
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-738520.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/738520/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: ''
+  playtime_minutes: 0
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/738520
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: steam-468920
+  type: game
+  steam_appid: '468920'
+  title:
+    zh-cn: 终极钓鱼模拟器
+    en: Ultimate Fishing Simulator
+    it: Ultimate Fishing Simulator
+  original_title:
+    zh-cn: Ultimate Fishing Simulator
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/steam-468920.webp
+  cover_source: https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/468920/library_600x900_2x.jpg
+  year: ''
+  finished_on: ''
+  last_played_on: ''
+  playtime_minutes: 0
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/468920
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''

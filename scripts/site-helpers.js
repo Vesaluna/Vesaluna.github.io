@@ -165,6 +165,21 @@ function mediaPeriod(value, language) {
   return { key: `${year}-q${quarter}`, label };
 }
 
+function mediaPlaytime(value, language) {
+  const minutes = Number(value || 0);
+  if (!Number.isFinite(minutes) || minutes <= 0) return '';
+  if (minutes < 60) {
+    return language === 'zh-cn' ? `${minutes} 分钟` : `${minutes} min`;
+  }
+  const hours = Math.round((minutes / 60) * 10) / 10;
+  const amount = language === 'it' ? String(hours).replace('.', ',') : String(hours);
+  return language === 'zh-cn'
+    ? `${amount} 小时`
+    : language === 'it'
+      ? `${amount} ore`
+      : `${amount} hours`;
+}
+
 hexo.extend.helper.register('media_items', function mediaItems(page) {
   const language = currentLanguage.call(this, page);
   return mediaData().map((item) => {
@@ -180,6 +195,8 @@ hexo.extend.helper.register('media_items', function mediaItems(page) {
       cover: item.cover,
       year: item.year,
       finishedOn: dateOnly(item.finished_on),
+      lastPlayedOn: dateOnly(item.last_played_on),
+      playtime: mediaPlaytime(item.playtime_minutes, language),
       periodKey: period.key,
       periodLabel: period.label,
       completedCount: Number(item.completed_count || 1),
