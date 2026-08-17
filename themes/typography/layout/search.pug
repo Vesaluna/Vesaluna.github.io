@@ -12,7 +12,6 @@ block content
         .content.search-page(
             data-search-page,
             data-search-index=url_for('search.xml'),
-            data-search-prompt=__('SearchPrompt'),
             data-search-empty=__('SearchEmpty'),
             data-search-count=__('SearchCount'),
             data-search-error=__('SearchError')
@@ -32,5 +31,5 @@ block content
                         spellcheck="false"
                     )
                     button(type="submit")= __('Search')
-            p.site-search-status(role="status", aria-live="polite")= __('SearchPrompt')
+            p.site-search-status(role="status", aria-live="polite")
             ol.site-search-results
