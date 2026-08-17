@@ -8,6 +8,6 @@ source_dir: source-it
 public_dir: public/it
 
 theme_config:
-  title_primary: "Ragazza timida"
-  title_secondary: "Blog personale"
+  title_primary: "废怯少女"
+  title_secondary: "个人博客"
 

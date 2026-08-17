@@ -8,6 +8,6 @@ source_dir: source-en
 public_dir: public/en
 
 theme_config:
-  title_primary: "Timid Girl"
-  title_secondary: "Personal Blog"
+  title_primary: "废怯少女"
+  title_secondary: "个人博客"
 
