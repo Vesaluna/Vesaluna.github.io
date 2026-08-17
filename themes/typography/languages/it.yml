@@ -21,7 +21,7 @@ Works: Opere
 Search: Cerca
 SearchLabel: Cerca negli articoli
 SearchPlaceholder: Inserisci parole dal titolo o dal testo
-SearchPrompt: Inserisci una parola per iniziare
+SearchPrompt: ''
 SearchEmpty: Nessun articolo corrispondente
 SearchCount: 'Risultati: {count}'
 SearchError: L'indice di ricerca al momento non è disponibile

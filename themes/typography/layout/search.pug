@@ -21,7 +21,7 @@ block content
             if page.content
                 .search-page-intro!= page.content
             form.site-search-form(role="search")
-                label(for="site-search-input")= __('SearchLabel')
+                label.sr-only(for="site-search-input")= __('SearchLabel')
                 .site-search-control
                     i.fa.fa-search(aria-hidden="true")
                     input#site-search-input(

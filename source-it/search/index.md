@@ -6,5 +6,3 @@ lang: it
 translation_key: search
 nav_order: 5
 ---
-
-Cerca nei titoli e nel testo degli articoli in italiano.

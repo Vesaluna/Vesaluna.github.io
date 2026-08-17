@@ -6,5 +6,3 @@ lang: en
 translation_key: search
 nav_order: 5
 ---
-
-Search article titles and text in the English section.

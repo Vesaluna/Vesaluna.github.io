@@ -6,5 +6,3 @@ lang: zh-cn
 translation_key: search
 nav_order: 5
 ---
-
-搜索博客文章的标题与正文。

@@ -21,7 +21,7 @@ Works: 已阅
 Search: 搜索
 SearchLabel: 搜索文章
 SearchPlaceholder: 输入标题或正文关键词
-SearchPrompt: 输入关键词开始搜索
+SearchPrompt: ''
 SearchEmpty: 没有找到相关文章
 SearchCount: 找到 {count} 篇文章
 SearchError: 暂时无法读取搜索索引，请稍后重试

@@ -21,7 +21,7 @@ Works: Works
 Search: Search
 SearchLabel: Search articles
 SearchPlaceholder: Enter words from a title or article
-SearchPrompt: Enter a keyword to begin
+SearchPrompt: ''
 SearchEmpty: No matching articles found
 SearchCount: 'Results: {count}'
 SearchError: The search index is temporarily unavailable
