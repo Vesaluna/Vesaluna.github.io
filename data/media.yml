@@ -2697,28 +2697,28 @@
     zh-cn: ''
     en: ''
     it: ''
-- id: manual-ring-1
+- id: manual-ring-tetralogy
   type: book
   title:
-    zh-cn: 环界1：铃
-    en: Ring
-    it: Ring
+    zh-cn: 环界
+    en: The Ring Tetralogy
+    it: La tetralogia di Ring
   original_title:
-    zh-cn: リング
-    en: リング
-    it: リング
+    zh-cn: 铃／螺旋／环／新生
+    en: リング／らせん／ループ／バースデイ
+    it: リング／らせん／ループ／バースデイ
   creator:
     zh-cn: 铃木光司
     en: Koji Suzuki
     it: Koji Suzuki
   cover: >-
-    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-ring-1.webp
-  cover_source: https://img.alicdn.com/bao/uploaded/i1/3968989056/O1CN01JnDUWA2GlhJGiMgVU_!!0-item_pic.jpg
-  year: '2016'
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-ring-tetralogy.webp
+  cover_source: https://img.alicdn.com/i4/859515618/O1CN01UBwdgp1rN5azhfY3d_!!859515618.jpg
+  year: '2017'
   finished_on: '2026-03-31'
   completed_count: 1
   tags: []
-  link: https://book.douban.com/subject/26861459/
+  link: https://book.douban.com/series/35632
   review:
     zh-cn: ''
     en: ''
