@@ -32,6 +32,14 @@ mixin make_post(item, is_detail)
                             a.a-tag(href=config.root + item.path, title= item.name)= item.name
                             span &nbsp;
                             - });
+        if is_detail && item.ai_translation
+            - var sourceVersion = language_switches(item).find(function (language) { return language.code === 'zh-cn' && language.available; });
+            p.translation-notice
+                span.translation-notice-badge AI
+                span= __('AITranslationNotice')
+                if sourceVersion
+                    span.translation-notice-separator ·
+                    a(href=sourceVersion.url, hreflang="zh-cn")= __('SourceVersion')
         if is_detail
             p.post-abstract!= item.content
         else

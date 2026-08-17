@@ -1,0 +1,27 @@
+.translation-notice {
+  color: #999;
+  font-size: 0.78em;
+  letter-spacing: 0.02em;
+  margin: -0.25em 0 1.4em;
+}
+
+.translation-notice-badge {
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+  color: #888;
+  display: inline-block;
+  font-size: 0.82em;
+  line-height: 1.45;
+  margin-right: 0.55em;
+  padding: 0 0.38em;
+  vertical-align: 0.08em;
+}
+
+.translation-notice-separator {
+  margin: 0 0.5em;
+}
+
+.translation-notice a {
+  border-bottom: 1px dotted #bbb;
+  color: inherit;
+}

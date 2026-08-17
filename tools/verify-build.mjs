@@ -21,6 +21,15 @@ function collectHtml(folder) {
   return htmlFiles.map((file) => readFileSync(file, 'utf8')).join('\n');
 }
 
+function markdownFiles(folder) {
+  return readdirSync(folder, { withFileTypes: true }).flatMap((entry) => {
+    const target = join(folder, entry.name);
+    if (entry.name.startsWith('.') || entry.name === '_drafts') return [];
+    if (entry.isDirectory()) return markdownFiles(target);
+    return entry.name.endsWith('.md') ? [target] : [];
+  });
+}
+
 const required = [
   'index.html', 'about/index.html', 'works/index.html', 'CNAME', '.nojekyll',
   'en/index.html', 'en/about/index.html', 'en/works/index.html', 'en/atom.xml',
@@ -52,13 +61,35 @@ for (const [language, directory] of [['zh-CN', ''], ['en', 'en'], ['it', 'it']])
 const chineseTitles = ['游记｜访黄果树', '随笔｜飞机', '教程｜关于时间管理'];
 for (const directory of ['en', 'it']) {
   const combined = collectHtml(join(output, directory));
-  for (const title of chineseTitles) check(!combined.includes(title), `${directory} contains untranslated post: ${title}`);
+  const visibleText = combined
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ');
+  for (const title of chineseTitles) check(!visibleText.includes(title), `${directory} contains untranslated post: ${title}`);
 }
 
 const generatedHtml = collectHtml(output);
 for (const placeholder of ['custom_css_source', 'custom_js_source', 'custom_mathjax_source']) {
   check(!generatedHtml.includes(placeholder), `Generated pages reference placeholder asset: ${placeholder}`);
 }
+
+let translatedPostCount = 0;
+for (const [language, sourceDirectory] of [['en', 'source-en'], ['it', 'source-it']]) {
+  for (const file of markdownFiles(resolve(root, sourceDirectory, '_posts'))) {
+    const source = readFileSync(file, 'utf8');
+    const frontMatter = source.match(/^---\s*\n([\s\S]*?)\n---/);
+    const data = yaml.load(frontMatter?.[1] || '') || {};
+    const route = join(output, language, String(data.permalink || ''), 'index.html');
+    check(existsSync(route), `Missing translated route: ${language}/${data.permalink}`);
+    if (existsSync(route)) {
+      const html = readFileSync(route, 'utf8');
+      check(html.includes('translation-notice'), `Missing AI translation notice: ${language}/${data.permalink}`);
+      check(html.includes('hreflang="zh-cn"'), `Missing source-version link: ${language}/${data.permalink}`);
+    }
+    translatedPostCount += 1;
+  }
+}
+check(translatedPostCount === 26, `Expected 26 translated posts, found ${translatedPostCount}`);
 
 const media = yaml.load(readFileSync(resolve(root, 'data/media.yml'), 'utf8')) || [];
 for (const item of media) {
@@ -73,4 +104,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${required.length} required routes, three language roots and media data.`);
+console.log(`Verified ${required.length} required routes, ${translatedPostCount} translated posts, three language roots and media data.`);

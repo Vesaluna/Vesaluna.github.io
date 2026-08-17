@@ -55,11 +55,17 @@ function validateTranslations() {
       if (keys[language].has(data.translation_key)) {
         throw new Error(`Duplicate translation_key ${data.translation_key} for ${language}`);
       }
+      if (file.includes(`${resolve(root, directory, '_posts')}/`) && language !== 'zh-cn' && data.ai_translation !== true) {
+        throw new Error(`Missing ai_translation: true in ${file}`);
+      }
       keys[language].add(data.translation_key);
     }
   }
 
   for (const language of ['en', 'it']) {
+    for (const key of keys['zh-cn']) {
+      if (!keys[language].has(key)) throw new Error(`Missing ${language} translation_key: ${key}`);
+    }
     for (const key of keys[language]) {
       if (!keys['zh-cn'].has(key)) throw new Error(`Orphan ${language} translation_key: ${key}`);
     }
