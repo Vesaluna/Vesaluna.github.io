@@ -161,10 +161,12 @@ hexo.extend.helper.register('media_items', function mediaItems(page) {
       cover: item.cover,
       year: item.year,
       finishedOn: dateOnly(item.finished_on),
+      completedCount: Number(item.completed_count || 1),
       tags: Array.isArray(item.tags) ? item.tags : [],
       link: item.link || '',
       review: requestedReview || chineseReview,
-      reviewFallback: language !== 'zh-cn' && !requestedReview && Boolean(chineseReview)
+      reviewFallback: language !== 'zh-cn' && !requestedReview && Boolean(chineseReview),
+      hasReview: Boolean(requestedReview || chineseReview)
     };
   });
 });

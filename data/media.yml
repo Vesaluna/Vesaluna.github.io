@@ -1,21 +1,2177 @@
-# Add only real books, games and films here. Cover files belong in
-# source/images/media/ and should be small WebP or AVIF images.
-#
-# - id: unique-slug
-#   type: book # book | game | movie
-#   title:
-#     zh-cn: 中文标题
-#     en: English title
-#     it: Titolo italiano
-#   original_title: Optional original title
-#   creator: Optional author, director or developer
-#   cover: /images/media/unique-slug.webp
-#   year: 2026
-#   finished_on: 2026-08-16
-#   tags: [文学]
-#   link: https://example.com/
-#   review:
-#     zh-cn: 中文短评
-#     en:
-#     it:
-[]
+# 已阅数据由导入工具生成。写短评时搜索作品标题，只修改对应的 review 内容。
+# zh-cn 是中文短评；en 和 it 可留空，外语页面会自动显示中文并标注。
+# 再次导入新的 App 备份时，已有短评会按 id 保留。
+- id: media-690f10fa33c334329a7121e3
+  type: book
+  title:
+    zh-cn: 人生十二法则
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 乔丹·彼得森
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-690f10fa33c334329a7121e3.webp
+  cover_source: https://img1.doubanio.com/view/subject/s/public/s33529549.jpg
+  year: '2019'
+  finished_on: '2025-11-06'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/34870933
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-68cff50bb5116176198eda34
+  type: movie
+  title:
+    zh-cn: 美国精神病人
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 玛丽·哈伦
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-68cff50bb5116176198eda34.webp
+  cover_source: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2460996826.jpg
+  year: '2000'
+  finished_on: '2025-09-21'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/1301715
+  review:
+    zh-cn: Impressive
+    en: ''
+    it: ''
+- id: media-68d030dfee053d8eeb8d3c93
+  type: movie
+  title:
+    zh-cn: 银翼杀手2049
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Blade Runner 2
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 丹尼斯·维伦纽瓦
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-68d030dfee053d8eeb8d3c93.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2501864539.jpg
+  year: '2017'
+  finished_on: '2025-09-21'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/10512661
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-68cff581e8366b17cb0e3f53
+  type: movie
+  title:
+    zh-cn: 寒蝉鸣泣之时
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Higurashi no naku koro ni
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 今千秋、吉本毅、筑紫大介
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-68cff581e8366b17cb0e3f53.webp
+  cover_source: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2510605511.jpg
+  year: '2006'
+  finished_on: '2025-06-27'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/1946839
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-67bdf2da744a4816fa87ed9c
+  type: movie
+  title:
+    zh-cn: 颂乐人偶
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Ave Mujica - The Die is Cast -
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 柿本广大
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-67bdf2da744a4816fa87ed9c.webp
+  cover_source: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2917037891.jpg
+  year: '2025'
+  finished_on: '2025-05-21'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/36560608/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6818a590fd97931c19e4cdfe
+  type: book
+  title:
+    zh-cn: 天人五衰
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[日] 三岛由纪夫'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6818a590fd97931c19e4cdfe.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s29901006.jpg
+  year: '2018'
+  finished_on: '2025-05-05'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26897248/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-68cff5ec42ac148b956e0b57
+  type: movie
+  title:
+    zh-cn: 进击的巨人 总集篇 最后的进击
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: 'Attack on Titan The Movie: THE LAST ATTACK'
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 林祐一郎
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-68cff5ec42ac148b956e0b57.webp
+  cover_source: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2912972913.jpg
+  year: '2024'
+  finished_on: '2025-04-22'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/37014543
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-67cac5e68a5b0df67731284b
+  type: book
+  title:
+    zh-cn: 晓寺
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[日] 三岛由纪夫'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-67cac5e68a5b0df67731284b.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s29901003.jpg
+  year: '2018'
+  finished_on: '2025-03-10'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26897255/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-67bf7f26d6de5b42653f9462
+  type: movie
+  title:
+    zh-cn: 少女终末旅行
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Girls' Last Tour
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 尾崎隆晴、土屋浩幸、平向智子
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-67bf7f26d6de5b42653f9462.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2547242490.jpg
+  year: '2017'
+  finished_on: '2025-03-01'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/27081136/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-677cfbd0a0481522194c2e38
+  type: book
+  title:
+    zh-cn: 奔马
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[日] 三岛由纪夫'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-677cfbd0a0481522194c2e38.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s29881662.jpg
+  year: '2018'
+  finished_on: '2025-02-14'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26919599/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6789f0f5187a2ee77c9bd349
+  type: book
+  title:
+    zh-cn: 娱乐至死
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[美] 尼尔·波兹曼'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6789f0f5187a2ee77c9bd349.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s28048575.jpg
+  year: '2015'
+  finished_on: '2025-01-20'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26319730/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-677cfc304455b8eb520054d8
+  type: movie
+  title:
+    zh-cn: 迷途之子!!!!!
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 柿本广大
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-677cfc304455b8eb520054d8.webp
+  cover_source: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2915853161.jpg
+  year: '2023'
+  finished_on: '2025-01-11'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/36352095/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6732ede922254225e8586b05
+  type: book
+  title:
+    zh-cn: 罪与罚
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[俄] 陀思妥耶夫斯基'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6732ede922254225e8586b05.webp
+  cover_source: https://img1.doubanio.com/view/subject/s/public/s33863869.jpg
+  year: '2021'
+  finished_on: '2024-11-15'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/35406615/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-672fb8ea0267e94f36827378
+  type: book
+  title:
+    zh-cn: 乌合之众
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ［法］居斯塔夫·勒庞
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-672fb8ea0267e94f36827378.webp
+  cover_source: https://img1.doubanio.com/view/subject/s/public/s28102600.jpg
+  year: '2015'
+  finished_on: '2024-11-10'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26416883/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-67128ec2ce285cd2d09af6d0
+  type: book
+  title:
+    zh-cn: 风雨独立路
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[新加坡] 李光耀'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-67128ec2ce285cd2d09af6d0.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s1067415.jpg
+  year: '1998'
+  finished_on: '2024-11-06'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/1082102/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6722635555c8bedeffd37009
+  type: book
+  title:
+    zh-cn: 我只会算术
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[日] 小平邦彦'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6722635555c8bedeffd37009.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s34151523.jpg
+  year: '2022'
+  finished_on: '2024-10-30'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/35803079/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6640dc67edca38373bfb25ca
+  type: book
+  title:
+    zh-cn: 雪国
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[日] 川端康成'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6640dc67edca38373bfb25ca.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s34667686.jpg
+  year: '2022'
+  finished_on: '2024-10-17'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/35818897/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-670fe5ca1117a72b091c7d3d
+  type: book
+  title:
+    zh-cn: 纳瓦尔宝典
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[美] 埃里克·乔根森'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-670fe5ca1117a72b091c7d3d.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s34241855.jpg
+  year: '2022'
+  finished_on: '2024-10-16'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/35876121/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6707c97e3da120d8477ed1ec
+  type: book
+  title:
+    zh-cn: 高效能人士的七个习惯
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[美] 史蒂芬·柯维'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6707c97e3da120d8477ed1ec.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s4510907.jpg
+  year: '2018'
+  finished_on: '2024-10-13'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/5325618/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-670648238ae621f5ad2d2764
+  type: book
+  title:
+    zh-cn: 史蒂夫·乔布斯传
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[美] 沃尔特·艾萨克森'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-670648238ae621f5ad2d2764.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s6974202.jpg
+  year: '2011'
+  finished_on: '2024-10-11'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/6798611/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-664a0c4dd43b154b4cf712db
+  type: book
+  title:
+    zh-cn: 数学分析 (第二卷)(第7版)
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[俄] B. A. 卓里奇、李植、卓里奇'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-664a0c4dd43b154b4cf712db.webp
+  cover_source: https://img2.doubanio.com/view/subject/s/public/s30003991.jpg
+  year: '2019'
+  finished_on: '2024-09-29'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/30459106/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66f5701535fd51285e7119ed
+  type: book
+  title:
+    zh-cn: 智人之上
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[以色列] 尤瓦尔·赫拉利'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66f5701535fd51285e7119ed.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s34941172.jpg
+  year: '2024'
+  finished_on: '2024-09-26'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/37001305/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66ec285d553737ca402ff338
+  type: book
+  title:
+    zh-cn: 洛丽塔
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[美] 弗拉基米尔·纳博科夫'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66ec285d553737ca402ff338.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s1483347.jpg
+  year: '2005'
+  finished_on: '2024-09-21'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/1465324/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66c87b0f284a193034f4594e
+  type: book
+  title:
+    zh-cn: 春雪
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[日] 三岛由纪夫'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66c87b0f284a193034f4594e.webp
+  cover_source: https://img1.doubanio.com/view/subject/s/public/s29901000.jpg
+  year: '2018'
+  finished_on: '2024-08-31'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26897254/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66cc6b72a561cb155115ec4b
+  type: movie
+  title:
+    zh-cn: 紫罗兰永恒花园 剧场版
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: 'Violet Evergarden: the Movie'
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 石立太一
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66cc6b72a561cb155115ec4b.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2611203679.jpg
+  year: '2020'
+  finished_on: '2024-08-26'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/30179560/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66c32c888e41e6a1ed119c94
+  type: movie
+  title:
+    zh-cn: 葬送的芙莉莲
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: 'Frieren: Beyond Journey''s End'
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 斋藤圭一郎
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66c32c888e41e6a1ed119c94.webp
+  cover_source: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2897218476.jpg
+  year: '2023'
+  finished_on: '2024-08-22'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/36093351/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-666db87389a1d85a7a7330c2
+  type: book
+  title:
+    zh-cn: 悲惨世界
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 雨果
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-666db87389a1d85a7a7330c2.webp
+  cover_source: https://img1.doubanio.com/view/subject/s/public/s5934960.jpg
+  year: '1992'
+  finished_on: '2024-08-11'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/3200760/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66bc38e5b01547eb92350391
+  type: movie
+  title:
+    zh-cn: 是，首相  第二季
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 彼得·惠特莫尔、西德尼·洛特比
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66bc38e5b01547eb92350391.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2187836590.jpg
+  year: '1987'
+  finished_on: '2024-08-09'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/5359940/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66437ec404f885c8437cb0e5
+  type: book
+  title:
+    zh-cn: 刺杀骑士团长
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[日] 村上春树'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66437ec404f885c8437cb0e5.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s34611665.jpg
+  year: '2023'
+  finished_on: '2024-07-31'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/36344435/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66740833e71542fea76ed1a4
+  type: movie
+  title:
+    zh-cn: 是，首相 第一季
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 彼得·惠特莫尔、西德尼·洛特比
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66740833e71542fea76ed1a4.webp
+  cover_source: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2187836471.jpg
+  year: '1986'
+  finished_on: '2024-07-28'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/1441948/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-669f98d6ba2cb5f15f76e140
+  type: book
+  title:
+    zh-cn: 当我谈跑步时，我谈些什么（2015典藏版）
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: （日）村上春树
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-669f98d6ba2cb5f15f76e140.webp
+  cover_source: https://img2.doubanio.com/view/subject/s/public/s28316091.jpg
+  year: '2015'
+  finished_on: '2024-07-27'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26575679/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-664778beba23a1d5e44fef8e
+  type: book
+  title:
+    zh-cn: 变态心理学（第12版）（万千心理）
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 克林
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-664778beba23a1d5e44fef8e.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s28721787.jpg
+  year: '2016'
+  finished_on: '2024-07-25'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26793159/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66952d0048b0ac4f4782263a
+  type: book
+  title:
+    zh-cn: 浮士德
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[德] 歌德'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66952d0048b0ac4f4782263a.webp
+  cover_source: https://img1.doubanio.com/view/subject/s/public/s26841788.jpg
+  year: '2013'
+  finished_on: '2024-07-25'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/24295354/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-664778103df038f48214d44d
+  type: book
+  title:
+    zh-cn: 费尔德曼发展心理学（原书第4版）
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[美] 罗伯特·S. 费尔德曼（Robert S. Feldman）'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-664778103df038f48214d44d.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s33970474.jpg
+  year: '2021'
+  finished_on: '2024-07-16'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/35565044/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6647788983c72d29ecdc5399
+  type: book
+  title:
+    zh-cn: 社会心理学（第11版，精装彩印）
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[美] 戴维·迈尔斯'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6647788983c72d29ecdc5399.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s28261247.jpg
+  year: '2014'
+  finished_on: '2024-07-09'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/25982198/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663cfc1ae2db21fdacaad4c5
+  type: book
+  title:
+    zh-cn: 数学分析 (第一卷)(第7版)
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[俄] B. A. 卓里奇、李植、卓里奇'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663cfc1ae2db21fdacaad4c5.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s30003985.jpg
+  year: '2019'
+  finished_on: '2024-07-01'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/30459098/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663cff350f6df3ffa729fb90
+  type: book
+  title:
+    zh-cn: 伍尔福克教育心理学
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[美]安妮塔·伍尔福克（Anita Woolfolk）'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663cff350f6df3ffa729fb90.webp
+  cover_source: https://img1.doubanio.com/view/subject/s/public/s29915160.jpg
+  year: '2015'
+  finished_on: '2024-06-30'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26744183/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-667a7e87235686d9f7fe87c2
+  type: book
+  title:
+    zh-cn: 奇特的一生
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[苏] 格拉宁'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-667a7e87235686d9f7fe87c2.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s2656745.jpg
+  year: '1979'
+  finished_on: '2024-06-25'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/2212128/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663ceecbe76395a3700d7641
+  type: book
+  title:
+    zh-cn: 西方哲学史
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[挪]奎纳尔•希尔贝克、[挪]尼尔斯•吉列尔'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663ceecbe76395a3700d7641.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s28551283.jpg
+  year: '2016'
+  finished_on: '2024-06-25'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26438558/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6649b5c29160eeab137e4817
+  type: movie
+  title:
+    zh-cn: 新哥斯拉
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Godzilla Resurgence
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 庵野秀明、樋口真嗣
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6649b5c29160eeab137e4817.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2371512648.jpg
+  year: '2016'
+  finished_on: '2024-06-23'
+  completed_count: 2
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/26279124/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-666dae3670dfdf31a98e3953
+  type: movie
+  title:
+    zh-cn: 是，大臣  第三季
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 西德尼·洛特比、彼得·惠特莫尔
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-666dae3670dfdf31a98e3953.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2187837418.jpg
+  year: '1982'
+  finished_on: '2024-06-16'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/4933235/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6669984db78b3428f61fa1b4
+  type: movie
+  title:
+    zh-cn: 是，大臣  第二季
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 彼得·惠特莫尔、西德尼·洛特比
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6669984db78b3428f61fa1b4.webp
+  cover_source: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2187837276.jpg
+  year: '1981'
+  finished_on: '2024-06-14'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/4933194/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-665def04641f7216589572ca
+  type: book
+  title:
+    zh-cn: 我的几何人生
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[美国]丘成桐、[美国]史蒂夫·纳迪斯'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-665def04641f7216589572ca.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s33890167.jpg
+  year: '2021'
+  finished_on: '2024-06-12'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/35308863/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66615a713a104a3fa0165bf9
+  type: movie
+  title:
+    zh-cn: 是，大臣  第一季
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 彼得·惠特莫尔、Sydney Lotterby
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66615a713a104a3fa0165bf9.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2187837239.jpg
+  year: '1980'
+  finished_on: '2024-06-11'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/4937405/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66615a141caad6b583b48f38
+  type: movie
+  title:
+    zh-cn: 团子大家族 第二季
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 石原立也、山田尚子、石立太一
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66615a141caad6b583b48f38.webp
+  cover_source: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2221182844.jpg
+  year: '2008'
+  finished_on: '2024-06-09'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/3230813/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-666290f56146d2b5ec58d3ac
+  type: book
+  title:
+    zh-cn: 假面的告白
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[日] 三岛由纪夫'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-666290f56146d2b5ec58d3ac.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s33847513.jpg
+  year: '2020'
+  finished_on: '2024-06-07'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/34924508/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663cff140be45947a849f1b7
+  type: book
+  title:
+    zh-cn: 普通心理学(第5版）
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 彭聃龄
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663cff140be45947a849f1b7.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s32261564.jpg
+  year: '2019'
+  finished_on: '2024-06-06'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/30762055/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663cfc0308f326400de5b042
+  type: book
+  title:
+    zh-cn: 挪威的森林
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[日] 村上春树'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663cfc0308f326400de5b042.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s34611664.jpg
+  year: '2023'
+  finished_on: '2024-06-05'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/36344438/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66410e0491436fe5b4b6aae7
+  type: movie
+  title:
+    zh-cn: 团子大家族
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 石原立也、木上益治、武本康弘
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66410e0491436fe5b4b6aae7.webp
+  cover_source: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2221186392.jpg
+  year: '2007'
+  finished_on: '2024-06-04'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/2277181/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-664375f946ee4d0eba8faa77
+  type: book
+  title:
+    zh-cn: 物理基础知识(下册)-青年自学丛书-1976
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-664375f946ee4d0eba8faa77.webp
+  cover_source: >-
+    https://media.greatfire.org/cdn-cgi/image/width=221/proxy/?url=https://mmbiz.qpic.cn/mmbiz_png/8bBQmZ0vldr3WVc9yCDibA10ibGiaicsgibwfkEgRg8LD33fZS4T9tWzr3O99onibTJTa5rgYIwJesOLiaQueI1Od9SlA/640?wx_fmt=png
+  year: '1976'
+  finished_on: '2024-06-02'
+  completed_count: 1
+  tags: []
+  link: ''
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6643a33c5c4284e5337aed3f
+  type: book
+  title:
+    zh-cn: 舆论学
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 陈力丹
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6643a33c5c4284e5337aed3f.webp
+  cover_source: https://m.media-amazon.com/images/I/318B13N86HL._AC_UF1000,1000_QL80_.jpg
+  year: '2012'
+  finished_on: '2024-06-01'
+  completed_count: 1
+  tags: []
+  link: ''
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6658613c4ec5340e8ec0a8bc
+  type: book
+  title:
+    zh-cn: 我在西南联大的日子
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 汪曾祺
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6658613c4ec5340e8ec0a8bc.webp
+  cover_source: https://img2.doubanio.com/view/subject/s/public/s29940561.jpg
+  year: '2018'
+  finished_on: '2024-05-28'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/30220005/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6645e843a16f81b305d900f7
+  type: movie
+  title:
+    zh-cn: 剧场版魔法少女小圆 新篇 叛逆的故事
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: 'Puella Magi Madoka Magica the Movie: Rebellion'
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 宫本幸裕、新房昭之
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6645e843a16f81b305d900f7.webp
+  cover_source: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2151582333.jpg
+  year: '2013'
+  finished_on: '2024-05-24'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/10569151/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6644a6b63cec6cefd3d892fe
+  type: book
+  title:
+    zh-cn: 金阁寺
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[日] 三岛由纪夫'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6644a6b63cec6cefd3d892fe.webp
+  cover_source: https://img2.doubanio.com/view/subject/s/public/s29918141.jpg
+  year: '2018'
+  finished_on: '2024-05-23'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26877556/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66410d802bc60bbeaa95ed4f
+  type: movie
+  title:
+    zh-cn: 紫罗兰永恒花园
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Violet Evergarden
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 石立太一、藤田春香、木上益治
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66410d802bc60bbeaa95ed4f.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2508746540.jpg
+  year: '2018'
+  finished_on: '2024-05-17'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/26805209/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663cedc3516d4d0cf81f61f4
+  type: book
+  title:
+    zh-cn: 人格心理学(第八版)
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: Jerry M·Burger
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663cedc3516d4d0cf81f61f4.webp
+  cover_source: https://img1.doubanio.com/view/subject/s/public/s28028569.jpg
+  year: '2014'
+  finished_on: '2024-05-15'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26004131/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663de339ec7ff0579c716604
+  type: book
+  title:
+    zh-cn: 无机化学基础知识-青年自学丛书-1978
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663de339ec7ff0579c716604.webp
+  cover_source: >-
+    https://media.greatfire.org/cdn-cgi/image/width=221/proxy/?url=https://mmbiz.qpic.cn/mmbiz_png/8bBQmZ0vldr3WVc9yCDibA10ibGiaicsgibwfkEgRg8LD33fZS4T9tWzr3O99onibTJTa5rgYIwJesOLiaQueI1Od9SlA/640?wx_fmt=png
+  year: '1978'
+  finished_on: '2024-05-14'
+  completed_count: 1
+  tags:
+    - 教材
+  link: ''
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663f832bfc89d3b6f52a786d
+  type: book
+  title:
+    zh-cn: 物理基础知识（上册）-青年自学丛书-1974
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663f832bfc89d3b6f52a786d.webp
+  cover_source: >-
+    https://media.greatfire.org/cdn-cgi/image/width=221/proxy/?url=https://mmbiz.qpic.cn/mmbiz_png/8bBQmZ0vldr3WVc9yCDibA10ibGiaicsgibwfkEgRg8LD33fZS4T9tWzr3O99onibTJTa5rgYIwJesOLiaQueI1Od9SlA/640?wx_fmt=png
+  year: '1974'
+  finished_on: '2024-05-14'
+  completed_count: 1
+  tags: []
+  link: ''
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663cee4ca2f748e228c257ba
+  type: movie
+  title:
+    zh-cn: 魔法少女小圆
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Madoka☆Magica
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 新房昭之、宫本幸裕、畠山守
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663cee4ca2f748e228c257ba.webp
+  cover_source: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2088343031.jpg
+  year: '2011'
+  finished_on: '2024-05-12'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/5349275/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6644a8d8da3c81b9326500ad
+  type: book
+  title:
+    zh-cn: 欲望的演化（最新修订版）
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[美]戴维·巴斯'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6644a8d8da3c81b9326500ad.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s33693883.jpg
+  year: '2020'
+  finished_on: '2024-04-10'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/35153840/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663cf938c2c1cd1eab39332b
+  type: book
+  title:
+    zh-cn: 失乐园
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: '[日] 渡边淳一'
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663cf938c2c1cd1eab39332b.webp
+  cover_source: https://img1.doubanio.com/view/subject/s/public/s29647440.jpg
+  year: '2018'
+  finished_on: '2024-03-27'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/27194307/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663d014c26ab17e2a7370433
+  type: movie
+  title:
+    zh-cn: 穿普拉达的女王
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: 穿Prada的恶魔(港)
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 大卫·弗兰科尔
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663d014c26ab17e2a7370433.webp
+  cover_source: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p735379215.jpg
+  year: '2007'
+  finished_on: '2024-03-08'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/1482072/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6669b4b05fe4f46121847f31
+  type: movie
+  title:
+    zh-cn: 在下坂本，有何贵干？
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 高松信司、赤城博昭、久保太郎
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6669b4b05fe4f46121847f31.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2329821809.jpg
+  year: '2016'
+  finished_on: '2024-03-06'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/26708698/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-664580086229a1f886e4af8f
+  type: movie
+  title:
+    zh-cn: 不管我怎么去想我不受欢迎这件事都是你们的错！
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: WataMote
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 大沼心、永冈智佳、神保昌登
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-664580086229a1f886e4af8f.webp
+  cover_source: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2260256352.jpg
+  year: '2013'
+  finished_on: '2024-02-25'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/20458842/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663cf2b520a1eeee6ba3d1b1
+  type: movie
+  title:
+    zh-cn: 死亡笔记
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: ''
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663cf2b520a1eeee6ba3d1b1.webp
+  cover_source: https://m.media-amazon.com/images/I/716ASj7z2GL._AC_UF894,1000_QL80_.jpg
+  year: '2006'
+  finished_on: '2024-02-11'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: ''
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6644cbd1a2d4d53f7f7a1fe7
+  type: movie
+  title:
+    zh-cn: 日本最长的一天
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: The Emperor in August
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 原田真人
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6644cbd1a2d4d53f7f7a1fe7.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2217690779.jpg
+  year: '2015'
+  finished_on: '2024-01-31'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/26259636/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66457ff2dcc53a333ece9554
+  type: movie
+  title:
+    zh-cn: 二二六
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Four Days of Snow and Blood (USA)
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 五社英雄
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66457ff2dcc53a333ece9554.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2533678420.jpg
+  year: '1989'
+  finished_on: '2024-01-28'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/1442853/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6644cacb686e5560649f5784
+  type: movie
+  title:
+    zh-cn: あゝ海軍
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 村山三男
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6644cacb686e5560649f5784.webp
+  cover_source: >-
+    https://firebasestorage.googleapis.com/v0/b/muuseo-production-884ca.firebasestorage.app/o/images%2Fusers%2F14138%2Fitems%2F1094287%2F0_original.webp?alt=media&token=182e118f-c125-47b3-9dcb-8dc7e1778159
+  year: '1969'
+  finished_on: '2024-01-12'
+  completed_count: 1
+  tags:
+    - 电影
+  link: ''
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6675b74a494d9c87eb1e91d7
+  type: book
+  title:
+    zh-cn: 走出性别困境
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 潘柏林、刘烨、韩萌
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6675b74a494d9c87eb1e91d7.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s34605067.jpg
+  year: '2023'
+  finished_on: '2024-01-02'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/36473977/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663d008ec3d9183c74e9f6bd
+  type: movie
+  title:
+    zh-cn: 奥本海默
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 克里斯托弗·诺兰
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663d008ec3d9183c74e9f6bd.webp
+  cover_source: https://img2.doubanio.com/view/photo/s_ratio_poster/public/p2897212051.jpg
+  year: '2023'
+  finished_on: '2023-09-10'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/35593344/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-6649b5adbd66815d4561f619
+  type: movie
+  title:
+    zh-cn: 新·奥特曼
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Shin Ultraman
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 樋口真嗣
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-6649b5adbd66815d4561f619.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2871162289.jpg
+  year: '2022'
+  finished_on: '2023-05-19'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/30482587/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66594ac3020f93c1c2482a4d
+  type: movie
+  title:
+    zh-cn: 芭比
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 格蕾塔·葛韦格
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66594ac3020f93c1c2482a4d.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2890207440.jpg
+  year: '2023'
+  finished_on: ''
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/4058939/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663cf86e0db56956c2bfeed6
+  type: movie
+  title:
+    zh-cn: 丹麦女孩
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 汤姆·霍伯
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663cf86e0db56956c2bfeed6.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2264778990.jpg
+  year: '2015'
+  finished_on: ''
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/3071604/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66594ae253fe67dd63cf1323
+  type: movie
+  title:
+    zh-cn: 釜山行
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Train to Busan
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 延尚昊
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66594ae253fe67dd63cf1323.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2360940399.jpg
+  year: '2016'
+  finished_on: ''
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/25986180/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66594b11de5766947b01248a
+  type: movie
+  title:
+    zh-cn: 杰克奥特曼
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Kaettekita Urutoraman
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 本多猪四郎 、山际永三、佐伯孚治
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66594b11de5766947b01248a.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2225082438.jpg
+  year: '1971'
+  finished_on: ''
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/2264555/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66628f248818814ad964759c
+  type: movie
+  title:
+    zh-cn: 你的名字。
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Your Name
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 新海诚
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66628f248818814ad964759c.webp
+  cover_source: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2395733377.jpg
+  year: '2016'
+  finished_on: ''
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/26683290/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663d0044d445f3959b61eeed
+  type: movie
+  title:
+    zh-cn: 赛马娘 第二季
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: 'Uma Musume: Pretty Derby'
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 及川启、成田巧、太田知章
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663d0044d445f3959b61eeed.webp
+  cover_source: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2874882477.jpg
+  year: '2021'
+  finished_on: ''
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/35213714/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66594a933c7ee3d409a8a969
+  type: book
+  title:
+    zh-cn: 三体
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 刘慈欣
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66594a933c7ee3d409a8a969.webp
+  cover_source: https://img1.doubanio.com/view/subject/s/public/s2768378.jpg
+  year: '2008'
+  finished_on: ''
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/2567698/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66594a96efcae910881c147c
+  type: book
+  title:
+    zh-cn: 三体Ⅱ
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 刘慈欣
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66594a96efcae910881c147c.webp
+  cover_source: https://img3.doubanio.com/view/subject/s/public/s3078482.jpg
+  year: '2008'
+  finished_on: ''
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/3066477/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-66594a9c0a8b2055f789825f
+  type: book
+  title:
+    zh-cn: 三体Ⅲ
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: ''
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 刘慈欣
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-66594a9c0a8b2055f789825f.webp
+  cover_source: https://img9.doubanio.com/view/subject/s/public/s26012674.jpg
+  year: '2010'
+  finished_on: ''
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/5363767/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-665c9b8081c178b0d6306b82
+  type: movie
+  title:
+    zh-cn: 新·假面骑士
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Shin Kamen Rider
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 庵野秀明
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-665c9b8081c178b0d6306b82.webp
+  cover_source: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2889654332.jpg
+  year: '2023'
+  finished_on: ''
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://movie.douban.com/subject/35421743/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: media-663cf88292c45318d0599aae
+  type: movie
+  title:
+    zh-cn: 新世纪福音战士
+    en: ''
+    it: ''
+  original_title:
+    zh-cn: Neon Genesis Evangelion
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 庵野秀明、鹤卷和哉、摩砂雪
+    en: ''
+    it: ''
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/media-663cf88292c45318d0599aae.webp
+  cover_source: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2026157878.jpg
+  year: '1995'
+  finished_on: ''
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://movie.douban.com/subject/1457573/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''

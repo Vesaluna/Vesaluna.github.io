@@ -92,9 +92,13 @@ for (const [language, sourceDirectory] of [['en', 'source-en'], ['it', 'source-i
 check(translatedPostCount === 26, `Expected 26 translated posts, found ${translatedPostCount}`);
 
 const media = yaml.load(readFileSync(resolve(root, 'data/media.yml'), 'utf8')) || [];
+const mediaPage = readFileSync(join(output, 'works/index.html'), 'utf8');
 for (const item of media) {
-  const cover = resolve(output, item.cover.replace(/^\//, ''));
-  check(existsSync(cover), `Missing generated cover: ${item.cover}`);
+  if (item.cover.startsWith('/')) {
+    const cover = resolve(output, item.cover.replace(/^\//, ''));
+    check(existsSync(cover), `Missing generated cover: ${item.cover}`);
+  }
+  check(mediaPage.includes(item.cover), `Works page does not reference cover: ${item.id}`);
 }
 
 check(readFileSync(join(output, 'CNAME'), 'utf8').trim() === 'vesaluna.com', 'CNAME changed unexpectedly');

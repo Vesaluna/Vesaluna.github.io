@@ -142,6 +142,7 @@
 
 .media-fallback { color: rgba(46, 64, 91, 0.62); font-size: 0.85em; font-style: italic; }
 .media-review { white-space: pre-wrap; }
+.media-review-pending { color: rgba(46, 64, 91, 0.52); font-size: 0.9em; font-style: italic; }
 
 @media (max-width: 768px) {
   .language-switcher { display: inline-flex !important; margin: 0 0.25rem !important; }

@@ -53,13 +53,20 @@ block content
                                         p.media-detail
                                             strong= __('FinishedOn') + ': '
                                             = item.finishedOn
+                                    if item.completedCount > 1
+                                        p.media-detail
+                                            strong= __('CompletedCount') + ': '
+                                            = item.completedCount
                                     if item.tags.length
                                         ul.media-tags(aria-label=__('Tags'))
                                             each tag in item.tags
                                                 li= tag
-                                    if item.reviewFallback
-                                        p.media-fallback= __('ChineseOnly')
-                                    p.media-review= item.review
+                                    if item.hasReview
+                                        if item.reviewFallback
+                                            p.media-fallback= __('ChineseOnly')
+                                        p.media-review= item.review
+                                    else
+                                        p.media-review-pending= __('ReviewPending')
                                     if item.link
                                         p
                                             a(href=item.link, target="_blank", rel="noopener noreferrer")= __('MoreInfo')

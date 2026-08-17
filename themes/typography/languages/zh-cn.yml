@@ -21,14 +21,16 @@ Works: 已阅
 All: 全部
 Books: 书籍
 Games: 游戏
-Movies: 电影
-OpenReview: 查看《%s》的短评
+Movies: 影视
+OpenReview: 查看《%s》
 Close: 关闭
 FinishedOn: 完成于
+CompletedCount: 完成次数
 Year: 年份
 Creator: 作者 / 创作者
 OriginalTitle: 原名
 ChineseOnly: 暂仅提供中文
+ReviewPending: 等待补记
 EmptyMedia: 尚未添加作品。条目会在录入真实内容后显示于此。
 MoreInfo: 更多资料
 LanguageUnavailable: 尚未翻译

@@ -21,14 +21,16 @@ Works: Works
 All: All
 Books: Books
 Games: Games
-Movies: Films
-OpenReview: 'Read the note on “%s”'
+Movies: Film & TV
+OpenReview: 'Open “%s”'
 Close: Close
 FinishedOn: Finished on
+CompletedCount: Times completed
 Year: Year
 Creator: Author / creator
 OriginalTitle: Original title
 ChineseOnly: Currently available in Chinese only
+ReviewPending: Note to be added
 EmptyMedia: No works have been added yet. Real entries will appear here once recorded.
 MoreInfo: More information
 LanguageUnavailable: Not translated yet

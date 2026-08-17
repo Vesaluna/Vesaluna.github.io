@@ -22,9 +22,11 @@ function validateMedia() {
     ids.add(item.id);
     if (!['book', 'game', 'movie'].includes(item.type)) throw new Error(`Invalid media type for ${item.id}.`);
     if (!item.title?.['zh-cn']) throw new Error(`Missing Chinese title for ${item.id}.`);
-    if (!item.review?.['zh-cn']) throw new Error(`Missing Chinese review for ${item.id}.`);
-    if (!item.cover?.startsWith('/images/media/')) throw new Error(`Invalid local cover path for ${item.id}.`);
-    if (!existsSync(resolve(root, 'source', item.cover.replace(/^\//, '')))) {
+    if (!item.review || typeof item.review !== 'object') throw new Error(`Missing review fields for ${item.id}.`);
+    const localCover = item.cover?.startsWith('/images/media/');
+    const picxCover = item.cover?.startsWith('https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/');
+    if (!localCover && !picxCover) throw new Error(`Invalid cover path for ${item.id}.`);
+    if (localCover && !existsSync(resolve(root, 'source', item.cover.replace(/^\//, '')))) {
       throw new Error(`Cover file does not exist for ${item.id}: ${item.cover}`);
     }
   }
