@@ -1,0 +1,36 @@
+extends partial/layout
+
+block site_title
+    != page.title + " · " + config.title
+
+block description
+    - var desc = page.desc || strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
+    meta(name="description", content=desc)
+
+block content
+    .autopagerize_page_element
+        .content.search-page(
+            data-search-page,
+            data-search-index=url_for('search.xml'),
+            data-search-prompt=__('SearchPrompt'),
+            data-search-empty=__('SearchEmpty'),
+            data-search-count=__('SearchCount'),
+            data-search-error=__('SearchError')
+        )
+            h1.search-page-title= page.title
+            if page.content
+                .search-page-intro!= page.content
+            form.site-search-form(role="search")
+                label(for="site-search-input")= __('SearchLabel')
+                .site-search-control
+                    i.fa.fa-search(aria-hidden="true")
+                    input#site-search-input(
+                        type="search",
+                        name="q",
+                        placeholder=__('SearchPlaceholder'),
+                        autocomplete="off",
+                        spellcheck="false"
+                    )
+                    button(type="submit")= __('Search')
+            p.site-search-status(role="status", aria-live="polite")= __('SearchPrompt')
+            ol.site-search-results

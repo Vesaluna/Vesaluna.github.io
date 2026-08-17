@@ -2196,6 +2196,7 @@
   year: ''
   finished_on: ''
   last_played_on: '2026-01-02'
+  acquired_on: '2024-12-31'
   playtime_minutes: 15534
   completed_count: 1
   tags:
@@ -2226,6 +2227,7 @@
   year: ''
   finished_on: ''
   last_played_on: '2026-02-05'
+  acquired_on: '2025-12-25'
   playtime_minutes: 7068
   completed_count: 1
   tags:
@@ -2256,6 +2258,7 @@
   year: ''
   finished_on: ''
   last_played_on: '2025-04-20'
+  acquired_on: '2025-01-21'
   playtime_minutes: 6036
   completed_count: 1
   tags:
@@ -2286,6 +2289,7 @@
   year: ''
   finished_on: ''
   last_played_on: '2026-01-17'
+  acquired_on: '2025-12-19'
   playtime_minutes: 5316
   completed_count: 1
   tags:
@@ -2316,6 +2320,7 @@
   year: ''
   finished_on: ''
   last_played_on: '2026-08-16'
+  acquired_on: '2026-07-28'
   playtime_minutes: 4170
   completed_count: 1
   tags:
@@ -2346,6 +2351,7 @@
   year: ''
   finished_on: ''
   last_played_on: '2026-05-02'
+  acquired_on: '2026-04-27'
   playtime_minutes: 1428
   completed_count: 1
   tags:
@@ -2376,6 +2382,7 @@
   year: ''
   finished_on: ''
   last_played_on: '2025-09-19'
+  acquired_on: '2025-09-03'
   playtime_minutes: 810
   completed_count: 1
   tags:
@@ -2406,6 +2413,7 @@
   year: ''
   finished_on: ''
   last_played_on: '2026-07-19'
+  acquired_on: '2026-07-14'
   playtime_minutes: 264
   completed_count: 1
   tags:
@@ -2436,6 +2444,7 @@
   year: ''
   finished_on: ''
   last_played_on: '2025-09-26'
+  acquired_on: '2025-09-19'
   playtime_minutes: 12
   completed_count: 1
   tags:
@@ -2466,6 +2475,7 @@
   year: ''
   finished_on: ''
   last_played_on: ''
+  acquired_on: '2026-08-09'
   playtime_minutes: 0
   completed_count: 1
   tags:
@@ -2496,6 +2506,7 @@
   year: ''
   finished_on: ''
   last_played_on: ''
+  acquired_on: '2026-06-20'
   playtime_minutes: 0
   completed_count: 1
   tags:
@@ -2526,6 +2537,7 @@
   year: ''
   finished_on: ''
   last_played_on: ''
+  acquired_on: '2026-08-09'
   playtime_minutes: 0
   completed_count: 1
   tags:
@@ -2556,6 +2568,7 @@
   year: ''
   finished_on: ''
   last_played_on: ''
+  acquired_on: '2026-07-28'
   playtime_minutes: 0
   completed_count: 1
   tags:
@@ -2586,6 +2599,7 @@
   year: ''
   finished_on: ''
   last_played_on: ''
+  acquired_on: '2026-08-06'
   playtime_minutes: 0
   completed_count: 1
   tags:
@@ -2616,6 +2630,7 @@
   year: ''
   finished_on: ''
   last_played_on: ''
+  acquired_on: '2026-08-09'
   playtime_minutes: 0
   completed_count: 1
   tags:
@@ -2646,11 +2661,526 @@
   year: ''
   finished_on: ''
   last_played_on: ''
+  acquired_on: '2026-08-11'
   playtime_minutes: 0
   completed_count: 1
   tags:
     - Steam
   link: https://store.steampowered.com/app/468920
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-ojosama-kotoba
+  type: book
+  title:
+    zh-cn: お嬢さまことば速修講座
+    en: A Crash Course in Lady-like Speech
+    it: Corso rapido di linguaggio da signorina
+  original_title:
+    zh-cn: ''
+    en: お嬢さまことば速修講座
+    it: お嬢さまことば速修講座
+  creator:
+    zh-cn: 加藤ゑみ子
+    en: Emiko Kato
+    it: Emiko Kato
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-ojosama-kotoba.webp
+  cover_source: https://tshop.r10s.jp/book/cabinet/1171/9784799321171.jpg
+  year: '2017'
+  finished_on: '2026-01-24'
+  completed_count: 1
+  tags: []
+  link: https://d21.co.jp/book/detail/978-4-7993-2117-1
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-ring-1
+  type: book
+  title:
+    zh-cn: 环界1：铃
+    en: Ring
+    it: Ring
+  original_title:
+    zh-cn: リング
+    en: リング
+    it: リング
+  creator:
+    zh-cn: 铃木光司
+    en: Koji Suzuki
+    it: Koji Suzuki
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-ring-1.webp
+  cover_source: https://img.alicdn.com/bao/uploaded/i1/3968989056/O1CN01JnDUWA2GlhJGiMgVU_!!0-item_pic.jpg
+  year: '2016'
+  finished_on: '2026-03-31'
+  completed_count: 1
+  tags: []
+  link: https://book.douban.com/subject/26861459/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-fx-kurumi
+  type: book
+  title:
+    zh-cn: FX战士久留美
+    en: FX Fighter Kurumi-chan
+    it: FX Fighter Kurumi-chan
+  original_title:
+    zh-cn: FX戦士くるみちゃん
+    en: FX戦士くるみちゃん
+    it: FX戦士くるみちゃん
+  creator:
+    zh-cn: でむにゃん、炭酸だいすき
+    en: Demunyan and Tansan Daisuki
+    it: Demunyan e Tansan Daisuki
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-fx-kurumi.webp
+  cover_source: https://cdn.kdkw.jp/cover_1000/322104/322104000242.webp
+  year: '2021'
+  finished_on: '2026-07-20'
+  completed_count: 1
+  tags:
+    - 漫画
+  link: https://www.kadokawa.co.jp/product/322104000242/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-letters-iwo-jima
+  type: movie
+  title:
+    zh-cn: 硫磺岛家书
+    en: Letters from Iwo Jima
+    it: Lettere da Iwo Jima
+  original_title:
+    zh-cn: Letters from Iwo Jima
+    en: ''
+    it: Letters from Iwo Jima
+  creator:
+    zh-cn: 克林特·伊斯特伍德
+    en: Clint Eastwood
+    it: Clint Eastwood
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-letters-iwo-jima.webp
+  cover_source: https://www.originalfilmart.co.uk/cdn/shop/products/letters_from_iwo_jima_2006_original_film_art_5000x.jpg?v=1551891605
+  year: '2006'
+  finished_on: '2026-01-20'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://www.imdb.com/title/tt0498380/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-flags-our-fathers
+  type: movie
+  title:
+    zh-cn: 父辈的旗帜
+    en: Flags of Our Fathers
+    it: Flags of Our Fathers
+  original_title:
+    zh-cn: Flags of Our Fathers
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 克林特·伊斯特伍德
+    en: Clint Eastwood
+    it: Clint Eastwood
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-flags-our-fathers.webp
+  cover_source: https://moviemem.com/wp-content/uploads/2022/08/FLAGSOFOURFATHERSLEGALEAGLE.jpg
+  year: '2006'
+  finished_on: '2026-01-21'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://www.imdb.com/title/tt0418689/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-world-war-z
+  type: movie
+  title:
+    zh-cn: 僵尸世界大战
+    en: World War Z
+    it: World War Z
+  original_title:
+    zh-cn: World War Z
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 马克·福斯特
+    en: Marc Forster
+    it: Marc Forster
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-world-war-z.webp
+  cover_source: https://image.tmdb.org/t/p/original/v6Afn63g6Uo5U3j99ALn3Orzvo6.jpg
+  year: '2013'
+  finished_on: '2026-02-28'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://www.themoviedb.org/movie/72190-world-war-z
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-it-2017
+  type: movie
+  title:
+    zh-cn: 小丑回魂
+    en: It
+    it: It
+  original_title:
+    zh-cn: It
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 安德斯·穆斯切蒂
+    en: Andy Muschietti
+    it: Andy Muschietti
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-it-2017.webp
+  cover_source: https://image.tmdb.org/t/p/original/lFQqNrwlvrEYU6TBy0PYbWDrikx.jpg
+  year: '2017'
+  finished_on: '2026-03-01'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://www.themoviedb.org/movie/346364-it
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-ring-1998
+  type: movie
+  title:
+    zh-cn: 午夜凶铃
+    en: Ring
+    it: Ring
+  original_title:
+    zh-cn: リング
+    en: リング
+    it: リング
+  creator:
+    zh-cn: 中田秀夫
+    en: Hideo Nakata
+    it: Hideo Nakata
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-ring-1998.webp
+  cover_source: https://ogre.natalie.mu/media/ex/film/115984/flyer_1.jpg?imdensity=1&imwidth=640
+  year: '1998'
+  finished_on: '2026-03-08'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://www.imdb.com/title/tt0178868/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-all-quiet-2022
+  type: movie
+  title:
+    zh-cn: 西线无战事
+    en: All Quiet on the Western Front
+    it: Niente di nuovo sul fronte occidentale
+  original_title:
+    zh-cn: Im Westen nichts Neues
+    en: Im Westen nichts Neues
+    it: Im Westen nichts Neues
+  creator:
+    zh-cn: 爱德华·贝尔格
+    en: Edward Berger
+    it: Edward Berger
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-all-quiet-2022.webp
+  cover_source: https://assets.gadgets360cdn.com/pricee/assets/product/202209/All_Quiet_on_the_Western_Front_1664530604.jpg
+  year: '2022'
+  finished_on: '2026-05-16'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://www.imdb.com/title/tt1016150/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-war-horse
+  type: movie
+  title:
+    zh-cn: 战马
+    en: War Horse
+    it: War Horse
+  original_title:
+    zh-cn: War Horse
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 史蒂文·斯皮尔伯格
+    en: Steven Spielberg
+    it: Steven Spielberg
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-war-horse.webp
+  cover_source: https://artofthemovies.co.uk/cdn/shop/products/War_Horse_One_Sheet_DS-326163.jpg?v=1611688607
+  year: '2011'
+  finished_on: '2026-05-17'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://www.imdb.com/title/tt1568911/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-code-geass-s1
+  type: movie
+  title:
+    zh-cn: 反叛的鲁路修 第一季
+    en: 'Code Geass: Lelouch of the Rebellion · Season 1'
+    it: 'Code Geass: Lelouch of the Rebellion · Stagione 1'
+  original_title:
+    zh-cn: コードギアス 反逆のルルーシュ
+    en: コードギアス 反逆のルルーシュ
+    it: コードギアス 反逆のルルーシュ
+  creator:
+    zh-cn: 谷口悟朗
+    en: Goro Taniguchi
+    it: Goro Taniguchi
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-code-geass-s1.webp
+  cover_source: https://image.tmdb.org/t/p/original/nF0qzl8jfQYxynra99WrC1zFq4C.jpg
+  year: '2006'
+  finished_on: '2026-05-19'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://www.sunrise-inc.co.jp/international/work/detail.php?cid=256
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-code-geass-r2
+  type: movie
+  title:
+    zh-cn: 反叛的鲁路修 第二季
+    en: 'Code Geass: Lelouch of the Rebellion R2'
+    it: 'Code Geass: Lelouch of the Rebellion R2'
+  original_title:
+    zh-cn: コードギアス 反逆のルルーシュ R2
+    en: コードギアス 反逆のルルーシュ R2
+    it: コードギアス 反逆のルルーシュ R2
+  creator:
+    zh-cn: 谷口悟朗
+    en: Goro Taniguchi
+    it: Goro Taniguchi
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-code-geass-r2.webp
+  cover_source: https://image.tmdb.org/t/p/original/wtDXWzKIsQ0ZNrtAqlJH8hCqJDH.jpg
+  year: '2008'
+  finished_on: '2026-05-22'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://www.themoviedb.org/tv/31724-code-geass/season/2
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-code-geass-resurrection
+  type: movie
+  title:
+    zh-cn: 复活的鲁路修
+    en: 'Code Geass: Lelouch of the Re;surrection'
+    it: 'Code Geass: Lelouch of the Re;surrection'
+  original_title:
+    zh-cn: コードギアス 復活のルルーシュ
+    en: コードギアス 復活のルルーシュ
+    it: コードギアス 復活のルルーシュ
+  creator:
+    zh-cn: 谷口悟朗
+    en: Goro Taniguchi
+    it: Goro Taniguchi
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-code-geass-resurrection.webp
+  cover_source: https://image.tmdb.org/t/p/original/jWTn6YAXUmOuW3LLSCKPXKaEW1o.jpg
+  year: '2019'
+  finished_on: '2026-05-22'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://www.sunrise-inc.co.jp/international/work/detail.php?cid=409
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-seven-samurai
+  type: movie
+  title:
+    zh-cn: 七武士
+    en: Seven Samurai
+    it: I sette samurai
+  original_title:
+    zh-cn: 七人の侍
+    en: 七人の侍
+    it: 七人の侍
+  creator:
+    zh-cn: 黑泽明
+    en: Akira Kurosawa
+    it: Akira Kurosawa
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-seven-samurai.webp
+  cover_source: https://cdn.sanity.io/images/wjz69vt3/moviecanon/2c0b3ea0cc09213dd2e3a7a4dbf0b0ca404556df-533x800.jpg?h=1200&w=800
+  year: '1954'
+  finished_on: '2026-06-03'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://www.imdb.com/title/tt0047478/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-steins-gate
+  type: movie
+  title:
+    zh-cn: 命运石之门
+    en: Steins;Gate
+    it: Steins;Gate
+  original_title:
+    zh-cn: STEINS;GATE
+    en: STEINS;GATE
+    it: STEINS;GATE
+  creator:
+    zh-cn: 佐藤卓哉、滨崎博嗣
+    en: Takuya Sato and Hiroshi Hamasaki
+    it: Takuya Sato e Hiroshi Hamasaki
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-steins-gate.webp
+  cover_source: https://image.tmdb.org/t/p/original/96R4bV7dB8ramaWceNKsxvJgCUd.jpg
+  year: '2011'
+  finished_on: '2026-07-23'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://www.themoviedb.org/tv/42509-steins-gate
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-steins-gate-zero
+  type: movie
+  title:
+    zh-cn: 命运石之门0
+    en: Steins;Gate 0
+    it: Steins;Gate 0
+  original_title:
+    zh-cn: シュタインズ・ゲート ゼロ
+    en: シュタインズ・ゲート ゼロ
+    it: シュタインズ・ゲート ゼロ
+  creator:
+    zh-cn: 川村贤一
+    en: Kenichi Kawamura
+    it: Kenichi Kawamura
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-steins-gate-zero.webp
+  cover_source: https://ogre.natalie.mu/media/news/comic/2020/1019/STEINSGATE0_KV.jpg?imdensity=1&imwidth=750
+  year: '2018'
+  finished_on: '2026-07-24'
+  completed_count: 1
+  tags:
+    - 剧集
+  link: https://www.themoviedb.org/tv/78102-steins-gate-0
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-steins-gate-movie
+  type: movie
+  title:
+    zh-cn: 命运石之门：负荷领域的既视感
+    en: 'Steins;Gate: The Movie – Load Region of Déjà Vu'
+    it: 'Steins;Gate: Il film – Load Region of Déjà Vu'
+  original_title:
+    zh-cn: 劇場版 STEINS;GATE 負荷領域のデジャヴ
+    en: 劇場版 STEINS;GATE 負荷領域のデジャヴ
+    it: 劇場版 STEINS;GATE 負荷領域のデジャヴ
+  creator:
+    zh-cn: 若林汉二
+    en: Kanji Wakabayashi
+    it: Kanji Wakabayashi
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-steins-gate-movie.webp
+  cover_source: https://artfiles.alphacoders.com/730/73077.jpg
+  year: '2013'
+  finished_on: '2026-07-26'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://www.imdb.com/title/tt2967286/
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-obsession-2026
+  type: movie
+  title:
+    zh-cn: 痴迷
+    en: Obsession
+    it: Obsession
+  original_title:
+    zh-cn: Obsession
+    en: ''
+    it: ''
+  creator:
+    zh-cn: 柯里·巴克
+    en: Curry Barker
+    it: Curry Barker
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-obsession-2026.webp
+  cover_source: https://cdn.etiketti.app/kinotar/poster/obsession_1777966756735.webp
+  year: '2026'
+  finished_on: '2026-07-27'
+  completed_count: 1
+  tags:
+    - 电影
+  link: https://www.upcominghorrormovies.com/movie/obsession
+  review:
+    zh-cn: ''
+    en: ''
+    it: ''
+- id: manual-scarlet-moon-immortal
+  type: game
+  steam_appid: '4048300'
+  title:
+    zh-cn: 绯月仙行录
+    en: 'Scarlet Moon: Immortal Journey'
+    it: 'Luna scarlatta: viaggio immortale'
+  original_title:
+    zh-cn: ''
+    en: 绯月仙行录
+    it: 绯月仙行录
+  creator:
+    zh-cn: 月光草
+    en: Moonlight Grass
+    it: Moonlight Grass
+  cover: >-
+    https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/manual-scarlet-moon-immortal.webp
+  cover_source: https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4048300/01aca3baab68d279eb430d55cebea2c411bbe9f9/capsule_616x353_schinese.jpg?t=1783374041
+  year: '2026'
+  finished_on: '2026-08-04'
+  acquired_on: ''
+  playtime_minutes: 0
+  completed_count: 1
+  tags:
+    - Steam
+  link: https://store.steampowered.com/app/4048300
   review:
     zh-cn: ''
     en: ''

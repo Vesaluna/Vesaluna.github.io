@@ -18,6 +18,13 @@ CategoriesCount: '%d articoli'
 PageCount: '%d'
 PageNumber: 'Pagina %d'
 Works: Opere
+Search: Cerca
+SearchLabel: Cerca negli articoli
+SearchPlaceholder: Inserisci parole dal titolo o dal testo
+SearchPrompt: Inserisci una parola per iniziare
+SearchEmpty: Nessun articolo corrispondente
+SearchCount: 'Risultati: {count}'
+SearchError: L'indice di ricerca al momento non è disponibile
 All: Tutte
 Books: Libri
 Games: Giochi
@@ -27,6 +34,7 @@ Close: Chiudi
 FinishedOn: Completato il
 SteamPlaytime: Tempo di gioco su Steam
 LastPlayedOn: Ultimo avvio
+SteamAcquiredOn: Aggiunto alla libreria Steam
 CompletedCount: Completamenti
 Year: Anno
 Creator: Autore / creatore

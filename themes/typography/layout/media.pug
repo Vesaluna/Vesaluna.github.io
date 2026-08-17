@@ -74,6 +74,10 @@ block content
                                         p.media-detail
                                             strong= __('LastPlayedOn') + ': '
                                             = item.lastPlayedOn
+                                    if item.acquiredOn
+                                        p.media-detail
+                                            strong= __('SteamAcquiredOn') + ': '
+                                            = item.acquiredOn
                                     if item.completedCount > 1
                                         p.media-detail
                                             strong= __('CompletedCount') + ': '

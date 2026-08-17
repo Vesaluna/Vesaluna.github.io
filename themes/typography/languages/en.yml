@@ -18,6 +18,13 @@ CategoriesCount: '%d post'
 PageCount: '%d'
 PageNumber: 'Page %d'
 Works: Works
+Search: Search
+SearchLabel: Search articles
+SearchPlaceholder: Enter words from a title or article
+SearchPrompt: Enter a keyword to begin
+SearchEmpty: No matching articles found
+SearchCount: 'Results: {count}'
+SearchError: The search index is temporarily unavailable
 All: All
 Books: Books
 Games: Games
@@ -27,6 +34,7 @@ Close: Close
 FinishedOn: Finished on
 SteamPlaytime: Steam playtime
 LastPlayedOn: Last played
+SteamAcquiredOn: Added to Steam library
 CompletedCount: Times completed
 Year: Year
 Creator: Author / creator

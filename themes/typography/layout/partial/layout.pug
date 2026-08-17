@@ -23,3 +23,5 @@ html(lang=documentLang)
         script(src= url_for('js/google-analytics.js'))
         script(src= url_for('js/typography.js'))
         script(src= url_for('js/media-library.js'))
+        if page.layout == "search"
+            script(src= url_for('js/search.js'))

@@ -31,9 +31,9 @@ function markdownFiles(folder) {
 }
 
 const required = [
-  'index.html', 'about/index.html', 'works/index.html', 'CNAME', '.nojekyll',
-  'en/index.html', 'en/about/index.html', 'en/works/index.html', 'en/atom.xml',
-  'it/index.html', 'it/about/index.html', 'it/works/index.html', 'it/atom.xml',
+  'index.html', 'about/index.html', 'works/index.html', 'search/index.html', 'CNAME', '.nojekyll',
+  'en/index.html', 'en/about/index.html', 'en/works/index.html', 'en/search/index.html', 'en/atom.xml',
+  'it/index.html', 'it/about/index.html', 'it/works/index.html', 'it/search/index.html', 'it/atom.xml',
   '2024/06/30/记录｜The first step/index.html',
   '2024/09/03/教程｜时间管理/index.html',
   '2024/09/12/练习｜Zorich数学分析下册Pag385n-2/index.html',
@@ -94,10 +94,19 @@ check(translatedPostCount === 26, `Expected 26 translated posts, found ${transla
 const media = yaml.load(readFileSync(resolve(root, 'data/media.yml'), 'utf8')) || [];
 const mediaPage = readFileSync(join(output, 'works/index.html'), 'utf8');
 const steamGames = media.filter((item) => item.type === 'game' && item.steam_appid);
+const steamGamesWithAcquiredDate = steamGames.filter((item) => item.acquired_on);
+const manualEntries = media.filter((item) => item.id.startsWith('manual-'));
+check(media.length === 117, `Expected 117 media entries, found ${media.length}.`);
+check(manualEntries.length === 19, `Expected 19 manually added entries, found ${manualEntries.length}.`);
+check(mediaPage.includes('2026 年第一季度'), 'Works page is missing the 2026 first-quarter group.');
+check(mediaPage.includes('2026 年第二季度'), 'Works page is missing the 2026 second-quarter group.');
+check(mediaPage.includes('2026 年第三季度'), 'Works page is missing the 2026 third-quarter group.');
 check(mediaPage.includes('2025 年第一季度'), 'Works page is missing quarterly grouping.');
 check(mediaPage.includes('日期未记录'), 'Works page is missing the undated group.');
 check(mediaPage.includes('Steam 游戏时长'), 'Works page is missing Steam playtime details.');
-check(steamGames.length === 16, `Expected 16 Steam library entries, found ${steamGames.length}.`);
+check(mediaPage.includes('Steam 入库时间'), 'Works page is missing Steam acquisition dates.');
+check(steamGames.length === 17, `Expected 17 Steam library entries, found ${steamGames.length}.`);
+check(steamGamesWithAcquiredDate.length === 16, `Expected 16 known Steam acquisition dates, found ${steamGamesWithAcquiredDate.length}.`);
 for (const item of media) {
   if (item.cover.startsWith('/')) {
     const cover = resolve(output, item.cover.replace(/^\//, ''));
@@ -106,8 +115,21 @@ for (const item of media) {
   check(mediaPage.includes(item.cover), `Works page does not reference cover: ${item.id}`);
 }
 for (const item of steamGames) {
-  check(item.id === `steam-${item.steam_appid}`, `Steam id mismatch: ${item.id}`);
+  check(item.id === `steam-${item.steam_appid}` || item.id === 'manual-scarlet-moon-immortal', `Steam id mismatch: ${item.id}`);
   check(item.link === `https://store.steampowered.com/app/${item.steam_appid}`, `Steam link mismatch: ${item.id}`);
+}
+
+const searchPages = [
+  ['', '搜索文章'],
+  ['en', 'Search articles'],
+  ['it', 'Cerca negli articoli']
+];
+for (const [directory, heading] of searchPages) {
+  const page = readFileSync(join(output, directory, 'search/index.html'), 'utf8');
+  check(page.includes(heading), `Search page heading is missing for ${directory || 'zh-cn'}.`);
+  check(page.includes('search.css'), `Search stylesheet is missing for ${directory || 'zh-cn'}.`);
+  check(page.includes('search.js'), `Search script is missing for ${directory || 'zh-cn'}.`);
+  check(page.includes(`${directory ? `/${directory}` : ''}/search.xml`), `Search index path is incorrect for ${directory || 'zh-cn'}.`);
 }
 
 check(readFileSync(join(output, 'CNAME'), 'utf8').trim() === 'vesaluna.com', 'CNAME changed unexpectedly');

@@ -182,7 +182,7 @@ function mediaPlaytime(value, language) {
 
 hexo.extend.helper.register('media_items', function mediaItems(page) {
   const language = currentLanguage.call(this, page);
-  return mediaData().map((item) => {
+  const items = mediaData().map((item) => {
     const requestedReview = localized(item.review && item.review[language], language);
     const chineseReview = localized(item.review && item.review['zh-cn'], 'zh-cn');
     const period = mediaPeriod(item.finished_on, language);
@@ -196,6 +196,7 @@ hexo.extend.helper.register('media_items', function mediaItems(page) {
       year: item.year,
       finishedOn: dateOnly(item.finished_on),
       lastPlayedOn: dateOnly(item.last_played_on),
+      acquiredOn: dateOnly(item.acquired_on),
       playtime: mediaPlaytime(item.playtime_minutes, language),
       periodKey: period.key,
       periodLabel: period.label,
@@ -206,5 +207,9 @@ hexo.extend.helper.register('media_items', function mediaItems(page) {
       reviewFallback: language !== 'zh-cn' && !requestedReview && Boolean(chineseReview),
       hasReview: Boolean(requestedReview || chineseReview)
     };
+  });
+  return items.sort((left, right) => {
+    const dateOrder = String(right.finishedOn || '').localeCompare(String(left.finishedOn || ''));
+    return dateOrder || left.title.localeCompare(right.title, language);
   });
 });

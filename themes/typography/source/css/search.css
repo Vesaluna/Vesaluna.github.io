@@ -1,0 +1,57 @@
+.search-page-title { margin-bottom: 0.4em; }
+.search-page-intro { max-width: 48rem; margin-bottom: 2rem; }
+
+.site-search-form { max-width: 46rem; margin: 1.5rem 0 1rem; }
+.site-search-form > label { display: block; margin-bottom: 0.55rem; font-weight: 500; }
+
+.site-search-control {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  border: 1px solid rgba(46, 64, 91, 0.3);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.72);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.site-search-control:focus-within {
+  border-color: #2e405b;
+  box-shadow: 0 0 0 3px rgba(46, 64, 91, 0.1);
+}
+
+.site-search-control i { padding-left: 0.9rem; color: rgba(46, 64, 91, 0.55); }
+.site-search-control input {
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0.8rem;
+  color: #2e405b;
+  font: inherit;
+}
+
+.site-search-control button {
+  align-self: stretch;
+  border: 0;
+  border-left: 1px solid rgba(46, 64, 91, 0.2);
+  background: transparent;
+  padding: 0 1rem;
+  color: #2e405b;
+  font: inherit;
+  cursor: pointer;
+}
+
+.site-search-control button:hover,
+.site-search-control button:focus-visible { color: #fff; background: #2e405b; outline: none; }
+.site-search-status { min-height: 1.5em; color: rgba(46, 64, 91, 0.62); font-size: 0.9em; }
+
+.site-search-results { max-width: 48rem; margin: 1.3rem 0 0; padding: 0; list-style: none; }
+.site-search-results li { margin: 0; padding: 1rem 0; border-top: 1px solid rgba(46, 64, 91, 0.14); }
+.site-search-results li:last-child { border-bottom: 1px solid rgba(46, 64, 91, 0.14); }
+.site-search-results a { font-weight: 600; }
+.site-search-results p { margin: 0.45rem 0 0; color: rgba(46, 64, 91, 0.7); font-size: 0.92em; line-height: 1.7; }
+
+@media (max-width: 520px) {
+  .site-search-control { grid-template-columns: auto minmax(0, 1fr); }
+  .site-search-control button { grid-column: 1 / -1; border-top: 1px solid rgba(46, 64, 91, 0.2); border-left: 0; padding: 0.65rem; }
+}
