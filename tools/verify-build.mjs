@@ -93,6 +93,8 @@ check(translatedPostCount === 26, `Expected 26 translated posts, found ${transla
 
 const media = yaml.load(readFileSync(resolve(root, 'data/media.yml'), 'utf8')) || [];
 const mediaPage = readFileSync(join(output, 'works/index.html'), 'utf8');
+check(mediaPage.includes('2025 年第一季度'), 'Works page is missing quarterly grouping.');
+check(mediaPage.includes('日期未记录'), 'Works page is missing the undated group.');
 for (const item of media) {
   if (item.cover.startsWith('/')) {
     const cover = resolve(output, item.cover.replace(/^\//, ''));

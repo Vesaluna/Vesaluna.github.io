@@ -3,6 +3,8 @@
 
   var cards = Array.prototype.slice.call(document.querySelectorAll('[data-media-target]'));
   var filters = Array.prototype.slice.call(document.querySelectorAll('[data-media-filter]'));
+  var groups = Array.prototype.slice.call(document.querySelectorAll('[data-media-group]'));
+  var empty = document.querySelector('.media-filter-empty');
   if (!cards.length && !filters.length) return;
 
   filters.forEach(function (filter) {
@@ -16,6 +18,12 @@
       cards.forEach(function (card) {
         card.hidden = selected !== 'all' && card.getAttribute('data-media-type') !== selected;
       });
+      groups.forEach(function (group) {
+        group.hidden = !Array.prototype.some.call(group.querySelectorAll('[data-media-target]'), function (card) {
+          return !card.hidden;
+        });
+      });
+      if (empty) empty.hidden = cards.some(function (card) { return !card.hidden; });
     });
   });
 

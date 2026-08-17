@@ -20,14 +20,27 @@ block content
                 button.media-filter(type="button", data-media-filter="game", aria-pressed="false")= __('Games')
                 button.media-filter(type="button", data-media-filter="movie", aria-pressed="false")= __('Movies')
             if items.length
-                .media-grid
-                    each item in items
-                        button.media-card(type="button", data-media-type=item.type, data-media-target='media-dialog-' + item.id, aria-label=__('OpenReview', item.title))
-                            if item.cover
-                                img.media-cover(src=item.cover, alt=item.title, width="320", height="480", loading="lazy", decoding="async")
-                            else
-                                span.media-cover-placeholder= item.title
-                            span.media-card-title= item.title
+                - var periodGroups = [];
+                - var periodGroupByKey = {};
+                - items.forEach(function (item) {
+                -   if (!periodGroupByKey[item.periodKey]) {
+                -     periodGroupByKey[item.periodKey] = { key: item.periodKey, label: item.periodLabel, items: [] };
+                -     periodGroups.push(periodGroupByKey[item.periodKey]);
+                -   }
+                -   periodGroupByKey[item.periodKey].items.push(item);
+                - });
+                each period in periodGroups
+                    section.media-period(data-media-group=period.key)
+                        h2.media-period-title= period.label
+                        .media-grid
+                            each item in period.items
+                                button.media-card(type="button", data-media-type=item.type, data-media-target='media-dialog-' + item.id, aria-label=__('OpenReview', item.title))
+                                    if item.cover
+                                        img.media-cover(src=item.cover, alt=item.title, width="320", height="480", loading="lazy", decoding="async")
+                                    else
+                                        span.media-cover-placeholder= item.title
+                                    span.media-card-title= item.title
+                p.media-filter-empty(hidden)= __('NoMediaForFilter')
                 each item in items
                     dialog.media-dialog(id='media-dialog-' + item.id, aria-labelledby='media-title-' + item.id)
                         .media-dialog-inner

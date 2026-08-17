@@ -44,6 +44,16 @@
   gap: 1.8rem 1.25rem;
 }
 
+.media-period + .media-period { margin-top: 3rem; }
+.media-period-title {
+  margin: 0 0 1.2rem;
+  color: rgba(46, 64, 91, 0.72);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.media-filter-empty { padding: 1.5rem 0; color: rgba(46, 64, 91, 0.58); }
+
 .media-card {
   display: flex;
   min-width: 0;

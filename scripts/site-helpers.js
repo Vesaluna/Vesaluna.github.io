@@ -147,11 +147,30 @@ function mediaData() {
   return Array.isArray(parsed) ? parsed : [];
 }
 
+function mediaPeriod(value, language) {
+  const date = dateOnly(value);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    return {
+      key: 'undated',
+      label: language === 'en' ? 'Date not recorded' : language === 'it' ? 'Data non registrata' : '日期未记录'
+    };
+  }
+  const year = date.slice(0, 4);
+  const quarter = Math.floor((Number(date.slice(5, 7)) - 1) / 3) + 1;
+  const label = language === 'en'
+    ? `${year} · Q${quarter}`
+    : language === 'it'
+      ? `${year} · ${quarter}º trimestre`
+      : `${year} 年第${['一', '二', '三', '四'][quarter - 1]}季度`;
+  return { key: `${year}-q${quarter}`, label };
+}
+
 hexo.extend.helper.register('media_items', function mediaItems(page) {
   const language = currentLanguage.call(this, page);
   return mediaData().map((item) => {
     const requestedReview = localized(item.review && item.review[language], language);
     const chineseReview = localized(item.review && item.review['zh-cn'], 'zh-cn');
+    const period = mediaPeriod(item.finished_on, language);
     return {
       id: item.id,
       type: item.type,
@@ -161,6 +180,8 @@ hexo.extend.helper.register('media_items', function mediaItems(page) {
       cover: item.cover,
       year: item.year,
       finishedOn: dateOnly(item.finished_on),
+      periodKey: period.key,
+      periodLabel: period.label,
       completedCount: Number(item.completed_count || 1),
       tags: Array.isArray(item.tags) ? item.tags : [],
       link: item.link || '',
