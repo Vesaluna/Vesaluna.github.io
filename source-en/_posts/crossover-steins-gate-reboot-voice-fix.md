@@ -1,5 +1,5 @@
 ---
-title: Tutorial | Fixing Missing Character Voices in STEINS;GATE RE:BOOT on Mac with CrossOver
+title: Tutorial | Fixing Character Voices in STEINS;GATE RE:BOOT on Mac with CrossOver
 date: 2026-08-30 20:02:56
 tags: [Guide, macOS, CrossOver, Steam, Games]
 lang: en
@@ -8,13 +8,19 @@ permalink: 2026/08/30/crossover-steins-gate-reboot-voice-fix/
 ai_translation: true
 ---
 
-Some time ago, while running the Steam edition of *STEINS;GATE RE:BOOT* (AppID 4012810) through CrossOver 26.3.0 on an Apple Silicon Mac, I ran into a rather peculiar problem. The game started normally, and both the background music and interface sound effects worked, yet the characters were completely silent whenever they spoke.
+Some time ago, while running the Steam edition of *STEINS;GATE RE:BOOT* through CrossOver 26.3.0 on an Apple Silicon Mac, I ran into a rather peculiar problem:
 
-At first it was tempting to suspect damaged voice files. The diagnostic logs eventually pointed elsewhere: the character voices use **Windows Media Audio 2 (WMA v2)**, while this CrossOver installation lacked the GStreamer libav plugin needed to decode that part of the audio chain. This article records how I traced the problem and the solution I eventually adopted. It should also serve as a note to revisit after future CrossOver upgrades.
+- the game started normally;
+- the background music and interface sound effects worked;
+- only the character voices were completely silent.
+
+I eventually confirmed that the game files were not at fault. The problem lay in CrossOver's audio-decoding chain: the character voices use **Windows Media Audio 2 (WMA v2)**, while the current environment lacked a usable **GStreamer libav** decoder plugin.
+
+This article records the solution that ultimately worked for me.
 
 > This article describes an Apple Silicon Mac running CrossOver 26.3.0 and the Steam edition of *STEINS;GATE RE:BOOT*. A CrossOver update may change its bundled GStreamer version, so the dynamic libraries described here should not be copied unchanged into another version.
 
-## 1. Locating the problem
+## 1. Cause of the problem
 
 For the voices to play through CrossOver, the data has to travel through roughly the following chain:
 

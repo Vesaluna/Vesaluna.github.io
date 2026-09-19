@@ -1,5 +1,5 @@
 ---
-title: Guida | Correggere le voci assenti in STEINS;GATE RE:BOOT su Mac con CrossOver
+title: Guida | Ripristinare le voci in STEINS;GATE RE:BOOT su Mac con CrossOver
 date: 2026-08-30 20:02:56
 tags: [Guida, macOS, CrossOver, Steam, Videogiochi]
 lang: it
@@ -8,13 +8,19 @@ permalink: 2026/08/30/crossover-steins-gate-reboot-correzione-voci/
 ai_translation: true
 ---
 
-Qualche tempo fa, eseguendo l'edizione Steam di *STEINS;GATE RE:BOOT* (AppID 4012810) tramite CrossOver 26.3.0 su un Mac Apple Silicon, mi sono imbattuto in un problema piuttosto singolare. Il gioco si avviava normalmente e sia la musica di sottofondo sia gli effetti dell'interfaccia funzionavano, ma i personaggi restavano completamente muti quando parlavano.
+Qualche tempo fa, eseguendo l'edizione Steam di *STEINS;GATE RE:BOOT* tramite CrossOver 26.3.0 su un Mac Apple Silicon, mi sono imbattuto in un problema piuttosto singolare:
 
-In un primo momento era naturale sospettare che i file delle voci fossero danneggiati. I log diagnostici hanno infine indicato un'altra causa: le voci dei personaggi usano **Windows Media Audio 2 (WMA v2)**, mentre in questa installazione di CrossOver mancava il plugin GStreamer libav necessario a decodificare quella parte della catena audio. In questo articolo annoto il percorso seguito per individuare il problema e la soluzione che ho scelto, così da poterlo consultare di nuovo dopo futuri aggiornamenti di CrossOver.
+- il gioco si avviava normalmente;
+- la musica di sottofondo e gli effetti dell'interfaccia funzionavano;
+- soltanto le voci dei personaggi erano completamente assenti.
+
+Alla fine ho verificato che i file del gioco non erano responsabili. Il problema si trovava nella catena di decodifica audio di CrossOver: le voci usano **Windows Media Audio 2 (WMA v2)**, mentre nell'ambiente corrente mancava un plugin di decodifica **GStreamer libav** utilizzabile.
+
+In questo articolo annoto la soluzione che ha funzionato.
 
 > L'ambiente descritto è un Mac Apple Silicon con CrossOver 26.3.0 e l'edizione Steam di *STEINS;GATE RE:BOOT*. Un aggiornamento di CrossOver può cambiare la versione di GStreamer inclusa: le librerie dinamiche descritte qui non vanno quindi copiate alla cieca in un'altra versione.
 
-## 1. Individuare il problema
+## 1. La causa del problema
 
 Per riprodurre le voci attraverso CrossOver, i dati devono attraversare all'incirca questa catena:
 

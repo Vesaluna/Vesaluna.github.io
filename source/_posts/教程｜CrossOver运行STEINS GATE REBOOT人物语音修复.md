@@ -1,5 +1,5 @@
 ---
-title: 教程｜在 Mac 上用 CrossOver 运行《STEINS;GATE RE:BOOT》：人物语音问题与解决办法
+title: 教程｜在 Mac 上用 CrossOver 运行『STEINS;GATE RE:BOOT』时的人物语音修复
 date: 2026-08-30 20:02:56
 tags: [指南, macOS, CrossOver, Steam, 游戏]
 lang: zh-cn
@@ -7,73 +7,90 @@ translation_key: crossover-steins-gate-reboot-voice-fix
 permalink: 2026/08/30/教程｜CrossOver运行STEINS-GATE-REBOOT人物语音修复/
 ---
 
-前些时候，我在 Apple Silicon Mac 上通过 CrossOver 26.3.0 运行 Steam 版《STEINS;GATE RE:BOOT》（AppID 4012810）时，遇到了一个颇为古怪的问题：游戏可以正常启动，BGM 与界面音效也都没有异常，偏偏人物开口时完全没有声音。
+前些时候，我在 Apple Silicon Mac 上通过 CrossOver 26.3.0 运行 Steam 版『STEINS;GATE RE:BOOT』时，遇到了一个比较奇怪的问题：
 
-最初很容易怀疑语音文件有所损坏，但日志最后指向了另一个原因：游戏的人物语音使用 **Windows Media Audio 2（WMA v2）**，而当前 CrossOver 中恰好缺少能完成这一段解码的 GStreamer libav 插件。这里记录一下排查的过程与最后采用的办法，也算为以后升级 CrossOver 时留一份可以回看的笔记。
+- 游戏可以正常启动；
+- BGM 和界面音效正常；
+- 唯独人物语音完全没有声音。
 
-> 本文对应的环境是 Apple Silicon Mac、CrossOver 26.3.0 与 Steam 版《STEINS;GATE RE:BOOT》。CrossOver 升级后可能更换自带的 GStreamer，所以不应将本文中的动态库原样搬到其他版本。
+最后确认，问题并不在游戏文件，而在 CrossOver 的音频解码链路：游戏人物语音使用 **Windows Media Audio 2（WMA v2）**，而当前环境中缺少可用的 **GStreamer libav** 解码插件。
 
-## 1. 问题出在哪里
+本文记录最终可用的解决办法。
 
-人物语音要在 CrossOver 中播放，大致需要经过下面这条链路：
+> 本文环境为 Apple Silicon Mac、CrossOver 26.3.0 与 Steam 版『STEINS;GATE RE:BOOT』。CrossOver 升级后可能更换自带的 GStreamer，因此不要直接把本文中的动态库复制到其他版本。
+
+## 1. 问题原因
+
+人物语音在 CrossOver 中大致经过下面这条链路：
 
 ```text
 游戏中的 WMA v2 语音
         ↓
-Wine / CrossOver 的 wmadmod 与 winegstreamer
+Wine / CrossOver 的 wmadmod、winegstreamer
         ↓
 GStreamer
         ↓
-libav（FFmpeg）中的 avdec_wmav2 解码器
+libav / FFmpeg 的 avdec_wmav2
         ↓
 人物语音
 ```
 
-CrossOver 已经带有 Wine、GStreamer 核心与 macOS 的音频输出，因此游戏的 BGM 和普通音效仍然能播放。但它们正常并不能证明所有音频格式都已经能够解码。在这个案例中，数据已经被交给媒体链路，可是当中没有可用的 `libgstlibav`，所以人物开口时才会单独沉默。
+CrossOver 本身已经具备 Wine、GStreamer 核心和 macOS 音频输出，因此 BGM 与普通音效可以正常播放。
 
-CodeWeavers 也单独列出过 [Missing GStreamer 1.0 libav](https://support.codeweavers.com/en_US/missing-libraries/missinggstreamer1libav) 这类问题。它并非《STEINS;GATE RE:BOOT》独有，只是在这款游戏中恰好以“只有人声消失”的方式表现出来。
+但这并不意味着所有音频格式都能正常解码。
 
-## 2. 先复制一个 bottle
+在这个案例中，WMA v2 数据已经进入 GStreamer 链路，但缺少可用的 `libgstlibav`，因此人物语音无法被解码。
 
-在试验各种媒体组件之前，最重要的一步不是下载文件，而是复制当前能用的 Steam bottle。
+CodeWeavers 也专门记录过这一类问题：
 
-1. 打开 CrossOver。
-2. 右键当前可以正常启动 Steam 的 bottle。
-3. 选择 **Duplicate Bottle**。
-4. 将副本命名为 `Steam-SGRE-Voice-Test`。
-5. 主 bottle 保持不动，后续操作全部在副本中完成。
+[Missing GStreamer 1.0 libav](https://support.codeweavers.com/en_US/missing-libraries/missinggstreamer1libav)
 
-我在测试时仍然使用 Graphics Backend 为 Auto、MSync 开启的组合。只要主 bottle 没有被修改，即使实验失败，也不会影响平时使用的 Steam。
+因此，这并不是『STEINS;GATE RE:BOOT』特有的问题，只是在这款游戏中表现为“BGM 正常、人物无声”。
 
-## 3. 排查中走过的弯路
+## 2. 几个容易踩的坑
 
-### 3.1 不要修改 CrossOver 的共享目录
+在找到最终方案之前，我尝试过几种并不合适的方法。
 
-不要把文件直接复制到：
+### 不要修改 CrossOver 的共享目录
+
+不要直接向下面的目录添加动态库：
 
 ```text
 /Applications/CrossOver.app/Contents/SharedSupport/CrossOver/
 ```
 
-这里是所有 bottle 共用的运行环境。一个不兼容的动态库就可能影响 Steam 与其他 bottle，而且 CrossOver 更新时还可能覆盖这些文件。
+这里属于所有 bottle 共用的运行环境。一旦加入不兼容的库，可能同时影响 Steam 和其他 bottle，而且 CrossOver 更新时也可能覆盖修改。
 
-### 3.2 不要混用 Windows 媒体 DLL
+### 不要混用 Windows 媒体 DLL
 
-我曾尝试过 Windows 7 的原生 `wmadmod.dll`，它会调用 CrossOver 自带的 `mfplat.dll`，并在角色开口时因空指针写入而崩溃。如果继续替换为 Windows 7 的 `mfplat.dll`，游戏又会因为缺少较新的 `MFLockSharedWorkQueue` 接口而无法启动。
+我尝试过 Windows 7 原生的 `wmadmod.dll`。
 
-来自不同 Windows 版本、Wine 与 CrossOver 的媒体 DLL 并不是可以随意拼接的积木。
+结果它会调用 CrossOver 自带的 `mfplat.dll`，并在角色开始说话时崩溃。如果继续替换为 Windows 7 的 `mfplat.dll`，又会因为缺少较新的 `MFLockSharedWorkQueue` 接口而无法启动。
 
-### 3.3 不要使用 Homebrew 的 ARM 插件
+也就是说，不同 Windows 版本以及 Wine / CrossOver 的媒体 DLL 并不能随意混用。
 
-Apple Silicon 上通过 Homebrew 安装的 GStreamer 通常是 ARM64，而 CrossOver 运行这款 Windows 游戏时用到的媒体进程是 x86_64。两种架构不能直接混用。
+### 不要使用纯 ARM64 的 GStreamer 插件
 
-### 3.4 不要让整个 Steam 扫描私有插件
+Apple Silicon 上通过 Homebrew 安装的 GStreamer 通常是 ARM64。
 
-如果将 `GST_PLUGIN_PATH` 一类变量直接加给 Steam，Steam 与它的网页组件也会扫描这套私有 libav，结果可能是长时间停在启动阶段。这些设置只应当传给 `sgre_steam.exe`。
+但 CrossOver 在运行这款游戏时使用的是 x86_64 媒体链路，因此 ARM64 插件不能直接使用。
 
-## 4. 最后采用的方案
+### 不要把插件环境变量加给整个 Steam
 
-最后我没有替换任何 Windows 系统 DLL，而是在测试 bottle 内放入一套仅供 SGRE 使用的 GStreamer libav 组件：
+如果把 `GST_PLUGIN_PATH` 等变量直接传给 Steam，Steam 和它的网页组件也会扫描这套私有插件，可能导致 Steam 长时间停在启动阶段。
+
+这些环境变量只应该传给 `sgre_steam.exe`。
+
+## 3. 最终方案
+
+我的做法是：
+
+1. 复制一个单独的测试 bottle；
+2. 在 bottle 内加入一套私有的 GStreamer libav；
+3. 不替换任何 Windows 系统 DLL；
+4. 只在启动 SGRE 时加载这些插件。
+
+目录结构如下：
 
 ```text
 ~/Library/Application Support/CrossOver/Bottles/
@@ -92,11 +109,13 @@ Apple Silicon 上通过 Homebrew 安装的 GStreamer 通常是 ARM64，而 Cross
             └── libbz2.1.dylib
 ```
 
-组件来自 [GStreamer 官方 macOS Universal 1.24.13 运行时](https://gstreamer.freedesktop.org/download/)。选择 1.24 系列，是因为这个 CrossOver 版本自带 GStreamer 1.24.4，同一稳定系列更容易保持二进制兼容。对应的官方说明可见 [GStreamer 1.24 release notes](https://gstreamer.freedesktop.org/releases/1.24/)。
+这些组件来自 [GStreamer 官方 macOS Universal 1.24 系列运行时](https://gstreamer.freedesktop.org/download/)。
 
-不过，1.24.13 插件声明需要 1.24.14 级别的库兼容版本，而 CrossOver 提供的是 1.24.4，所以不能只把文件复制进去。我对插件的最低兼容版本与依赖路径进行了适配，并对修改后的动态库做了 ad-hoc 签名。
+CrossOver 26.3.0 自带的是 GStreamer 1.24.4，因此我选择了同属 1.24 系列的组件，以尽量降低 ABI 不兼容的风险。
 
-成功使用的两个关键文件 SHA-256 如下：
+不过，直接复制仍然不能工作：我使用的 1.24.13 插件声明要求更高的 1.24.x 库兼容版本，因此还需要调整最低兼容版本和动态库依赖路径，并对修改后的文件重新进行 ad-hoc 签名。
+
+最终成功使用的两个关键文件 SHA-256 为：
 
 ```text
 libgstlibav.dylib
@@ -106,11 +125,13 @@ libgstpbutils-1.0.0.dylib
 5a3f007aabde95632acc35ac16c4902b0060883e063e60e1bb32a1175cf3b6b4
 ```
 
-> 不建议基础用户自行使用十六进制编辑器修改 `.dylib`。更稳妥的方式是使用与 CrossOver 版本匹配、来源清楚且可以校验的组件。CrossOver 或 GStreamer 升级后，也应当重新检查兼容性。
+> 不建议不熟悉 Mach-O 动态库的用户直接用十六进制编辑器修改 `.dylib`。更稳妥的方式，是使用与 CrossOver 版本匹配、来源明确且可以校验的组件。
 
-## 5. 只在启动游戏时加载插件
+## 4. 只在启动 SGRE 时加载插件
 
-即使文件已经放入 bottle，从 Steam 的“开始游戏”按钮启动时，SGRE 默认仍然只能看到 CrossOver 自带的插件目录。因此我又做了一个专用启动器，只在启动 `sgre_steam.exe` 的一刻设置解码环境：
+即使插件已经放进 bottle，通过 Steam 的“开始游戏”按钮启动时，SGRE 仍然只能看到 CrossOver 默认的插件目录。
+
+因此我使用了一个单独的启动脚本：
 
 ```zsh
 #!/bin/zsh
@@ -123,10 +144,13 @@ wine_bin='/Applications/CrossOver.app/Contents/SharedSupport/CrossOver/bin/wine'
 
 export SteamAppId='4012810'
 export SteamGameId='4012810'
+
 export GST_PLUGIN_PATH="$plugin_root/lib/gstreamer-1.0"
 export GST_PLUGIN_PATH_1_0="$plugin_root/lib/gstreamer-1.0"
+
 export GST_PLUGIN_SYSTEM_PATH='/Applications/CrossOver.app/Contents/SharedSupport/CrossOver/lib64/gstreamer-1.0'
 export GST_PLUGIN_SYSTEM_PATH_1_0="$GST_PLUGIN_SYSTEM_PATH"
+
 export GST_REGISTRY="$plugin_root/registry.bin"
 export GST_REGISTRY_FORK='no'
 export GST_PLUGIN_FEATURE_RANK='avdec_wmav2:MAX'
@@ -137,25 +161,40 @@ exec "$wine_bin" \
   --cx-app 'C:\Program Files (x86)\Steam\steamapps\common\SGRE\sgre_steam.exe'
 ```
 
-如果 bottle 名称不同，需要同时修改 `bottle_name` 和 `bottle_root`。为了不必每次打开终端，我把这个脚本封装并签名成了普通的 macOS 应用：
+如果 bottle 名称不同，需要同时修改：
+
+```text
+bottle_name
+bottle_root
+```
+
+后来我又把这个脚本封装并签名成了一个普通的 macOS 应用：
 
 ```text
 STEINS;GATE REBOOT Voice Fix.app
 ```
 
-日常启动时，先打开 `Steam-SGRE-Voice-Test` bottle 中的 Steam，但不要点击其中的“开始游戏”；然后双击这个专用启动器。这样变量只会影响 SGRE，不会让 Steam 整体进入私有插件环境。
+实际使用时：
 
-## 6. 如何确认修复生效
+```text
+启动测试 bottle 中的 Steam
+→ 不要点击 Steam 的“开始游戏”
+→ 双击 STEINS;GATE REBOOT Voice Fix.app
+```
 
-“游戏没有崩溃”并不等于问题已经解决。我最后按照下面几点做了验证：
+这样 GStreamer 的私有插件环境只会作用于 SGRE，不会影响 Steam 本身。
 
-- 游戏窗口可以正常出现；
-- BGM、界面与环境音效正常；
-- 角色连续说多句台词时都有声音；
+## 5. 如何确认修复成功
+
+修复后，我主要检查了下面几项：
+
+- 游戏能够正常启动；
+- BGM、界面和环境音效正常；
+- 角色连续多句台词都有语音；
 - 切换存档或场景后语音仍然正常；
 - 退出后可以再次通过专用启动器进入。
 
-诊断日志中明确出现了：
+诊断日志中还可以看到：
 
 ```text
 avdec_wmav2
@@ -163,41 +202,89 @@ Decoded data
 return flow ok
 ```
 
-同时，运行中的游戏进程确实从测试 bottle 的 `cx_gstreamer_libav` 目录加载了 `libgstlibav.dylib`、`libavcodec.60.dylib` 等组件。人物语音的恢复因此不是偶然，而是 WMA v2 解码链路已经真正接通。
+同时，运行中的游戏进程确实加载了测试 bottle 中的：
 
-## 7. 故障排查与回滚
+```text
+libgstlibav.dylib
+libavcodec.60.dylib
+...
+```
 
-### 仍然没有语音
+这说明恢复语音的原因确实是 WMA v2 解码链路已经接通，而不是偶然现象。
 
-- 确认是通过专用启动器运行，而不是 Steam 的“开始游戏”。
-- 确认脚本中的 bottle 名称与 CrossOver 左侧显示的名称完全一致。
-- 确认 `cx_gstreamer_libav` 仍在测试 bottle 内。
-- 确认 `libgstlibav.dylib` 是 x86_64 或 Universal，而不是仅 ARM64。
+## 6. 常见问题
 
-### 人物开口时崩溃
+### 仍然没有人物语音
 
-优先检查是否曾把原生 `wmadmod.dll`、`mfplat.dll` 或其他媒体 DLL 复制进 `drive_c/windows/system32`。如果有，应当停止继续混装，恢复测试前的 bottle 备份。
+检查：
 
-### Steam 卡在启动中
+- 是否通过专用启动器启动，而不是 Steam 的“开始游戏”；
+- bottle 名称是否正确；
+- `cx_gstreamer_libav` 是否仍位于测试 bottle 中；
+- `libgstlibav.dylib` 是否包含 x86_64 架构。
 
-这通常是因为把 `GST_PLUGIN_PATH` 等变量传给了 Steam 本身。退出测试 bottle，恢复普通的 Steam 启动方式，只在 SGRE 专用启动器中设置这些变量。
+### 人物开口时游戏崩溃
 
-### 升级 CrossOver 后再次失效
+检查是否曾向：
 
-CrossOver 更新可能改变自带的 GStreamer 版本。不要将旧插件直接放进新版本的共享目录；应先复制 bottle，再检查新版本的 GStreamer 版本与架构。
+```text
+drive_c/windows/system32
+```
 
-本方案的改动都被限制在测试 bottle 和独立启动器中，回滚也很简单：停止使用 `STEINS;GATE REBOOT Voice Fix.app`，移走 bottle 内的 `cx_gstreamer_libav` 文件夹，或者直接恢复此前复制的干净 bottle。不需要删除仍然正常的主 Steam bottle，也不需要重装 CrossOver。
+复制过原生 `wmadmod.dll`、`mfplat.dll` 或其他媒体 DLL。
 
-## 8. 简单的总结
+如果有，建议恢复到测试前的 bottle，而不要继续混装。
 
-这次问题的根因，是人物语音使用 WMA v2，而现有 CrossOver 媒体链路中缺少可用的 GStreamer libav 解码插件。最后的处理思路可以简化为：
+### Steam 卡在启动阶段
+
+通常是因为把 `GST_PLUGIN_PATH` 等变量传给了 Steam 本身。
+
+恢复普通 Steam 启动方式，只在 SGRE 的专用启动器中设置这些变量即可。
+
+### CrossOver 升级后再次失效
+
+CrossOver 更新可能改变其 GStreamer 版本和动态库依赖。
+
+因此升级后不要继续沿用旧插件，应重新检查：
+
+```text
+CrossOver 自带 GStreamer 版本
+插件版本
+CPU 架构
+动态库依赖
+```
+
+## 7. 回滚
+
+这套方案的改动都限制在测试 bottle 与独立启动器中，因此回滚很简单：
+
+```text
+停止使用专用启动器
+→ 删除或移走 cx_gstreamer_libav
+→ 或直接恢复原来的测试 bottle
+```
+
+不需要修改主 Steam bottle，也不需要重装 CrossOver。
+
+## 总结
+
+这个问题的根因可以概括为：
+
+```text
+SGRE 人物语音使用 WMA v2
+→ CrossOver 的 GStreamer 链路缺少可用 libav
+→ avdec_wmav2 无法工作
+→ 人物语音消失
+```
+
+最终采用的办法则是：
 
 ```text
 复制测试 bottle
-→ 在 bottle 内放入版本与架构匹配的私有 libav 插件
+→ 加入版本和架构匹配的私有 GStreamer libav
 → 只给 SGRE 设置插件路径
-→ 通过独立启动器运行
-→ 用人物台词与解码日志双重验证
+→ 使用独立启动器运行
+→ 通过语音与日志确认解码成功
 ```
 
-这样做虽然比直接丢几个 DLL 进去麻烦一些，但影响范围一直被限制在副本 bottle 之内，主 Steam 环境与 CrossOver 共享目录都能保持原状。
+相比直接替换 Windows DLL，这种做法稍微麻烦一些，但隔离性更好，也不会污染 CrossOver 的共享环境。
