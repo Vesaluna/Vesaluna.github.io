@@ -48,7 +48,13 @@ const required = [
   '2026/07/16/游记｜遁入织金/index.html',
   '2026/07/18/游记｜访黄果树/index.html',
   '2026/08/30/教程｜CrossOver运行STEINS-GATE-REBOOT人物语音修复/index.html',
-  '2026/09/19/像大小姐一样说话/index.html'
+  '2026/09/19/像大小姐一样说话/index.html',
+  '2023/09/29/转载｜为学与做人/index.html',
+  '2024/11/23/随笔｜关于数学的学习/index.html',
+  '2025/02/07/随笔｜主播女孩重度依赖游玩感想/index.html',
+  '2025/02/24/随笔｜如何有效地学习语言/index.html',
+  '2025/05/03/随笔｜关于书写同人小说的若干想法/index.html',
+  '2026/08/12/游戏｜绯色仙行录品鉴/index.html'
 ];
 
 for (const relative of required) check(existsSync(join(output, relative)), `Missing output: ${relative}`);
@@ -91,7 +97,7 @@ for (const [language, sourceDirectory] of [['en', 'source-en'], ['it', 'source-i
     translatedPostCount += 1;
   }
 }
-check(translatedPostCount === 30, `Expected 30 translated posts, found ${translatedPostCount}`);
+check(translatedPostCount === 42, `Expected 42 translated posts, found ${translatedPostCount}`);
 
 const media = yaml.load(readFileSync(resolve(root, 'data/media.yml'), 'utf8')) || [];
 const mediaPage = readFileSync(join(output, 'works/index.html'), 'utf8');
