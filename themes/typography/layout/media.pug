@@ -14,6 +14,12 @@ block content
             if page.content
                 .media-page-intro!= page.content
             - var items = media_items(page);
+            - var years = [...new Set(items.map(function (item) { return item.periodKey === 'undated' ? 'undated' : item.periodKey.slice(0, 4); }))];
+            if years.length
+                .media-years(role="group", aria-label=__('Year'))
+                    button.media-year.is-active(type="button", data-media-year="all", aria-pressed="true")= __('All')
+                    each year in years
+                        button.media-year(type="button", data-media-year=year, aria-pressed="false")= year === 'undated' ? __('Undated') : year
             .media-filters(role="group", aria-label=page.title)
                 button.media-filter.is-active(type="button", data-media-filter="all", aria-pressed="true")= __('All')
                 button.media-filter(type="button", data-media-filter="book", aria-pressed="false")= __('Books')
@@ -30,7 +36,7 @@ block content
                 -   periodGroupByKey[item.periodKey].items.push(item);
                 - });
                 each period in periodGroups
-                    section.media-period(data-media-group=period.key)
+                    section.media-period(data-media-group=period.key, data-media-year=period.key === 'undated' ? 'undated' : period.key.slice(0, 4))
                         h2.media-period-title= period.label
                         .media-grid
                             each item in period.items

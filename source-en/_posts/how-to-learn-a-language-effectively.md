@@ -10,15 +10,11 @@ ai_translation: true
 
 Before learning a language, one should ask what the purpose of learning it is. Without a purpose, it is difficult to travel very far. The same principle applies in other fields as well.
 
-## Knowing where I want to arrive
-
 I am learning Italian because I need to live in this country. To live here fully, I will eventually need a command of the language approaching that of a native speaker.
 
 What would such a level mean? In speech, it would mean being able to converse with anyone in the country, regardless of class, gender or region, and to make myself understood.
 
 Then there is writing. I should be able to write elevated literature as well as ordinary popular prose, while also learning to produce rigorous academic work.
-
-## Input and output
 
 Once the goal is clear, the next question is how to learn.
 

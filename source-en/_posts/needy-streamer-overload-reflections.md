@@ -14,8 +14,6 @@ It has been two weeks since I completed the game, after spending eighty hours wi
 
 I spent two weeks delaying, revising and returning to this article. It still feels disorderly and awkward, but this is the form in which I can finally bring it to an end.
 
-## Becoming “P-chan”
-
 The game is *NEEDY STREAMER OVERLOAD*. On opening it, a pixel-art desktop modelled after Windows appears, accompanied by simple and cheerful electronic music.
 
 The story belongs to Ame-chan. I am assigned the role of her Producer—“P-chan,” as she calls me—and given the goal of turning her into a streamer with one million followers within thirty days.
@@ -27,8 +25,6 @@ Every choice and every stream leaves a mark not only on Ame-chan herself, but al
 At first I weighed every option carefully. I tried to steer her away from the worst paths and find a direct route to a happy ending. Yet even after reaching one million followers in thirty days, Ame-chan unexpectedly blocked me. That was my first bad ending.
 
 Puzzled, I began another playthrough and tried to avoid whatever mistake I might have made. Several attempts later, ordinary play still led only to endings I found unsatisfying.
-
-## Breaking the porcelain cup called Ame-chan
 
 The game seems to possess a certain malice. It wants the player to make the choices that will gently and gradually shatter the porcelain cup called Ame-chan, then watch the same vessel break again and again in order to collect endings.
 
@@ -43,8 +39,6 @@ The grey colour of that childhood became the ground of her inner world, leaving 
 Life in the city was harsh for someone alone and empty-handed. After discovering the internet, she was quickly absorbed by it. For the first time she felt that she could be loved, that someone might pay attention to her and offer comfort. At the beginning of the game, she therefore chooses streaming in the hope of receiving still more attention, devotion and love.
 
 She writes a persona for herself and becomes OMGkawaiiAngel, an angel of the online world. Commemorative streams appear as her audience grows. They suggest that beyond satisfying her own desires, she also wants to become an angel capable of comforting people who resemble her.
-
-## “Dear God”
 
 Streaming brings many kinds of pressure, especially when the goal is an almost impossible one million followers in thirty days. Ame-chan already has serious psychological difficulties, and the “medication” action allows her to overdose. It is one of the few ways to reduce stress quickly, but it also increases mental darkness dramatically.
 
@@ -62,15 +56,11 @@ In one ending, Ame-chan travels at night to the Galactic Railroad station and bo
 
 By the end of the game, however, she has not reached the heaven she hoped for. Her god truly exists, but remains high above, doing nothing but watching.
 
-## Internet Overdose
-
 Another ending that affected me deeply is called “Internet Overdose.” Ame-chan reaches maximum stress twice. During a stream, hostile comments make her physically ill and she vomits.
 
 The bloodied bait falls into the water and immediately draws a school of sharks. The more fiercely she struggles, the more violently they bite.
 
 Her personal information is exposed. Unexplained cameras appear near her home. Abuse and mockery cover the internet, placing her under such pressure that she begins to hallucinate. In this ending, Ame-chan dies by suicide while viewers fill the stream with jeering messages.
-
-## Day 0 and a future in reality
 
 After twenty-two endings, a save file called “Day 0” appears on the title screen. The player has no control after entering it. Ame-chan sends messages herself and says she wants to reach one million followers through her own effort.
 

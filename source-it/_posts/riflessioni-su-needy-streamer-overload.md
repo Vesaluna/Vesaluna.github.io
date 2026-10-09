@@ -14,8 +14,6 @@ Sono trascorse due settimane da quando ho completato il gioco, dopo avergli dedi
 
 Per due settimane ho rimandato, corretto e ripreso questo articolo. Mi sembra ancora disordinato e impacciato, ma è la forma in cui riesco finalmente a concluderlo.
 
-## Diventare “P-chan”
-
 Il gioco è *NEEDY STREAMER OVERLOAD*. All'avvio compare un desktop in pixel art modellato su Windows, accompagnato da una musica elettronica semplice e allegra.
 
 La storia appartiene ad Ame-chan. A me viene assegnato il ruolo di Producer—“P-chan”, come mi chiama lei—con l'obiettivo di trasformarla, entro trenta giorni, in una streamer da un milione di follower.
@@ -27,8 +25,6 @@ Ogni scelta e ogni diretta lasciano una traccia non soltanto su Ame-chan, ma anc
 All'inizio valutavo con prudenza ogni opzione. Cercavo di tenerla lontana dai percorsi peggiori e di trovare una strada diretta verso un lieto fine. Eppure, anche dopo aver raggiunto un milione di follower in trenta giorni, Ame-chan mi bloccò all'improvviso. Fu il mio primo finale negativo.
 
 Perplesso, iniziai un'altra partita e cercai di evitare l'errore che potevo aver commesso. Dopo vari tentativi, tuttavia, il gioco normale continuava a condurre soltanto a finali che non mi soddisfacevano.
-
-## Infrangere la tazza di porcellana chiamata Ame-chan
 
 Il gioco sembra possedere una certa malizia. Desidera che il giocatore compia le scelte capaci di frantumare lentamente e con delicatezza la tazza di porcellana chiamata Ame-chan, per poi osservare lo stesso recipiente rompersi ancora e ancora e raccogliere così nuovi finali.
 
@@ -43,8 +39,6 @@ Il grigio dell'infanzia divenne il fondo del suo mondo interiore, lasciandola af
 La vita in città era dura per una persona sola e senza nulla. Dopo aver scoperto internet, ne fu rapidamente assorbita. Per la prima volta sentì di poter essere amata, che qualcuno potesse notarla e confortarla. All'inizio del gioco sceglie quindi di diventare streamer nella speranza di ricevere ancora più attenzione, devozione e amore.
 
 Costruisce un personaggio per sé e diventa OMGkawaiiAngel, un angelo del mondo online. Quando il pubblico cresce, compaiono dirette commemorative. Esse suggeriscono che, oltre a soddisfare i propri desideri, Ame-chan voglia davvero diventare un angelo capace di consolare chi le assomiglia.
-
-## “Caro Dio”
 
 Fare streaming comporta molte pressioni, soprattutto quando l'obiettivo è raggiungere un milione di follower in trenta giorni. Ame-chan ha già gravi difficoltà psicologiche, e l'azione relativa ai farmaci le permette di andare in overdose. È uno dei pochi modi per ridurre rapidamente lo stress, ma aumenta drasticamente l'oscurità mentale.
 
@@ -62,15 +56,11 @@ In uno dei finali, Ame-chan raggiunge di notte la stazione della Ferrovia Galatt
 
 Alla fine del gioco, tuttavia, non raggiunge il paradiso desiderato. Il suo dio esiste davvero, ma rimane in alto e si limita a osservare.
 
-## Internet Overdose
-
 Un altro finale che mi ha colpito profondamente si chiama “Internet Overdose”. Ame-chan raggiunge due volte il livello massimo di stress. Durante una diretta, i commenti ostili le provocano un malessere fisico e vomita.
 
 L'esca insanguinata cade nell'acqua e attira immediatamente un branco di squali. Più lei si dibatte, più i loro morsi diventano violenti.
 
 I suoi dati personali vengono esposti. Telecamere misteriose compaiono vicino a casa. Insulti e scherno invadono internet, sottoponendola a una pressione tanto grave da provocarle allucinazioni. In questo finale Ame-chan muore suicida mentre gli spettatori riempiono la diretta di messaggi beffardi.
-
-## Day 0 e un futuro nella realtà
 
 Dopo ventidue finali, nella schermata principale appare un salvataggio chiamato “Day 0”. Una volta entrati, il giocatore non può controllare nulla. Ame-chan invia da sola i messaggi e dice di voler raggiungere un milione di follower con le proprie forze.
 

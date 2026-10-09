@@ -10,8 +10,6 @@ ai_translation: true
 
 Studiare matematica richiede più che leggere libri con impegno e risolvere esercizi: richiede anche di pensare. È un fatto evidente, eppure durante lo studio finisco spesso per dimenticarlo.
 
-## Dal seguire una dimostrazione al porre domande
-
 Quando leggo la dimostrazione di un teorema, cerco di capire in che modo le ipotesi conducano al risultato. Una volta arrivato alla conclusione, però, mi sento soddisfatto e metto tutto da parte, tornando a consultarlo soltanto se un esercizio lo richiede.
 
 È chiaramente insufficiente. La parte importante dello studio della matematica non consiste soltanto nel verificare che un teorema sia corretto. Questo conta, naturalmente, ma i nostri predecessori hanno già impiegato secoli a rendere solida quella strada. Il mio compito è pensare più a fondo.
@@ -22,8 +20,6 @@ La matematica può certamente stancare, ma nessuna regola mi impone di terminare
 
 L'unico difetto di questo metodo è che i risultati non si vedono subito. Molti benefici emergono silenziosamente anni più tardi e diventano parte del proprio modo di pensare.
 
-## Conservare interesse e rigore
-
 Non occorre andare più in fretta né vivere lo studio con ansia. Sappiamo che una nuova scoperta matematica può impiegare molto tempo prima di influire sulla vita quotidiana. Perché, allora, tante persone continuano a dedicarsi a questo gioco del pensiero?
 
 Perché è interessante e perché è rigoroso. Sono questi i due aspetti essenziali. La matematica può essere seria, ma dovrebbe anche rimanere piacevole.
@@ -31,8 +27,6 @@ Perché è interessante e perché è rigoroso. Sono questi i due aspetti essenzi
 Prima di leggere un libro di matematica, dovrei stabilire quali capitoli studiare e assegnarmi dei tempi. La scadenza deve restare flessibile e adattarsi alle circostanze, ma è comunque utile: senza di essa, lo studio rischia di diventare troppo dispersivo per trasformarsi in abitudine.
 
 Bisogna poi comprendere ogni capitolo e provare gli esercizi. Ce ne saranno certamente alcuni che non riuscirò a risolvere, ma non è un motivo per rimproverarmi eccessivamente. Gli esercizi servono a verificare ciò che ho imparato e a riflettere sulla funzione di ogni elemento.
-
-## Pensare con la penna
 
 La cosa più importante è continuare a chiedersi “perché” mentre si legge e si risolvono problemi.
 

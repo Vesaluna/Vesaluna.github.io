@@ -3,27 +3,50 @@
 
   var cards = Array.prototype.slice.call(document.querySelectorAll('[data-media-target]'));
   var filters = Array.prototype.slice.call(document.querySelectorAll('[data-media-filter]'));
+  var years = Array.prototype.slice.call(document.querySelectorAll('button[data-media-year]'));
   var groups = Array.prototype.slice.call(document.querySelectorAll('[data-media-group]'));
   var empty = document.querySelector('.media-filter-empty');
-  if (!cards.length && !filters.length) return;
+  if (!cards.length && !filters.length && !years.length) return;
+
+  var selectedType = 'all';
+  var selectedYear = 'all';
+
+  function updateVisible() {
+    cards.forEach(function (card) {
+      var group = card.closest('[data-media-group]');
+      var matchesYear = selectedYear === 'all' || (group && group.getAttribute('data-media-year') === selectedYear);
+      var matchesType = selectedType === 'all' || card.getAttribute('data-media-type') === selectedType;
+      card.hidden = !matchesYear || !matchesType;
+    });
+    groups.forEach(function (group) {
+      group.hidden = !Array.prototype.some.call(group.querySelectorAll('[data-media-target]'), function (card) {
+        return !card.hidden;
+      });
+    });
+    if (empty) empty.hidden = cards.some(function (card) { return !card.hidden; });
+  }
 
   filters.forEach(function (filter) {
     filter.addEventListener('click', function () {
-      var selected = filter.getAttribute('data-media-filter');
+      selectedType = filter.getAttribute('data-media-filter');
       filters.forEach(function (item) {
         var active = item === filter;
         item.classList.toggle('is-active', active);
         item.setAttribute('aria-pressed', String(active));
       });
-      cards.forEach(function (card) {
-        card.hidden = selected !== 'all' && card.getAttribute('data-media-type') !== selected;
+      updateVisible();
+    });
+  });
+
+  years.forEach(function (year) {
+    year.addEventListener('click', function () {
+      selectedYear = year.getAttribute('data-media-year');
+      years.forEach(function (item) {
+        var active = item === year;
+        item.classList.toggle('is-active', active);
+        item.setAttribute('aria-pressed', String(active));
       });
-      groups.forEach(function (group) {
-        group.hidden = !Array.prototype.some.call(group.querySelectorAll('[data-media-target]'), function (card) {
-          return !card.hidden;
-        });
-      });
-      if (empty) empty.hidden = cards.some(function (card) { return !card.hidden; });
+      updateVisible();
     });
   });
 

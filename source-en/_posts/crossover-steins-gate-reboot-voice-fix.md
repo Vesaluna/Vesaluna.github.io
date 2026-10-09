@@ -8,19 +8,13 @@ permalink: 2026/08/30/crossover-steins-gate-reboot-voice-fix/
 ai_translation: true
 ---
 
-Some time ago, while running the Steam edition of *STEINS;GATE RE:BOOT* through CrossOver 26.3.0 on an Apple Silicon Mac, I ran into a rather peculiar problem:
+Some time ago, while running the Steam edition of *STEINS;GATE RE:BOOT* through CrossOver 26.3.0 on an Apple Silicon Mac, I ran into a rather peculiar problem. The game started normally, and both the background music and interface sound effects worked, but the character voices were completely silent.
 
-- the game started normally;
-- the background music and interface sound effects worked;
-- only the character voices were completely silent.
-
-I eventually confirmed that the game files were not at fault. The problem lay in CrossOver's audio-decoding chain: the character voices use **Windows Media Audio 2 (WMA v2)**, while the current environment lacked a usable **GStreamer libav** decoder plugin.
+I eventually confirmed that the game files were not at fault. The problem lay in CrossOver's audio-decoding chain: the character voices use Windows Media Audio 2 (WMA v2), while the current environment lacked a usable GStreamer libav decoder plugin.
 
 This article records the solution that ultimately worked for me.
 
 > This article describes an Apple Silicon Mac running CrossOver 26.3.0 and the Steam edition of *STEINS;GATE RE:BOOT*. A CrossOver update may change its bundled GStreamer version, so the dynamic libraries described here should not be copied unchanged into another version.
-
-## 1. Cause of the problem
 
 For the voices to play through CrossOver, the data has to travel through roughly the following chain:
 
@@ -40,21 +34,9 @@ CrossOver already includes Wine, the GStreamer core and macOS audio output. That
 
 CodeWeavers also documents the broader [Missing GStreamer 1.0 libav](https://support.codeweavers.com/en_US/missing-libraries/missinggstreamer1libav) problem. It is not unique to *STEINS;GATE RE:BOOT*; this game simply exposes it as missing voices while other audio remains intact.
 
-## 2. Duplicate the bottle first
-
-Before testing any media components, the most important step is not downloading a library but copying the working Steam bottle.
-
-1. Open CrossOver.
-2. Right-click the bottle in which Steam currently starts normally.
-3. Select **Duplicate Bottle**.
-4. Name the copy `Steam-SGRE-Voice-Test`.
-5. Leave the main bottle untouched and perform every later experiment in the copy.
+Before testing any media components, the most important step is not downloading a library but copying the working Steam bottle. In CrossOver, right-click the bottle in which Steam currently starts normally and select Duplicate Bottle. Name the copy `Steam-SGRE-Voice-Test`, leave the main bottle untouched, and perform every later experiment in the copy.
 
 I kept the known stable graphics settings—Graphics Backend set to Auto and MSync enabled. As long as the main bottle is not altered, a failed experiment will not affect the Steam installation used every day.
-
-## 3. Approaches that did not work
-
-### 3.1 Do not modify CrossOver's shared directory
 
 Do not copy files directly into:
 
@@ -64,21 +46,13 @@ Do not copy files directly into:
 
 This environment is shared by every bottle. One incompatible dynamic library can affect Steam and other bottles, and a CrossOver update may overwrite the files anyway.
 
-### 3.2 Do not mix Windows media DLLs
-
 I tested the native Windows 7 `wmadmod.dll`. It called CrossOver's bundled `mfplat.dll` and crashed with a null-pointer write as soon as a character spoke. Replacing that file with the Windows 7 `mfplat.dll` did not help: the game then failed to start because that version lacks the newer `MFLockSharedWorkQueue` interface.
 
 Media DLLs taken from different Windows versions, Wine and CrossOver are not interchangeable building blocks.
 
-### 3.3 Do not use the ARM Homebrew plugin
-
 On Apple Silicon, GStreamer installed through Homebrew is normally ARM64, while the media process used by CrossOver for this Windows game is x86_64. Those architectures cannot be mixed directly.
 
-### 3.4 Do not apply the private decoder environment to all of Steam
-
 If variables such as `GST_PLUGIN_PATH` are applied to Steam itself, Steam and its web components will also scan the private libav bundle. Steam may then remain stuck during startup. The decoder environment should be passed only to `sgre_steam.exe`.
-
-## 4. The solution I used
 
 Instead of replacing any Windows system DLL, I placed a private GStreamer libav bundle inside the test bottle and made it available only to SGRE:
 
@@ -115,9 +89,7 @@ libgstpbutils-1.0.0.dylib
 
 > I do not recommend that inexperienced users modify `.dylib` files with a hex editor. Use components that match the CrossOver version, come from a known source and can be verified by checksum. Compatibility should be checked again after any CrossOver or GStreamer update.
 
-## 5. Load the plugin only when starting the game
-
-Even after the files are placed inside the bottle, launching from Steam's **Play** button still lets SGRE see only CrossOver's default plugin directory. I therefore made a dedicated launcher that sets the decoder environment only when `sgre_steam.exe` starts:
+Even after the files are placed inside the bottle, launching from Steam's Play button still lets SGRE see only CrossOver's default plugin directory. I therefore made a dedicated launcher that sets the decoder environment only when `sgre_steam.exe` starts:
 
 ```zsh
 #!/bin/zsh
@@ -150,17 +122,9 @@ If the bottle has a different name, both `bottle_name` and `bottle_root` need to
 STEINS;GATE REBOOT Voice Fix.app
 ```
 
-For ordinary use, I first start Steam in the `Steam-SGRE-Voice-Test` bottle without clicking **Play**, then open the dedicated launcher. This keeps the variables limited to SGRE instead of placing all of Steam inside the private plugin environment.
+For ordinary use, I first start Steam in the `Steam-SGRE-Voice-Test` bottle without clicking Play, then open the dedicated launcher. This keeps the variables limited to SGRE instead of placing all of Steam inside the private plugin environment.
 
-## 6. Verifying that the fix is real
-
-The fact that the game no longer crashes is not enough. I checked all of the following:
-
-- the game window opens normally;
-- BGM, interface sounds and ambient effects work;
-- several consecutive spoken lines contain voices;
-- voices remain after loading a save or changing scenes;
-- the game can be closed and started again through the launcher.
+The fact that the game no longer crashes is not enough. I checked that the game window opened normally, that BGM, interface sounds and ambient effects still worked, and that several consecutive spoken lines contained voices. The voices remained after loading a save or changing scenes, and the game could be closed and started again through the launcher.
 
 The diagnostic log explicitly contained:
 
@@ -172,30 +136,15 @@ return flow ok
 
 The running game process also loaded `libgstlibav.dylib`, `libavcodec.60.dylib` and the other components from the test bottle's `cx_gstreamer_libav` directory. The voices had not returned by accident: the WMA v2 decoding chain was actually connected.
 
-## 7. Troubleshooting and rollback
-
-### Voices are still missing
-
-- Make sure the game was started through the dedicated launcher rather than Steam's **Play** button.
-- Check that the bottle name in the script exactly matches the name shown in CrossOver.
-- Confirm that `cx_gstreamer_libav` is still inside the test bottle.
-- Confirm that `libgstlibav.dylib` is x86_64 or Universal, not ARM64 only.
-
-### The game crashes when a character speaks
+If the voices are still missing, check that the game was started through the dedicated launcher rather than Steam's Play button. The bottle name in the script must exactly match the name shown in CrossOver, `cx_gstreamer_libav` must still be inside the test bottle, and `libgstlibav.dylib` must be x86_64 or Universal rather than ARM64 only.
 
 Check whether native `wmadmod.dll`, `mfplat.dll` or other media DLLs were copied into `drive_c/windows/system32`. If so, stop mixing components and restore the bottle backup made before testing.
 
-### Steam remains stuck while starting
-
 This usually means `GST_PLUGIN_PATH` and related variables were passed to Steam itself. Exit the test bottle, restore the normal Steam launch method, and keep those variables only in the dedicated SGRE launcher.
-
-### Voices disappear after updating CrossOver
 
 A CrossOver update may change its bundled GStreamer version. Do not copy the old plugin into the new shared directory. Duplicate the bottle first, then inspect the new GStreamer version and architecture before adapting the bundle again.
 
 Because all changes are confined to the test bottle and the separate launcher, rollback is simple: stop using `STEINS;GATE REBOOT Voice Fix.app`, move the `cx_gstreamer_libav` directory out of the bottle, or restore the clean duplicated bottle. There is no need to delete the working main Steam bottle or reinstall CrossOver.
-
-## 8. A short summary
 
 The missing voices were caused by WMA v2 character audio meeting a CrossOver media chain without a usable GStreamer libav decoder. The final method can be reduced to the following sequence:
 

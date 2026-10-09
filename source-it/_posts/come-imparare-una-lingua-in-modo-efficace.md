@@ -10,15 +10,11 @@ ai_translation: true
 
 Prima di imparare una lingua, bisogna domandarsi quale sia lo scopo per cui la si studia. Senza uno scopo è difficile percorrere molta strada. Lo stesso principio vale anche in altri campi.
 
-## Sapere dove voglio arrivare
-
 Studio l'italiano perché devo vivere in questo paese. Per viverci pienamente, dovrò raggiungere una padronanza della lingua vicina a quella di un madrelingua.
 
 Che cosa significa un simile livello? Nel parlato vuol dire riuscire a conversare con chiunque nel paese, indipendentemente dalla classe sociale, dal genere o dalla regione di provenienza, facendosi comprendere.
 
 Poi c'è la scrittura. Dovrei saper comporre tanto un'opera letteraria elevata quanto un testo popolare e quotidiano, imparando allo stesso tempo a produrre lavori accademici rigorosi.
-
-## Input e output
 
 Una volta chiarito l'obiettivo, bisogna chiedersi come imparare.
 

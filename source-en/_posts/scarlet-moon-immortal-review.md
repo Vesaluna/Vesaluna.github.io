@@ -10,8 +10,6 @@ ai_translation: true
 
 Introducing a game inevitably involves subjective judgement. A work that leaves me indifferent may appeal greatly to someone else. The following should therefore be treated only as a point of reference: if the game catches your eye, it may still be worth trying for yourself.
 
-## What kind of game is it?
-
 *Scarlet Moon Immortal* is a role-playing game. The player controls its heroine, gathers materials, raises levels, and unlocks story scenes and CG illustrations. Combat is turn-based and somewhat reminiscent of *Pokémon*.
 
 For players who dislike grinding and travelling back and forth across maps, the structure can become tiring: a great deal of running around may unlock only a small amount of new content.
@@ -20,13 +18,9 @@ The story follows the princess of a fallen kingdom. When she was a child, enemy 
 
 It is a classic revenge story. As the heroine's cultivation advances, the plot gradually reveals the truth of what happened in the past.
 
-## Why I recommend it
-
 First, the heroine's visual design strongly appeals to me. A cultivation setting is also relatively unusual among the adult games I have played, which gives the experience some freshness. The CG artwork is generally good, and several illustrations are especially refined.
 
 The game also offers considerable freedom. There is no strict time limit, so the player can proceed at a personal pace.
-
-## Why I do not recommend it
 
 The first problem is guidance. The tutorial on the starting island is reasonably clear, but once the world opens up, many side quests appear alongside the main story without any indication of their importance.
 

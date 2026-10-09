@@ -138,6 +138,22 @@ for (const [directory, heading] of searchPages) {
   check(page.includes('search.css'), `Search stylesheet is missing for ${directory || 'zh-cn'}.`);
   check(page.includes('search.js'), `Search script is missing for ${directory || 'zh-cn'}.`);
   check(page.includes(`${directory ? `/${directory}` : ''}/search.xml`), `Search index path is incorrect for ${directory || 'zh-cn'}.`);
+  check(page.includes('js/search.js'), `Search script is missing for ${directory || 'zh-cn'}.`);
+  check(!page.includes('js/media-library.js'), `Media script should not load on search for ${directory || 'zh-cn'}.`);
+}
+
+for (const directory of ['', 'en', 'it']) {
+  const label = directory || 'zh-cn';
+  const home = readFileSync(join(output, directory, 'index.html'), 'utf8');
+  const works = readFileSync(join(output, directory, 'works/index.html'), 'utf8');
+  check(home.includes('width=device-width, initial-scale=1.0'), `Page zoom is restricted for ${label}.`);
+  check(!home.includes('js/media-library.js'), `Media script should not load on home for ${label}.`);
+  check(!home.includes('js/search.js'), `Search script should not load on home for ${label}.`);
+  check(works.includes('js/media-library.js'), `Media script is missing for ${label}.`);
+  check(!works.includes('js/search.js'), `Search script should not load on works for ${label}.`);
+  for (const year of ['all', '2026', '2025', '2024', '2023', 'undated']) {
+    check(works.includes(`data-media-year="${year}"`), `Year filter ${year} is missing for ${label}.`);
+  }
 }
 
 check(readFileSync(join(output, 'CNAME'), 'utf8').trim() === 'vesaluna.com', 'CNAME changed unexpectedly');

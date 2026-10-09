@@ -8,14 +8,9 @@ permalink: 2023/09/29/reprint-learning-and-being-a-person/
 ai_translation: true
 ---
 
-> - Author: Liang Qichao
-> - Original work: A speech delivered in 1922
-> - Chinese source: [“Learning and Being a Person” on Wikisource](https://zh.wikisource.org/zh-hans/%E7%82%BA%E5%AD%B8%E8%88%87%E5%81%9A%E4%BA%BA)
-> - Copyright: The original work is in the public domain. This English version is an AI-assisted translation of the Chinese text.
+> This is a 1922 speech by Liang Qichao. The [Chinese original is on Wikisource](https://zh.wikisource.org/zh-hans/%E7%82%BA%E5%AD%B8%E8%88%87%E5%81%9A%E4%BA%BA). The original is in the public domain; this English version is an AI-assisted translation of the Chinese text.
 
 Ladies and gentlemen, I have been lecturing in Nanjing for nearly three months. The educational community here in Suzhou invited me several times by letter, but unfortunately I had lessons every day in Nanjing and could not get away. I am deeply grateful to gather here today with students from every school in the city. I must ask your forgiveness for one thing: I have been unwell for the past month and am only just carrying on, so I cannot give a long speech today and fear that I may disappoint you.
-
-## We study in order to learn how to be human
 
 Let me ask you: “Why do you go to school?” I imagine everyone will answer in unison, “To acquire learning.” But if I ask again, “Why do you seek learning?” and “What do you wish to learn?”, your answers will probably differ greatly, or perhaps you will not be able to answer at all.
 
@@ -24,8 +19,6 @@ Let me answer for all of you: “We study in order to learn how to be human.” 
 The human mind has three parts: knowledge, feeling and will. Our ancient thinkers called the complete development of these parts the “three universal virtues”: wisdom, benevolence and courage. Why universal virtues? Because they are common standards of human morality, and all three are necessary to form a complete person.
 
 What does their fulfilment look like? Confucius said, “The wise are free from doubt, the benevolent from anxiety, and the courageous from fear.” Education should therefore include the cultivation of knowledge, emotion and will. Intellectual education should teach us not to be confused; emotional education should teach us not to be troubled; education of the will should teach us not to be afraid. Teachers should make these three their ultimate aim, and we should make them the aim of our own self-education as well.
-
-## The wise are free from doubt
 
 How do we become free from doubt? Most important is the cultivation of judgement. The first step is to possess a reasonable amount of common knowledge. The next is to acquire specialised knowledge for the work we intend to do. Beyond that, we need the wisdom to judge circumstances as they arise.
 
@@ -39,8 +32,6 @@ But are common and specialised knowledge enough? They are not. The universe and 
 
 How is that wisdom cultivated? First, we must train minds that are habitually shallow and restless until they become precise and grounded. Then, however difficult a matter may be, we can think through its structure from beginning to end and avoid confusion. Second, we must nurture minds that have been clouded until they become clear. Then we can judge calmly and transparently when a matter stands before us. Common knowledge, specialised learning and general wisdom are all parts of intellectual education, whose purpose is to make the wise free from doubt.
 
-## The benevolent are free from anxiety
-
 How do we become free from anxiety, and why should benevolence free us from it? To understand this, we must first understand the view of life held by the ancient Chinese thinkers. The whole substance and function of the Confucian view of life is contained in the word *ren*, benevolence. It is difficult to define, but we might call it “the realisation of universal personhood.” Confucius said, “Benevolence is humanity”: completed personhood is benevolence.
 
 Personhood cannot be displayed by an isolated individual. It appears in relationships between people. Self and other must affect and awaken one another and become a unity before my personhood can be realised. If we speak of personhood at all, we ultimately arrive at universal personhood. The universe is human life and human life is the universe; my personhood and the universe are not two separate things. One who experiences this truth is benevolent.
@@ -53,8 +44,6 @@ Benevolence also frees us from anxiety about gain and loss. Gain and loss exist 
 
 I study for the sake of learning and labour for the sake of labour, not as tools to acquire something else. Laozi said, “He produces but does not possess; he acts but does not hold on,” and, “The more he does for others, the more he has; the more he gives to others, the more abundant he becomes.” What gain or loss can trouble a person with such a view? One naturally comes to feel that heaven, earth and oneself arise together, and that all things and oneself are one. Life becomes filled with interest and transformed into art. This is the highest emotional education; its purpose is to free the benevolent from anxiety.
 
-## The courageous are free from fear
-
 How do we become free from fear? Once we have learned not to be confused or anxious, fear will naturally diminish. But courage belongs to the will. A person with a weak will may possess abundant knowledge and still be unable to use it at the necessary moment; they may possess beautiful sentiments and abandon them when tested.
 
 How, then, can the will become strong? First, the heart must be open and upright. Mencius spoke of a “flood-like vital energy, supremely great and strong,” and said that if we examine ourselves and remain right, we will advance even against thousands and tens of thousands. As the common saying has it, a person who has done no wrong need not fear a knock at midnight. To preserve courage, we must first make all our conduct capable of standing in the open.
@@ -64,8 +53,6 @@ Second, we must not be dragged about by inferior desires. Confucius once said th
 It is extremely easy for a strong will to become weak, and extremely difficult for a weak will to become strong again. If a person cannot be master of their own will, what can they accomplish? Someone oppressed and enslaved by others may eventually recover freedom through struggle. But when one's own will becomes the slave of one's appetites, recovery may never come; life is spent shrinking in fear.
 
 Confucius praised the strength of one who remains harmonious without drifting with the current, stands in the centre without leaning, does not change in prosperity and remains faithful even unto death in adversity. Let me tell you plainly: without such strength, one cannot become a complete person. Yet it is not easily achieved. The will must be trained at every moment. Once it is fully trained, we see what ought to be done, shoulder it without hesitation, and go forward even against thousands. That is what it means to stand upright through a human life. This is the aim of educating the will: the courageous are free from fear.
-
-## Wake up
 
 Take these three virtues as standards and ask yourselves: which have I achieved? In which do I have even a little confidence? If you possess none of them and have confidence in none, then you are in danger of failing to become a person at all.
 

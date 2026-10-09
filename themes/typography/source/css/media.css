@@ -18,15 +18,21 @@
   opacity: 0.38;
 }
 
+#main-container { min-width: 0; }
+.post-abstract, .media-dialog-copy, .site-search-results { overflow-wrap: anywhere; }
+
 .media-page-title { margin-bottom: 0.4em; }
 .media-page-intro { max-width: 48rem; margin-bottom: 2rem; }
-.media-filters { display: flex; flex-wrap: wrap; gap: 0.65rem; margin: 1.5rem 0 2rem; }
+.media-years, .media-filters { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+.media-years { margin: 1.5rem 0 0.85rem; }
+.media-filters { margin: 0 0 2rem; }
 
 .media-filter,
+.media-year,
 .media-card,
 .media-dialog-close { color: #2e405b; font: inherit; }
 
-.media-filter {
+.media-filter, .media-year {
   border: 1px solid rgba(46, 64, 91, 0.35);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.65);
@@ -36,7 +42,12 @@
 
 .media-filter:hover,
 .media-filter:focus-visible,
-.media-filter.is-active { color: #fff; background: #2e405b; outline: none; }
+.media-filter.is-active,
+.media-year:hover,
+.media-year:focus-visible,
+.media-year.is-active { color: #fff; background: #2e405b; outline: none; }
+
+.media-year { font-size: 0.88em; }
 
 .media-grid {
   display: grid;
@@ -156,16 +167,18 @@
 
 @media (max-width: 768px) {
   .language-switcher { display: inline-flex !important; margin: 0 0.25rem !important; }
+  .site-title-links ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 0.5rem; padding: 0; }
+  .site-title-links ul li { margin: 0; }
   .media-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem 1rem; }
   .media-dialog {
-    width: 100vw;
+    width: 100%;
     max-width: none;
-    max-height: 88vh;
+    max-height: 88dvh;
     margin: auto 0 0;
     border-radius: 14px 14px 0 0;
   }
-  .media-dialog-inner { padding: 1.4rem; overflow-y: auto; }
-  .media-dialog-layout { grid-template-columns: 90px minmax(0, 1fr); gap: 1.1rem; }
+  .media-dialog-inner { max-height: 88dvh; padding: 1.4rem; overflow-y: auto; }
+  .media-dialog-layout { grid-template-columns: minmax(0, 90px) minmax(0, 1fr); gap: 1.1rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

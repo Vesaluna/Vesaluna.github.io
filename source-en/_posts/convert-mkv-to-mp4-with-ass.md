@@ -12,8 +12,6 @@ Video files downloaded in MKV format often cannot be opened by a device's defaul
 
 The steps are as follows.
 
-## 1. FFmpeg
-
 FFmpeg is open-source video-processing software. I will introduce only the functions needed for the task in the title, although the program offers many other powerful features.
 
 Open Terminal and enter the following command to install FFmpeg:
@@ -24,8 +22,6 @@ brew install ffmpeg
 
 Wait for the installation to finish.
 
-## 2. Convert MKV to MP4
-
 Use `cd` to enter the folder containing the video you want to convert, then enter:
 
 ```bash
@@ -33,8 +29,6 @@ ffmpeg -i input.mkv -c copy output.mp4
 ```
 
 Replace `input` with the name of the source video and `output` with the desired name of the converted file.
-
-## 3. Add subtitles to the video
 
 Assuming you already have the corresponding ASS subtitle file, enter:
 

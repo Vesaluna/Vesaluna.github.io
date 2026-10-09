@@ -8,15 +8,11 @@ permalink: 2025/05/03/riflessioni-sulla-scrittura-di-fanfiction/
 ai_translation: true
 ---
 
-## Un mondo preso in prestito e i suoi confini
-
 Scrivere fanfiction significa raccontare una storia servendosi di un mondo e di personaggi già definiti.
 
 Il vantaggio è che l'ambientazione esiste già e non deve essere progettata di nuovo. La fanfiction si costruisce inoltre su un'altra opera e prolunga qualcosa che possiede già un pubblico; parte quindi con una certa capacità di attrazione che la narrativa originale deve invece creare da sé.
 
 Lo svantaggio è altrettanto evidente. Personaggi e regole fissi tracciano un recinto attorno all'autore. Eliminano una parte del lavoro di invenzione, ma nello stesso tempo limitano la creazione. Il punto più alto raggiungibile da un'opera derivata può essere inferiore a quello dell'originale, anche se la maggior parte di noi non deve preoccuparsi troppo di questo limite quando è ancora ben lontana dal raggiungerlo.
-
-## Per piacere o per guadagno
 
 Prima di scrivere fanfiction, bisogna stabilire lo scopo: soddisfare il proprio interesse oppure guadagnare? Obiettivi diversi richiedono metodi diversi.
 
@@ -27,8 +23,6 @@ Se è un prodotto, l'autore deve considerare ciò che i lettori desiderano ricev
 Perché si legge una fanfiction? Probabilmente per trovare qualcosa di diverso dall'originale che possa comunque esistere entro la sua cornice: un rimpianto finalmente risolto, una possibilità mai esplorata oppure l'incontro fra una nuova premessa e regole familiari.
 
 Purtroppo, prima che il testo esista, non possiamo sapere con precisione che cosa i lettori vogliano vedere. Forse non lo sanno neppure loro.
-
-## Opere lunghe, scalette e personaggi
 
 Un lungo romanzo pubblicato in rete ha bisogno di una scaletta. Di solito non preparo una struttura per i saggi, in parte perché non ne ho sviluppato l'abitudine e in parte perché spesso riesco a scriverli in un unico movimento senza allontanarmi troppo dal tema.
 

@@ -8,15 +8,11 @@ permalink: 2025/05/03/thoughts-on-writing-fan-fiction/
 ai_translation: true
 ---
 
-## A borrowed world and its boundaries
-
 Writing fan fiction means telling a story with a world and characters that have already been established.
 
 The advantage is that the setting is already there and does not have to be designed again. Fan fiction also builds on another work and extends something that already has an audience, so it begins with a degree of appeal that original fiction must create for itself.
 
 The disadvantage is equally clear. Fixed characters and settings draw a boundary around the writer. They remove the burden of invention while also constraining creation. The highest point a derivative work can reach may lie below that of the original, although most of us need not worry too much about that limit when we are still far from reaching it.
-
-## For pleasure or for payment
 
 Before writing fan fiction, one should decide on the purpose: is it to satisfy one's own interest, or to earn money? Different aims require different approaches.
 
@@ -27,8 +23,6 @@ If it is a product, the writer must consider what readers hope to receive. A goo
 Why do readers seek fan fiction? Presumably they want something different from the original that can nevertheless exist within its framework: an old regret finally answered, a possibility the original never explored, or the collision between a new premise and familiar rules.
 
 Unfortunately, before the work exists, we cannot know precisely what readers want to see. They may not know it themselves.
-
-## Long works, outlines and characters
 
 A long web novel needs an outline. I do not normally outline essays, partly because I never developed the habit and partly because I can often write them in one continuous movement without straying too far.
 
