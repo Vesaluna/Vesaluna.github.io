@@ -1,6 +1,16 @@
 extends partial/layout
 block content
 	.autopagerize_page_element: .content
+		if !page.current || page.current === 1
+			.home-intro
+				p= __('HomeIntro')
+				p
+					span= __('HomeStart') + ' '
+					- var featured = site.posts.toArray().filter(function (post) { return ['thoughts-on-learning-mathematics', 'scarlet-moon-immortal-review'].includes(post.translation_key); });
+					each post, index in featured
+						if index
+							span= ' · '
+						a(href=url_for(post.path))= post.title
 		- page.posts.each(function (item) {
 			include mixins
 			+make_post(item, false)

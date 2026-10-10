@@ -203,6 +203,7 @@ hexo.extend.helper.register('media_items', function mediaItems(page) {
       completedCount: Number(item.completed_count || 1),
       tags: Array.isArray(item.tags) ? item.tags : [],
       link: item.link || '',
+      articleUrl: item.article_key ? (translationMap[item.article_key]?.[language] || '') : '',
       review: requestedReview || chineseReview,
       reviewFallback: language !== 'zh-cn' && !requestedReview && Boolean(chineseReview),
       hasReview: Boolean(requestedReview || chineseReview)

@@ -98,6 +98,9 @@ block content
                                         p.media-review= item.review
                                     else
                                         p.media-review-pending= __('ReviewPending')
+                                    if item.articleUrl
+                                        p
+                                            a(href=item.articleUrl)= __('RelatedArticle')
                                     if item.link
                                         p
                                             a(href=item.link, target="_blank", rel="noopener noreferrer")= __('MoreInfo')
