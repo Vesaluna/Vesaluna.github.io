@@ -1,7 +1,7 @@
 ---
 title: 游记｜Firenze出游
 date: 2025-04-19 23:05:12
-tags: 游记
+tags: [游记, 旅行, 城市]
 lang: zh-cn
 translation_key: firenze-trip
 permalink: 2025/04/20/游记｜Firenze出游/

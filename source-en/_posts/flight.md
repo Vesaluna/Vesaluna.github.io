@@ -1,7 +1,7 @@
 ---
 title: Essay | Flight
 date: 2026-07-11 19:54:55
-tags: []
+tags: [Essay, Flight, Travel]
 lang: en
 translation_key: flight
 permalink: 2026/07/12/flight/

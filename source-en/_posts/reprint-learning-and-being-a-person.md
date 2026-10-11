@@ -1,7 +1,7 @@
 ---
 title: Reprint | Learning and Being a Person
 date: 2023-09-29 20:59:05
-tags: [Reprint, Liang Qichao, Education, Speech]
+tags: [Reprint, Education, Speech]
 lang: en
 translation_key: reprint-learning-and-being-a-person
 permalink: 2023/09/29/reprint-learning-and-being-a-person/

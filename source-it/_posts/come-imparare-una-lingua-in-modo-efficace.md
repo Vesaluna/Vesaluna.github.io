@@ -1,7 +1,7 @@
 ---
 title: Saggio | Come imparare una lingua in modo efficace
 date: 2025-02-24 19:22:05
-tags: [Saggio, Lingua, Studio, Italiano]
+tags: [Saggio, Lingua, Studio]
 lang: it
 translation_key: how-to-learn-a-language-effectively
 permalink: 2025/02/24/come-imparare-una-lingua-in-modo-efficace/

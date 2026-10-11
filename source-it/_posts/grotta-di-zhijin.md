@@ -1,7 +1,7 @@
 ---
 title: Viaggio | Dentro la Grotta di Zhijin
 date: 2026-07-15 23:21:47
-tags: [Viaggio]
+tags: [Viaggio, Grotte, Cina]
 lang: it
 translation_key: zhijin-cave
 permalink: 2026/07/16/dentro-la-grotta-di-zhijin/

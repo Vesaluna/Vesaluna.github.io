@@ -1,7 +1,7 @@
 ---
 title: 练习｜Zorich数学分析下册Pag385n.2
 date: 2024-09-12 17:02:58
-tags: 练习
+tags: [练习, 数学, 分析]
 mathjax: true
 lang: zh-cn
 translation_key: zorich-analysis-p385-n2

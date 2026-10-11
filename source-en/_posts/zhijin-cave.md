@@ -1,7 +1,7 @@
 ---
 title: Travel | Into Zhijin Cave
 date: 2026-07-15 23:21:47
-tags: [Travel]
+tags: [Travel, Caves, China]
 lang: en
 translation_key: zhijin-cave
 permalink: 2026/07/16/into-zhijin-cave/

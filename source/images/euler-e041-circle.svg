@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="title description">
+  <title id="title">欧拉 E041 中的单位圆示意图</title>
+  <desc id="description">圆心 C 位于水平直径 AB 的中点。M 位于上半圆左侧，P 是 M 在直径上的垂足，从 A 到 M 的圆弧用深色标出。</desc>
+  <g fill="none" stroke="#85827a" stroke-width="2">
+    <circle cx="280" cy="180" r="145"/>
+    <path d="M135 180H425"/>
+    <path d="M208 54V180"/>
+  </g>
+  <path d="M135 180A145 145 0 0 1 208 54" fill="none" stroke="#43413c" stroke-width="4" stroke-linecap="round"/>
+  <g fill="#43413c">
+    <circle cx="135" cy="180" r="3"/>
+    <circle cx="208" cy="54" r="3"/>
+    <circle cx="208" cy="180" r="3"/>
+    <circle cx="280" cy="180" r="3"/>
+    <circle cx="425" cy="180" r="3"/>
+  </g>
+  <g fill="#43413c" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-style="italic">
+    <text x="110" y="186">A</text>
+    <text x="195" y="42">M</text>
+    <text x="195" y="207">P</text>
+    <text x="271" y="207">C</text>
+    <text x="433" y="186">B</text>
+    <text x="216" y="123">y</text>
+    <text x="116" y="106">s</text>
+  </g>
+</svg>

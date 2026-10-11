@@ -1,7 +1,7 @@
 ---
 title: Guida | Convertire un MKV in MP4 e aggiungere sottotitoli ASS
 date: 2024-09-27 19:53:11
-tags: [Guida]
+tags: [Guida, Video, Sottotitoli]
 lang: it
 translation_key: convert-mkv-to-mp4-with-ass
 permalink: 2024/09/28/convertire-mkv-in-mp4-con-sottotitoli-ass/

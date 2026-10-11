@@ -1,7 +1,7 @@
 ---
 title: Ristampa | Studiare e diventare persone
 date: 2023-09-29 20:59:05
-tags: [Ristampa, Liang Qichao, Educazione, Discorso]
+tags: [Ristampa, Educazione, Discorso]
 lang: it
 translation_key: reprint-learning-and-being-a-person
 permalink: 2023/09/29/ristampa-studiare-e-diventare-persone/

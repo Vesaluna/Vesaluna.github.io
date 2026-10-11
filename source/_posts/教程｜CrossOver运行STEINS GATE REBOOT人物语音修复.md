@@ -1,7 +1,7 @@
 ---
 title: 教程｜在 Mac 上用 CrossOver 运行『STEINS;GATE RE:BOOT』时的人物语音修复
 date: 2026-08-30 20:02:56
-tags: [指南, macOS, CrossOver, Steam, 游戏]
+tags: [指南, 游戏, 语音]
 lang: zh-cn
 translation_key: crossover-steins-gate-reboot-voice-fix
 permalink: 2026/08/30/教程｜CrossOver运行STEINS-GATE-REBOOT人物语音修复/

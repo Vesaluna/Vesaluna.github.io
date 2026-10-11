@@ -1,7 +1,7 @@
 ---
 title: Saggio | Volo
 date: 2026-07-11 19:54:55
-tags: []
+tags: [Saggio, Volo, Viaggio]
 lang: it
 translation_key: flight
 permalink: 2026/07/12/volo/

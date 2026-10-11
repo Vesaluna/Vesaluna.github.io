@@ -1,7 +1,7 @@
 ---
 title: Guida | Sulla gestione del tempo
 date: 2024-09-03 16:08:53
-tags: [Guida]
+tags: [Guida, Tempo, Studio]
 lang: it
 translation_key: time-management
 permalink: 2024/09/03/guida-gestione-del-tempo/

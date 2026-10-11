@@ -1,0 +1,12 @@
+extends partial/layout
+
+block content
+    .autopagerize_page_element: .content.reprints-page
+        h1.post-title= page.title
+        - var reprints = site.posts.toArray().filter(function (post) { return String(post.translation_key || '').startsWith('reprint-'); });
+        if reprints.length
+            ul.list-with-title
+                each post in reprints
+                    li
+                        a(href=url_for(post.path))= post.title
+                        span= ' · ' + date(post.date, 'YYYY-MM-DD')

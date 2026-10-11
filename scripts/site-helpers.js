@@ -147,6 +147,17 @@ function mediaData() {
   return Array.isArray(parsed) ? parsed : [];
 }
 
+hexo.extend.helper.register('home_quotes', function homeQuotes(page) {
+  const file = path.join(hexo.base_dir, 'data', 'home-quotes.yml');
+  if (!fs.existsSync(file)) return [];
+  const entries = yaml.load(fs.readFileSync(file, 'utf8'));
+  if (!Array.isArray(entries)) return [];
+  const language = currentLanguage.call(this, page);
+  return entries
+    .map((entry) => String(entry && (entry[language] || entry['zh-cn']) || '').trim())
+    .filter(Boolean);
+});
+
 function mediaPeriod(value, language) {
   const date = dateOnly(value);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {

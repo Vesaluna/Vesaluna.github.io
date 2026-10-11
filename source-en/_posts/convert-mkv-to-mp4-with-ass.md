@@ -1,7 +1,7 @@
 ---
 title: Tutorial | Converting MKV to MP4 and Adding ASS Subtitles
 date: 2024-09-27 19:53:11
-tags: [Guide]
+tags: [Guide, Video, Subtitles]
 lang: en
 translation_key: convert-mkv-to-mp4-with-ass
 permalink: 2024/09/28/convert-mkv-to-mp4-with-ass-subtitles/

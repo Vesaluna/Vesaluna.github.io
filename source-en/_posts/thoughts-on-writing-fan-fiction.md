@@ -1,7 +1,7 @@
 ---
 title: Essay | Some Thoughts on Writing Fan Fiction
 date: 2025-05-03 11:53:47
-tags: [Essay, Writing, Fan Fiction, Creativity]
+tags: [Essay, Writing, Fanfiction]
 lang: en
 translation_key: thoughts-on-writing-fan-fiction
 permalink: 2025/05/03/thoughts-on-writing-fan-fiction/

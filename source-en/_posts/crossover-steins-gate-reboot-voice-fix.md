@@ -1,7 +1,7 @@
 ---
 title: Tutorial | Fixing Character Voices in STEINS;GATE RE:BOOT on Mac with CrossOver
 date: 2026-08-30 20:02:56
-tags: [Guide, macOS, CrossOver, Steam, Games]
+tags: [Guide, Games, Audio]
 lang: en
 translation_key: crossover-steins-gate-reboot-voice-fix
 permalink: 2026/08/30/crossover-steins-gate-reboot-voice-fix/

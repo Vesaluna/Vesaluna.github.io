@@ -1,7 +1,7 @@
 ---
 title: Saggio | Alcune riflessioni sulla scrittura di fanfiction
 date: 2025-05-03 11:53:47
-tags: [Saggio, Scrittura, Fanfiction, Creatività]
+tags: [Saggio, Scrittura, Fanfiction]
 lang: it
 translation_key: thoughts-on-writing-fan-fiction
 permalink: 2025/05/03/riflessioni-sulla-scrittura-di-fanfiction/

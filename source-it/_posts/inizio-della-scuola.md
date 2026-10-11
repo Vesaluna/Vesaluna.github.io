@@ -1,7 +1,7 @@
 ---
 title: Saggio | Ricomincia la scuola
 date: 2024-09-14 17:56:53
-tags: [Saggio, Pensieri]
+tags: [Saggio, Scuola, Studio]
 lang: it
 translation_key: school-opening
 permalink: 2024/09/14/ricomincia-la-scuola/

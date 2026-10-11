@@ -31,9 +31,9 @@ function markdownFiles(folder) {
 }
 
 const required = [
-  'index.html', 'about/index.html', 'works/index.html', 'search/index.html', 'CNAME', '.nojekyll',
-  'en/index.html', 'en/about/index.html', 'en/works/index.html', 'en/search/index.html', 'en/atom.xml',
-  'it/index.html', 'it/about/index.html', 'it/works/index.html', 'it/search/index.html', 'it/atom.xml',
+  'index.html', 'about/index.html', 'works/index.html', 'search/index.html', 'reprints/index.html', 'CNAME', '.nojekyll',
+  'en/index.html', 'en/about/index.html', 'en/works/index.html', 'en/search/index.html', 'en/reprints/index.html', 'en/atom.xml',
+  'it/index.html', 'it/about/index.html', 'it/works/index.html', 'it/search/index.html', 'it/reprints/index.html', 'it/atom.xml',
   '2024/06/30/记录｜The first step/index.html',
   '2024/09/03/教程｜时间管理/index.html',
   '2024/09/12/练习｜Zorich数学分析下册Pag385n-2/index.html',
@@ -54,7 +54,15 @@ const required = [
   '2025/02/07/随笔｜主播女孩重度依赖游玩感想/index.html',
   '2025/02/24/随笔｜如何有效地学习语言/index.html',
   '2025/05/03/随笔｜关于书写同人小说的若干想法/index.html',
-  '2026/08/12/游戏｜绯色仙行录品鉴/index.html'
+  '2026/08/12/游戏｜绯色仙行录品鉴/index.html',
+  '2026/10/11/笔记｜E041倒数平方和/index.html',
+  'en/2026/10/11/euler-e041-reciprocal-squares/index.html',
+  'it/2026/10/11/e041-somma-dei-reciproci-dei-quadrati/index.html',
+  '2024/03/25/笔记｜Fermat-Rolle-Lagrange定理的条件/index.html',
+  '2024/06/01/随笔｜过去数学的学习/index.html',
+  '2024/07/09/笔记｜在积分中引入参数/index.html',
+  '2023/09/24/书读完了/index.html',
+  '2024/08/22/窗子以外/index.html'
 ];
 
 for (const relative of required) check(existsSync(join(output, relative)), `Missing output: ${relative}`);
@@ -97,7 +105,19 @@ for (const [language, sourceDirectory] of [['en', 'source-en'], ['it', 'source-i
     translatedPostCount += 1;
   }
 }
-check(translatedPostCount === 42, `Expected 42 translated posts, found ${translatedPostCount}`);
+const expectedTranslatedPosts = markdownFiles(resolve(root, 'source', '_posts')).length * 2;
+check(translatedPostCount === expectedTranslatedPosts,
+  `Expected ${expectedTranslatedPosts} translated posts, found ${translatedPostCount}`);
+
+const quotes = yaml.load(readFileSync(resolve(root, 'data/home-quotes.yml'), 'utf8')) || [];
+check(Array.isArray(quotes) && quotes.length > 0, 'Home quote list must not be empty.');
+if (Array.isArray(quotes)) {
+  quotes.forEach((quote, index) => {
+    for (const language of ['zh-cn', 'en', 'it']) {
+      check(Boolean(String(quote?.[language] || '').trim()), `Missing ${language} home quote at item ${index + 1}`);
+    }
+  });
+}
 
 const media = yaml.load(readFileSync(resolve(root, 'data/media.yml'), 'utf8')) || [];
 const mediaPage = readFileSync(join(output, 'works/index.html'), 'utf8');

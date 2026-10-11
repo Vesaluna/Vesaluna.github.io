@@ -1,7 +1,7 @@
 ---
 title: Travel | A Visit to Huangguoshu
 date: 2026-07-17 23:04:21
-tags: [Travel]
+tags: [Travel, Waterfalls, China]
 lang: en
 translation_key: huangguoshu
 permalink: 2026/07/18/visit-to-huangguoshu/

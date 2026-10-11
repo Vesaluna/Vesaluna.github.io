@@ -1,7 +1,7 @@
 ---
 title: Saggio | Riflessioni dopo NEEDY STREAMER OVERLOAD
 date: 2025-02-07 19:16:42
-tags: [Saggio, Videogiochi, Riflessioni, NEEDY STREAMER OVERLOAD]
+tags: [Saggio, Videogiochi, Riflessioni]
 lang: it
 translation_key: needy-streamer-overload-reflections
 permalink: 2025/02/07/riflessioni-su-needy-streamer-overload/

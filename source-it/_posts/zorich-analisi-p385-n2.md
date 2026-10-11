@@ -1,7 +1,7 @@
 ---
 title: Esercizio | Zorich, Analisi matematica II, p. 385, n. 2
 date: 2024-09-12 17:02:58
-tags: [Esercizio]
+tags: [Esercizio, Matematica, Analisi]
 mathjax: true
 lang: it
 translation_key: zorich-analysis-p385-n2

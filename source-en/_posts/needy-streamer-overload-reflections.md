@@ -1,7 +1,7 @@
 ---
 title: Essay | Thoughts After Playing NEEDY STREAMER OVERLOAD
 date: 2025-02-07 19:16:42
-tags: [Essay, Games, Reflections, NEEDY STREAMER OVERLOAD]
+tags: [Essay, Games, Reflections]
 lang: en
 translation_key: needy-streamer-overload-reflections
 permalink: 2025/02/07/needy-streamer-overload-reflections/

@@ -1,7 +1,7 @@
 ---
 title: Tutorial | On Time Management
 date: 2024-09-03 16:08:53
-tags: [Guide]
+tags: [Guide, Time, Learning]
 lang: en
 translation_key: time-management
 permalink: 2024/09/03/tutorial-time-management/

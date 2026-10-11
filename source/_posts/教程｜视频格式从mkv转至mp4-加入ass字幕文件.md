@@ -1,7 +1,7 @@
 ---
 title: 教程｜视频格式从mkv转至mp4+加入ass字幕文件
 date: 2024-09-27 19:53:11
-tags: 指南
+tags: [指南, 视频, 字幕]
 lang: zh-cn
 translation_key: convert-mkv-to-mp4-with-ass
 permalink: 2024/09/28/教程｜视频格式从mkv转至mp4-加入ass字幕文件/

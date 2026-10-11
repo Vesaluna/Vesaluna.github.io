@@ -1,7 +1,7 @@
 ---
 title: Videogiochi | Una recensione di Scarlet Moon Immortal
 date: 2026-08-12 15:36:46
-tags: [Videogiochi, Recensione, RPG, Scarlet Moon Immortal]
+tags: [Videogiochi, Recensione, Coltivazione]
 lang: it
 translation_key: scarlet-moon-immortal-review
 permalink: 2026/08/12/recensione-scarlet-moon-immortal/

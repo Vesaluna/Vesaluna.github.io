@@ -1,7 +1,7 @@
 ---
 title: Essay | Guitar
 date: 2024-10-19 17:45:51
-tags: [Essay, Thoughts]
+tags: [Essay, Music, Guitar]
 lang: en
 translation_key: guitar
 permalink: 2024/10/19/guitar/

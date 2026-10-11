@@ -1,7 +1,7 @@
 ---
 title: Essay | The Metro
 date: 2025-09-27 17:51:59
-tags: [Essay, Thoughts]
+tags: [Essay, Metro, Life]
 description: Fragments of thought after changing my journey home to the metro.
 lang: en
 translation_key: metro

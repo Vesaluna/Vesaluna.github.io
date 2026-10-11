@@ -1,7 +1,7 @@
 ---
 title: Essay | School Begins
 date: 2024-09-14 17:56:53
-tags: [Essay, Thoughts]
+tags: [Essay, School, Learning]
 lang: en
 translation_key: school-opening
 permalink: 2024/09/14/school-begins/

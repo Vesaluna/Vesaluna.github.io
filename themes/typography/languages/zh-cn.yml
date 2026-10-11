@@ -29,7 +29,7 @@ All: 全部
 Books: 书籍
 Games: 游戏
 Movies: 影视
-OpenReview: 查看《%s》
+OpenReview: 查看『%s』
 Close: 关闭
 FinishedOn: 完成于
 SteamPlaytime: Steam 游戏时长

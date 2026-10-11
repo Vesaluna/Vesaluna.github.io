@@ -1,7 +1,7 @@
 ---
 title: Saggio | Letteratura, storia e popolo
 date: 2024-10-11 19:00:50
-tags: [Saggio, Pensieri]
+tags: [Saggio, Letteratura, Storia]
 lang: it
 translation_key: literature-history-nation
 permalink: 2024/10/12/letteratura-storia-e-popolo/

@@ -17,13 +17,6 @@ div#site-nav.site-title-links
             else
                 a(href=config.root + config.category_dir)= __('Categories')
         - }
-        - if (site.tags.length > 0) {
-        li
-            if is_current('tags/')
-                a.current(href=config.root + config.tag_dir)= __('Tags')
-            else
-                a(href=config.root + config.tag_dir)= __('Tags')
-        - }
         include ../mixins
         +make_page_links()
         - var languageLinks = language_switches(page);

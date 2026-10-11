@@ -1,7 +1,7 @@
 ---
 title: Essay | How to Learn a Language Effectively
 date: 2025-02-24 19:22:05
-tags: [Essay, Language, Learning, Italian]
+tags: [Essay, Language, Learning]
 lang: en
 translation_key: how-to-learn-a-language-effectively
 permalink: 2025/02/24/how-to-learn-a-language-effectively/

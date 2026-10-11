@@ -1,7 +1,7 @@
 ---
 title: Guida | Ripristinare le voci in STEINS;GATE RE:BOOT su Mac con CrossOver
 date: 2026-08-30 20:02:56
-tags: [Guida, macOS, CrossOver, Steam, Videogiochi]
+tags: [Guida, Videogiochi, Audio]
 lang: it
 translation_key: crossover-steins-gate-reboot-voice-fix
 permalink: 2026/08/30/crossover-steins-gate-reboot-correzione-voci/

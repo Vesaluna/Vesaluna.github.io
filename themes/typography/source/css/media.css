@@ -22,9 +22,8 @@
 .post-abstract, .media-dialog-copy, .site-search-results { overflow-wrap: anywhere; }
 
 .media-page-title { margin-bottom: 0.4em; }
-.home-intro { margin: 0 0 2.5rem; padding: 0 0 1rem; border-bottom: 1px solid rgba(128, 128, 128, 0.22); line-height: 1.8; }
-.home-intro p { margin: 0 0 0.65rem; }
-.home-intro a { text-underline-offset: 0.2em; }
+.home-quote { margin: 0 0 2.5rem; padding: 0 0 1rem; border-bottom: 1px solid rgba(128, 128, 128, 0.22); line-height: 1.8; }
+.home-quote p { margin: 0; }
 .media-page-intro { max-width: 48rem; margin-bottom: 2rem; }
 .media-years, .media-filters { display: flex; flex-wrap: wrap; gap: 0.65rem; }
 .media-years { margin: 1.5rem 0 0.85rem; }
@@ -186,4 +185,18 @@
 
 @media (prefers-reduced-motion: reduce) {
   .media-cover { transition: none; }
+}
+.post-container > mjx-container[display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.post-container p mjx-container[display="true"] {
+  display: inline-block;
+  margin: 0;
+  text-align: inherit;
+  vertical-align: middle;
 }

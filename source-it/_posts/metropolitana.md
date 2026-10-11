@@ -1,7 +1,7 @@
 ---
 title: Saggio | La metropolitana
 date: 2025-09-27 17:51:59
-tags: [Saggio, Pensieri]
+tags: [Saggio, Metropolitana, Vita]
 description: Pensieri frammentari dopo aver cambiato il viaggio di ritorno con la metropolitana.
 lang: it
 translation_key: metro
