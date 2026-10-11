@@ -72,6 +72,17 @@ for (const [language, directory] of [['zh-CN', ''], ['en', 'en'], ['it', 'it']])
   check(home.includes(`<html lang="${language}">`), `Incorrect html lang for ${language}`);
   check(home.includes('rel="canonical"'), `Missing canonical link for ${language}`);
   check(home.includes('hreflang="x-default"'), `Missing x-default link for ${language}`);
+
+  const languageRoot = join(output, directory);
+  const listingHtml = [
+    home,
+    ...(existsSync(join(languageRoot, 'page')) ? [collectHtml(join(languageRoot, 'page'))] : []),
+    collectHtml(join(languageRoot, 'archives'))
+  ].join('\n');
+  const reprintTitle = language === 'zh-CN' ? '转载｜' : language === 'en' ? 'Reprint |' : 'Ristampa |';
+  check(!listingHtml.includes(reprintTitle), `${language} homepage or archives contains reprints`);
+  check(readFileSync(join(languageRoot, 'reprints/index.html'), 'utf8').includes(reprintTitle),
+    `${language} reprints page is empty`);
 }
 
 const chineseTitles = ['游记｜访黄果树', '随笔｜飞机', '教程｜关于时间管理'];
