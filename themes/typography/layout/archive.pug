@@ -8,10 +8,9 @@ block description
     meta(name="description", content=desc)
 
 block content
-    - var archivePostCount = site.posts.toArray().filter(function(post) { return !String(post.translation_key || '').startsWith('reprint-'); }).length
     .autopagerize_page_element: .content
         p.post-title
-            != __("Archive") + ' ' + __('ArchiveCount', archivePostCount)
+            != __("Archive") + ' ' + __('ArchiveCount', site.posts.length)
         .archive.animated.fadeInDown
             ul.list-with-title
                 include mixins

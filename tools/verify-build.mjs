@@ -31,9 +31,9 @@ function markdownFiles(folder) {
 }
 
 const required = [
-  'index.html', 'about/index.html', 'works/index.html', 'search/index.html', 'reprints/index.html', 'CNAME', '.nojekyll',
-  'en/index.html', 'en/about/index.html', 'en/works/index.html', 'en/search/index.html', 'en/reprints/index.html', 'en/atom.xml',
-  'it/index.html', 'it/about/index.html', 'it/works/index.html', 'it/search/index.html', 'it/reprints/index.html', 'it/atom.xml',
+  'index.html', 'about/index.html', 'works/index.html', 'search/index.html', 'CNAME', '.nojekyll',
+  'en/index.html', 'en/about/index.html', 'en/works/index.html', 'en/search/index.html', 'en/atom.xml',
+  'it/index.html', 'it/about/index.html', 'it/works/index.html', 'it/search/index.html', 'it/atom.xml',
   '2024/06/30/记录｜The first step/index.html',
   '2024/09/03/教程｜时间管理/index.html',
   '2024/09/12/练习｜Zorich数学分析下册Pag385n-2/index.html',
@@ -49,7 +49,6 @@ const required = [
   '2026/07/18/游记｜访黄果树/index.html',
   '2026/08/30/教程｜CrossOver运行STEINS-GATE-REBOOT人物语音修复/index.html',
   '2026/09/19/像大小姐一样说话/index.html',
-  '2023/09/29/转载｜为学与做人/index.html',
   '2024/11/23/随笔｜关于数学的学习/index.html',
   '2025/02/07/随笔｜主播女孩重度依赖游玩感想/index.html',
   '2025/02/24/随笔｜如何有效地学习语言/index.html',
@@ -60,9 +59,7 @@ const required = [
   'it/2026/10/11/e041-somma-dei-reciproci-dei-quadrati/index.html',
   '2024/03/25/笔记｜Fermat-Rolle-Lagrange定理的条件/index.html',
   '2024/06/01/随笔｜过去数学的学习/index.html',
-  '2024/07/09/笔记｜在积分中引入参数/index.html',
-  '2023/09/24/书读完了/index.html',
-  '2024/08/22/窗子以外/index.html'
+  '2024/07/09/笔记｜在积分中引入参数/index.html'
 ];
 
 for (const relative of required) check(existsSync(join(output, relative)), `Missing output: ${relative}`);
@@ -74,15 +71,8 @@ for (const [language, directory] of [['zh-CN', ''], ['en', 'en'], ['it', 'it']])
   check(home.includes('hreflang="x-default"'), `Missing x-default link for ${language}`);
 
   const languageRoot = join(output, directory);
-  const listingHtml = [
-    home,
-    ...(existsSync(join(languageRoot, 'page')) ? [collectHtml(join(languageRoot, 'page'))] : []),
-    collectHtml(join(languageRoot, 'archives'))
-  ].join('\n');
-  const reprintTitle = language === 'zh-CN' ? '转载｜' : language === 'en' ? 'Reprint |' : 'Ristampa |';
-  check(!listingHtml.includes(reprintTitle), `${language} homepage or archives contains reprints`);
-  check(readFileSync(join(languageRoot, 'reprints/index.html'), 'utf8').includes(reprintTitle),
-    `${language} reprints page is empty`);
+  check(!existsSync(join(languageRoot, 'reprints/index.html')), `${language} reprints page still exists`);
+  check(!collectHtml(languageRoot).includes('reprint-'), `${language} generated HTML still references reprint content`);
 }
 
 const chineseTitles = ['游记｜访黄果树', '随笔｜飞机', '教程｜关于时间管理'];
