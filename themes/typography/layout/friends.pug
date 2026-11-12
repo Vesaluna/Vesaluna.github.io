@@ -11,11 +11,25 @@ block content
         p.post-title= page.title
         .friends-intro!= page.content
         ul.friends-list
-            each friend in friend_links()
+            each friend in friend_links(page)
                 li
-                    a.friend-card(href=friend.url, target="_blank", rel="noopener noreferrer")
-                        span.friend-monogram(aria-hidden="true")= friend.name.charAt(0).toUpperCase()
+                    a.friend-card(class='friend-card--' + friend.theme, href=friend.url, target="_blank", rel="noopener noreferrer")
+                        span.friend-banner(aria-hidden="true")
+                            span.friend-sparkles ✦ · ˚
+                            if friend.button
+                                img.friend-button(src=friend.button, alt="", width="88", height="31", loading="lazy", decoding="async")
+                            else
+                                span.friend-monogram= friend.name.charAt(0).toUpperCase()
+                            span.friend-sparkles ˚ · ✦
                         span.friend-details
-                            span.friend-name= friend.name
-                            span.friend-domain= friend.domain
-                        span.friend-arrow(aria-hidden="true") ↗
+                            span.friend-heading
+                                span.friend-name= friend.name
+                                span.friend-arrow(aria-hidden="true") ↗
+                            if friend.description
+                                span.friend-description= friend.description
+                            if friend.interests
+                                span.friend-interests= friend.interests
+                            span.friend-footer
+                                span.friend-domain= friend.domain
+                                if friend.platform
+                                    span.friend-platform= friend.platform

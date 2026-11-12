@@ -10,12 +10,18 @@ const LANGUAGES = {
   it: { label: 'IT', prefix: 'it', source: 'source-it' }
 };
 
-hexo.extend.helper.register('friend_links', function friendLinks() {
+hexo.extend.helper.register('friend_links', function friendLinks(page) {
+  const language = currentLanguage.call(this, page);
   const entries = yaml.load(fs.readFileSync(path.join(hexo.base_dir, 'data/friends.yml'), 'utf8')) || [];
   return entries.map(entry => {
     const url = new URL(entry.url);
     if (!['https:', 'http:'].includes(url.protocol) || !entry.name) throw new Error('Invalid friend link');
-    return { name: String(entry.name), url: url.href, domain: url.hostname };
+    return {
+      name: String(entry.title || entry.name), url: url.href, domain: url.hostname,
+      description: localized(entry.description, language), interests: localized(entry.interests, language),
+      platform: String(entry.platform || ''), theme: entry.theme === 'pink' ? 'pink' : 'default',
+      button: typeof entry.button === 'string' && entry.button.startsWith('/images/friends/') ? entry.button : ''
+    };
   });
 });
 

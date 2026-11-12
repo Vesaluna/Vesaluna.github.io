@@ -7,4 +7,4 @@ translation_key: friends
 nav_order: 15
 ---
 
-Siti personali che vorrei condividere.
+I siti dei miei amici

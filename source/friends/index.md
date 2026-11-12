@@ -7,4 +7,4 @@ translation_key: friends
 nav_order: 15
 ---
 
-一些想分享的个人网站。
+朋友们的网站
