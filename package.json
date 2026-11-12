@@ -5,6 +5,8 @@
   "scripts": {
     "build": "node tools/build-trilingual.mjs",
     "check": "npm run build && node tools/verify-build.mjs",
+    "build:neocities": "npm run check && node tools/prepare-neocities.mjs",
+    "deploy:neocities": "node tools/deploy-neocities.mjs",
     "build:zh": "hexo generate",
     "clean": "hexo clean",
     "server": "hexo server"

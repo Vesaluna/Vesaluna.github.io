@@ -4,6 +4,7 @@ db.json
 *.log
 node_modules/
 public/
+public-neocities/
 .deploy*/
 _multiconfig.yml
 .legacy-git/
