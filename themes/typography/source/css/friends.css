@@ -1,0 +1,11 @@
+.friends-intro { margin: 1.5em 0 2em; color: #6f7c8b; }
+.friends-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.friends-list li { margin: 0; padding: 0; min-width: 0; }
+.friends-list a.friend-card { display: flex; align-items: center; gap: 16px; box-sizing: border-box; height: 100%; padding: 22px; border: 1px solid #dce0e4; border-radius: 6px; background: #ffffffb3; color: #2e405b; text-decoration: none; }
+.friend-monogram { display: grid; flex: 0 0 46px; width: 46px; height: 46px; place-items: center; border-radius: 50%; background: #edf0f3; color: #607389; font-size: 23px; }
+.friend-details { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.friend-name { font-size: 18px; }
+.friend-domain { font-size: 13px; color: #74808d; overflow-wrap: anywhere; }
+.friend-arrow { margin-left: auto; color: #8793a0; }
+.friends-list a.friend-card:hover { border-color: #9aa9b8; background: #fff; }
+.friends-list a.friend-card:focus-visible { outline: 2px solid #607389; outline-offset: 4px; }

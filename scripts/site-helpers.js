@@ -10,6 +10,15 @@ const LANGUAGES = {
   it: { label: 'IT', prefix: 'it', source: 'source-it' }
 };
 
+hexo.extend.helper.register('friend_links', function friendLinks() {
+  const entries = yaml.load(fs.readFileSync(path.join(hexo.base_dir, 'data/friends.yml'), 'utf8')) || [];
+  return entries.map(entry => {
+    const url = new URL(entry.url);
+    if (!['https:', 'http:'].includes(url.protocol) || !entry.name) throw new Error('Invalid friend link');
+    return { name: String(entry.name), url: url.href, domain: url.hostname };
+  });
+});
+
 function markdownFiles(directory) {
   if (!fs.existsSync(directory)) return [];
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
