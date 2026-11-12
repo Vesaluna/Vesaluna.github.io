@@ -35,4 +35,6 @@ link(rel="stylesheet", href= url_for('css/media.css') + '?v=20261011')
 link(rel="stylesheet", href= url_for('css/translation.css'))
 if page.layout == "search"
     link(rel="stylesheet", href= url_for('css/search.css'))
+if page.screenplay || page.video_card
+    link(rel="stylesheet", href= url_for('css/post-extras.css'))
 link(rel="alternate" type="application/atom+xml" title="ATOM 1.0" href=url_for('atom.xml'))
