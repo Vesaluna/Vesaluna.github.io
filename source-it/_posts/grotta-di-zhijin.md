@@ -23,3 +23,7 @@ La grotta si estende per diversi *li*, gira e ritorna su se stessa, e attraversa
 Le luci interne erano soprattutto azzurre e rosse. Rendevano le rocce più fantastiche, ma ne sottraevano il carattere naturale: molto spettacolo, poca sobrietà. Ai miei occhi sembravano l'illusione di un oltretomba e oscuravano la bellezza originaria della pietra. Una luce tenue, capace di lasciare emergere i colori propri della roccia, sarebbe forse stata più vicina all'intenzione della natura.
 
 Il percorso è terminato solo dopo due ore e mezza. Uscendo e voltandomi indietro, ho visto sulle montagne la stessa vegetazione di prima, ma mi sentivo come se avessi attraversato un'altra vita. Una sola grotta separava due regni. Il mondo è immenso e la natura nasconde le proprie meraviglie nei luoghi più oscuri. Senza entrarvi di persona, non si può conoscere la profondità dei monti del Guizhou, né l'ingegno del mondo naturale.
+
+<p><img src="/images/zhijin/zhijin-01.webp" alt="La luce del giorno entra nella grotta di Zhijin" width="1800" height="1200" loading="lazy" decoding="async" style="max-width:100%;height:auto"></p>
+
+<p><img src="/images/zhijin/zhijin-02.webp" alt="Formazioni rocciose e riflessi nella grotta di Zhijin" width="1800" height="1200" loading="lazy" decoding="async" style="max-width:100%;height:auto"></p>

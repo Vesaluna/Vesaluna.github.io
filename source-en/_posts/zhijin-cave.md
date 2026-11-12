@@ -23,3 +23,7 @@ The cave extends for several *li*, turning back upon itself, and walking through
 The cave lighting was largely blue and red. It made the rocks appear more fantastic, but diminished their natural character: rich in spectacle, lacking in restraint. To me it resembled an underworld illusion and obscured the original beauty of the stone. A faint light that allowed the rock's own colour to emerge might have come closer to the intention of nature.
 
 Only after two and a half hours did the route end. Leaving the cave and looking back, I saw the same vegetation upon the outer mountains, yet felt as though I had passed through another lifetime. A single cave divided two realms. The world is immense, and nature hides its wonders in obscure places. Without entering it oneself, one cannot know the depth of Guizhou's mountains or the ingenuity of the natural world.
+
+<p><img src="/images/zhijin/zhijin-01.webp" alt="Daylight entering Zhijin Cave" width="1800" height="1200" loading="lazy" decoding="async" style="max-width:100%;height:auto"></p>
+
+<p><img src="/images/zhijin/zhijin-02.webp" alt="Rock formations and their reflections inside Zhijin Cave" width="1800" height="1200" loading="lazy" decoding="async" style="max-width:100%;height:auto"></p>
