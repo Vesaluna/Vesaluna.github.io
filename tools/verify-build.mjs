@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import yaml from 'js-yaml';
 
@@ -140,7 +140,7 @@ check(steamGamesWithAcquiredDate.length === 16, `Expected 16 known Steam acquisi
 for (const item of media) {
   if (item.cover.startsWith('/')) {
     const cover = resolve(output, item.cover.replace(/^\//, ''));
-    check(existsSync(cover), `Missing generated cover: ${item.cover}`);
+    check(existsSync(cover) && statSync(cover).isFile(), `Missing generated cover file: ${item.cover}`);
   }
   check(mediaPage.includes(item.cover), `Works page does not reference cover: ${item.id}`);
 }
@@ -236,12 +236,15 @@ let brokenLinkCount = 0;
 let brokenHreflangCount = 0;
 for (const file of allHtmlPaths) {
   const html = readFileSync(file, 'utf8');
-  for (const [, targetPath] of html.matchAll(/\b(?:href|src)="(\/[^"#?]*)/g)) {
+  for (const [, attr, targetPath] of html.matchAll(/\b(href|src)="(\/[^"#?]*)/g)) {
     const decoded = decodeURI(targetPath).replace(/^\//, '');
-    const exists = existsSync(join(output, decoded)) || existsSync(join(output, decoded, 'index.html'));
+    const direct = join(output, decoded);
+    const indexHtml = join(output, decoded, 'index.html');
+    const isFile = (p) => existsSync(p) && statSync(p).isFile();
+    const exists = attr === 'src' ? isFile(direct) : (isFile(direct) || isFile(indexHtml));
     if (!exists) {
       brokenLinkCount += 1;
-      if (brokenLinkCount <= 10) failures.push(`Broken internal reference ${targetPath} in ${file}`);
+      if (brokenLinkCount <= 10) failures.push(`Broken internal ${attr} ${targetPath} in ${file}`);
     }
   }
   for (const [, targetPath] of html.matchAll(/<link\b[^>]*\bhreflang="[^"]+"[^>]*\bhref="https:\/\/vesaluna\.com([^"]*)"/g)) {
