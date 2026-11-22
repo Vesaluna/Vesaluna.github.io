@@ -1,7 +1,6 @@
 ---
 title: Notes | E041 and the sum of reciprocal squares
 date: 2026-10-11 00:00:00
-tags: [Notes, Mathematics, Euler]
 mathjax: true
 lang: en
 translation_key: euler-e041-reciprocal-squares

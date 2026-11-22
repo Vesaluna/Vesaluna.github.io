@@ -1,7 +1,6 @@
 ---
 title: Appunti | Parlare come una signorina
 date: 2026-09-19 16:33:00
-tags: [Appunti, Giapponese, Lingua]
 lang: it
 translation_key: ojousama-kotoba
 permalink: 2026/09/19/parlare-come-una-signorina/

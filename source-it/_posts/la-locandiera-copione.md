@@ -1,7 +1,6 @@
 ---
 title: Fanfiction | La locandiera
 date: 2026-06-18 13:13:28
-tags: [Copione, Fanfiction, Teatro]
 lang: it
 translation_key: the-innkeeper-screenplay
 permalink: 2026/06/18/la-locandiera-copione/
@@ -9,8 +8,6 @@ ai_translation: true
 screenplay: true
 video_card: true
 ---
-
-Una versione da leggere del mio copione WebGAL 『La locandiera』, riordinata in tre atti conservando la successione originale dei dialoghi e degli avvenimenti. Ho tolto le istruzioni del gioco per attese, personaggi e transizioni. La vicenda si svolge in un futuro alternativo, con personaggi adulti.
 
 <div class="screenplay">
 

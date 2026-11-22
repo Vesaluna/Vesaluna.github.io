@@ -1,7 +1,6 @@
 ---
 title: Essay | Literature, History and a People
 date: 2024-10-11 19:00:50
-tags: [Essay, Literature, History]
 lang: en
 translation_key: literature-history-nation
 permalink: 2024/10/12/literature-history-and-a-people/

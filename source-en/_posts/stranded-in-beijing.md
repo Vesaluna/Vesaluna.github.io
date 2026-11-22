@@ -1,7 +1,6 @@
 ---
 title: Conversation | Stranded in Beijing
 date: 2026-07-14 21:28:04
-tags: [Essay, Beijing, Travel]
 lang: en
 translation_key: stranded-in-beijing
 permalink: 2026/07/15/stranded-in-beijing/

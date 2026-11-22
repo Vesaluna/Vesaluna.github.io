@@ -1,7 +1,6 @@
 ---
 title: Games | A Review of Scarlet Moon Immortal
 date: 2026-08-12 15:36:46
-tags: [Games, Review, Cultivation]
 lang: en
 translation_key: scarlet-moon-immortal-review
 permalink: 2026/08/12/scarlet-moon-immortal-review/

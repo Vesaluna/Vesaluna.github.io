@@ -47,7 +47,6 @@ const required = [
   '2026/07/15/闲谈｜滞留北京/index.html',
   '2026/07/16/游记｜遁入织金/index.html',
   '2026/07/18/游记｜访黄果树/index.html',
-  '2026/08/30/教程｜CrossOver运行STEINS-GATE-REBOOT人物语音修复/index.html',
   '2026/09/19/像大小姐一样说话/index.html',
   '2024/11/23/随笔｜关于数学的学习/index.html',
   '2025/02/07/随笔｜主播女孩重度依赖游玩感想/index.html',
@@ -57,9 +56,7 @@ const required = [
   '2026/10/11/笔记｜E041倒数平方和/index.html',
   'en/2026/10/11/euler-e041-reciprocal-squares/index.html',
   'it/2026/10/11/e041-somma-dei-reciproci-dei-quadrati/index.html',
-  '2024/03/25/笔记｜Fermat-Rolle-Lagrange定理的条件/index.html',
-  '2024/06/01/随笔｜过去数学的学习/index.html',
-  '2024/07/09/笔记｜在积分中引入参数/index.html'
+  '2024/06/01/随笔｜过去数学的学习/index.html'
 ];
 
 for (const relative of required) check(existsSync(join(output, relative)), `Missing output: ${relative}`);

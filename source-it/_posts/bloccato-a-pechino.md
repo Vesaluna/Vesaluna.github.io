@@ -1,7 +1,6 @@
 ---
 title: Chiacchiere | Bloccato a Pechino
 date: 2026-07-14 21:28:04
-tags: [Saggio, Pechino, Viaggio]
 lang: it
 translation_key: stranded-in-beijing
 permalink: 2026/07/15/bloccato-a-pechino/
