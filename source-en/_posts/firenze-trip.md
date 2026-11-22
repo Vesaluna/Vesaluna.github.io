@@ -1,7 +1,6 @@
 ---
 title: Travel | A Trip to Firenze
 date: 2025-04-19 23:05:12
-tags: [Travel, Italy, Cities]
 lang: en
 translation_key: firenze-trip
 permalink: 2025/04/20/trip-to-firenze/

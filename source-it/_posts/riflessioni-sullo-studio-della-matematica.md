@@ -1,7 +1,6 @@
 ---
 title: Saggio | Riflessioni sullo studio della matematica
 date: 2024-11-23 17:53:28
-tags: [Saggio, Matematica, Studio]
 lang: it
 translation_key: thoughts-on-learning-mathematics
 permalink: 2024/11/23/riflessioni-sullo-studio-della-matematica/

@@ -122,7 +122,7 @@ category_generator:
 # Generate tags index page and each tag page
 tag_generator:
   per_page: 10
-  enable_index_page: true
+  enable_index_page: false
 
 # Generator atom feed for you website
 feed:

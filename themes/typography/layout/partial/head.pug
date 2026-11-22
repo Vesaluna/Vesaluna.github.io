@@ -45,16 +45,17 @@ each alternate in languageAlternates
 
 meta(name="renderer",content="webkit")
 link(rel="icon", href=url_for('images/favicon.png'), type="image/png")
-link(rel="stylesheet", href= url_for('css/bootstrap.min.css'))
-link(rel="stylesheet", href= url_for('css/font-awesome.min.css'))
-//- link(rel="stylesheet", href= url_for('css/typography-custom-font.css'))
+link(rel="preload", as="font", type="font/woff2", href=url_for('fonts/source-serif-4-latin-400-normal.woff2'), crossorigin)
+link(rel="stylesheet", href= url_for('css/grid-base.css'))
 if theme.themeStyle == "light"
     link(rel="stylesheet", href= url_for('css/style.css'))
 if theme.themeStyle == "dark"
     link(rel="stylesheet", href= url_for('css/style-dark.css'))
 link(rel="stylesheet", href= url_for('css/reading-typography.css'))
-link(rel="stylesheet", href= url_for('css/media.css') + '?v=20261011')
-link(rel="stylesheet", href= url_for('css/translation.css'))
+if page.layout == "media"
+    link(rel="stylesheet", href= url_for('css/media.css') + '?v=20261122')
+if page.ai_translation
+    link(rel="stylesheet", href= url_for('css/translation.css'))
 if page.layout == "search"
     link(rel="stylesheet", href= url_for('css/search.css'))
 if page.layout == "friends"

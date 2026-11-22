@@ -19,7 +19,7 @@ block content
                 if prev
                     span.pre.pagbuttons
                         a(href=url_for(prev), title=page.prev.title)
-                            i.fa.fa-angle-double-left(aria-hidden="true")
+                            span.pager-arrow(aria-hidden="true") «
                             |&nbsp;
                             != __('prev_post')+': ' + page.prev.title
                 if prev && next
@@ -29,5 +29,5 @@ block content
                         a(href=url_for(next), title=page.next.title)
                             != __('next_post')+': ' + page.next.title
                             |&nbsp;
-                            i.fa.fa-angle-double-right(aria-hidden="true")
+                            span.pager-arrow(aria-hidden="true") »
         include partial/comments

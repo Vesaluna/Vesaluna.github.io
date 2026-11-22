@@ -9,17 +9,17 @@ html(lang=documentLang)
         div#stage.container
             div.row
                 include sidebar
-                div#main-container.col-sm-9.col-xs-12.main-container.invisible
+                div#main-container.col-sm-9.col-xs-12.main-container
 
                     block content
                     div.visible-xs.site-bottom-footer
                         include footer
 
 
-        script(src= url_for('js/typography.js'))
+        script(src= url_for('js/typography.js'), defer)
         if page.path == "index.html"
-            script(src= url_for('js/home-quotes.js'))
+            script(src= url_for('js/home-quotes.js'), defer)
         if page.layout == "media"
-            script(src= url_for('js/media-library.js'))
+            script(src= url_for('js/media-library.js'), defer)
         if page.layout == "search"
-            script(src= url_for('js/search.js'))
+            script(src= url_for('js/search.js'), defer)

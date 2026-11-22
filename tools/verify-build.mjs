@@ -48,7 +48,6 @@ const required = [
   '2026/07/15/闲谈｜滞留北京/index.html',
   '2026/07/16/游记｜遁入织金/index.html',
   '2026/07/18/游记｜访黄果树/index.html',
-  '2026/08/30/教程｜CrossOver运行STEINS-GATE-REBOOT人物语音修复/index.html',
   '2026/09/19/像大小姐一样说话/index.html',
   '2024/11/23/随笔｜关于数学的学习/index.html',
   '2025/02/07/随笔｜主播女孩重度依赖游玩感想/index.html',
@@ -58,9 +57,7 @@ const required = [
   '2026/10/11/笔记｜E041倒数平方和/index.html',
   'en/2026/10/11/euler-e041-reciprocal-squares/index.html',
   'it/2026/10/11/e041-somma-dei-reciproci-dei-quadrati/index.html',
-  '2024/03/25/笔记｜Fermat-Rolle-Lagrange定理的条件/index.html',
-  '2024/06/01/随笔｜过去数学的学习/index.html',
-  '2024/07/09/笔记｜在积分中引入参数/index.html'
+  '2024/06/01/随笔｜过去数学的学习/index.html'
 ];
 
 for (const relative of required) check(existsSync(join(output, relative)), `Missing output: ${relative}`);
@@ -185,10 +182,31 @@ for (const directory of ['', 'en', 'it']) {
   check(!about.includes('class="post-meta"'), `About page should not render post-meta date for ${label}.`);
   check(!existsSync(join(output, directory, 'images/test.html')), `Unused test.html still published for ${label}.`);
   check(!existsSync(join(output, directory, 'assets/algolia')), `Unused algolia assets still published for ${label}.`);
+  check(!existsSync(join(output, directory, 'tags')), `Tags directory should not be generated for ${label}.`);
+  check(!home.includes('bootstrap.min.css') && !home.includes('font-awesome.min.css'), `Heavy Bootstrap/FontAwesome CSS should not load for ${label}.`);
+  check(!home.includes('css/media.css'), `Media CSS should not load on home for ${label}.`);
+  check(works.includes('css/media.css'), `Media CSS is missing on works for ${label}.`);
   for (const year of ['all', '2026', '2025', '2024', '2023', 'undated']) {
     check(works.includes(`data-media-year="${year}"`), `Year filter ${year} is missing for ${label}.`);
   }
 }
+
+for (const deletedRoute of [
+  '2024/03/25/笔记｜Fermat-Rolle-Lagrange定理的条件/index.html',
+  '2024/07/09/笔记｜在积分中引入参数/index.html',
+  '2026/08/30/教程｜CrossOver运行STEINS-GATE-REBOOT人物语音修复/index.html',
+  'en/2024/03/25/fermat-rolle-lagrange-conditions/index.html',
+  'en/2024/07/09/parameter-dependent-integrals/index.html',
+  'en/2026/08/30/crossover-steins-gate-reboot-voice-fix/index.html',
+  'it/2024/03/25/condizioni-teoremi-fermat-rolle-lagrange/index.html',
+  'it/2024/07/09/integrali-con-parametro/index.html',
+  'it/2026/08/30/crossover-steins-gate-reboot-correzione-voci/index.html'
+]) {
+  check(!existsSync(join(output, deletedRoute)), `Deleted article route still exists: ${deletedRoute}`);
+}
+
+const innkeeperZh = readFileSync(join(output, '2026/06/18/二创｜女店主/index.html'), 'utf8');
+check(!innkeeperZh.includes('将 WebGAL 版本的『女店主』整理为三幕剧本'), 'Innkeeper intro paragraph should be removed.');
 
 check(!generatedHtml.includes('UA-73442912-1') && !generatedHtml.includes('google-analytics.js'),
   'Legacy Google Analytics script is still referenced in generated HTML.');
@@ -214,9 +232,6 @@ check(samplePost.includes('property="og:type" content="article"'),
   'Post og:type should be article.');
 check(samplePost.includes('<h1 class="post-title">'),
   'Post title should render as h1.');
-
-const codePost = readFileSync(join(output, '2026/08/30/教程｜CrossOver运行STEINS-GATE-REBOOT人物语音修复/index.html'), 'utf8');
-check(codePost.includes('prism.css'), 'Code-block post is missing prism.css.');
 
 const sitemap = readFileSync(join(output, 'sitemap.xml'), 'utf8');
 check(sitemap.includes('<loc>https://vesaluna.com/</loc>') && sitemap.includes('<loc>https://vesaluna.com/en/</loc>') && sitemap.includes('<loc>https://vesaluna.com/it/</loc>'),

@@ -1,7 +1,6 @@
 ---
 title: Saggio | Chitarra
 date: 2024-10-19 17:45:51
-tags: [Saggio, Musica, Chitarra]
 lang: it
 translation_key: guitar
 permalink: 2024/10/19/chitarra/

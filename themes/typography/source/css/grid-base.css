@@ -1,0 +1,103 @@
+/* Lightweight grid, normalize, and shared site utilities replacing Bootstrap 3 + FontAwesome */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary { display: block; }
+[hidden], template { display: none !important; }
+a { background-color: transparent; }
+b, strong { font-weight: 700; }
+img { border: 0; }
+svg:not(:root) { overflow: hidden; }
+hr { box-sizing: content-box; height: 0; }
+pre { overflow: auto; }
+button, input, optgroup, select, textarea { margin: 0; font: inherit; color: inherit; }
+button { overflow: visible; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; }
+
+p { margin: 0 0 10px; }
+h1, h2, h3 { margin-top: 20px; margin-bottom: 10px; font-weight: 500; line-height: 1.1; }
+h4, h5, h6 { margin-top: 10px; margin-bottom: 10px; font-weight: 500; line-height: 1.1; }
+ul, ol { margin-top: 0; margin-bottom: 10px; }
+blockquote { padding: 10px 20px; margin: 0 0 20px; border-left: 5px solid #eee; }
+code { padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px; }
+pre { display: block; padding: 9.5px; margin: 0 0 10px; font-size: 13px; line-height: 1.42857143; color: #333; word-break: break-all; word-wrap: break-word; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px; }
+pre code { padding: 0; font-size: inherit; color: inherit; white-space: pre-wrap; background-color: transparent; border-radius: 0; }
+
+.container { margin-right: auto; margin-left: auto; }
+@media (min-width: 768px) { .container { width: 750px; } }
+@media (min-width: 992px) { .container { width: 970px; } }
+@media (min-width: 1200px) { .container { width: 1170px; } }
+
+.container::before, .container::after,
+.row::before, .row::after,
+.clearfix::before, .clearfix::after { display: table; content: " "; }
+.container::after, .row::after, .clearfix::after { clear: both; }
+
+.col-xs-12, .col-sm-3, .col-sm-9 { position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; }
+.col-xs-12 { float: left; width: 100%; }
+@media (min-width: 768px) {
+  .col-sm-3, .col-sm-9 { float: left; }
+  .col-sm-3 { width: 25%; }
+  .col-sm-9 { width: 75%; }
+}
+
+.visible-xs, .visible-sm, .visible-md, .visible-lg { display: none !important; }
+@media (max-width: 767px) { .visible-xs { display: block !important; } }
+@media (min-width: 768px) and (max-width: 991px) { .visible-sm { display: block !important; } }
+@media (min-width: 992px) and (max-width: 1199px) { .visible-md { display: block !important; } }
+@media (min-width: 1200px) { .visible-lg { display: block !important; } }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+.pagination { display: inline-block; padding-left: 0; margin: 20px 0; border-radius: 4px; }
+.pager-arrow { display: inline-block; line-height: 1; }
+
+/* Shared site layout & component rules */
+.language-switcher {
+  display: flex !important;
+  gap: 0.45rem;
+  align-items: center;
+  margin-top: 0.8rem !important;
+  font-size: 0.78em !important;
+}
+
+.language-switcher .current,
+.language-switcher a,
+.language-unavailable {
+  display: inline-block;
+  line-height: 1.35;
+}
+
+.language-unavailable {
+  cursor: not-allowed;
+  opacity: 0.38;
+}
+
+#main-container { min-width: 0; }
+.post-abstract, .media-dialog-copy, .site-search-results { overflow-wrap: anywhere; }
+
+.home-quote { margin: 0 0 2.5rem; padding: 0 0 1rem; border-bottom: 1px solid rgba(128, 128, 128, 0.22); line-height: 1.8; }
+.home-quote p { margin: 0; }
+
+.post-container > mjx-container[display="true"],
+.post-abstract > mjx-container[display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.post-container p mjx-container[display="true"] {
+  display: inline-block;
+  margin: 0;
+  text-align: inherit;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .language-switcher { display: inline-flex !important; margin: 0 0.25rem !important; }
+  .site-title-links ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 0.5rem; padding: 0; }
+  .site-title-links ul li { margin: 0; }
+}

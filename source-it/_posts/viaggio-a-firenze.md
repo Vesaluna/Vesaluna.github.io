@@ -1,7 +1,6 @@
 ---
 title: Viaggio | Una gita a Firenze
 date: 2025-04-19 23:05:12
-tags: [Viaggio, Italia, Città]
 lang: it
 translation_key: firenze-trip
 permalink: 2025/04/20/viaggio-a-firenze/

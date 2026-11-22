@@ -70,7 +70,7 @@ mixin make_pager()
                 p
                     if page.prev
                         span.pre.pagbuttons
-                            i.fa.fa-angle-double-left(aria-hidden="true")
+                            span.pager-arrow(aria-hidden="true") «
                             | &nbsp;
                             a(href=url_for(prev), aria-label=__('prev'))= __('prev')
                     if page.prev && page.next
@@ -79,7 +79,7 @@ mixin make_pager()
                         span.next.pagbuttons
                             a(href=url_for(next), aria-label=__('next'))= __('next')
                             | &nbsp;
-                            i.fa.fa-angle-double-right(aria-hidden="true")
+                            span.pager-arrow(aria-hidden="true") »
 
 mixin postList()
     - var year = 0;

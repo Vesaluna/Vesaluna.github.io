@@ -1,7 +1,6 @@
 ---
 title: Essay | Thoughts on Learning Mathematics
 date: 2024-11-23 17:53:28
-tags: [Essay, Mathematics, Learning]
 lang: en
 translation_key: thoughts-on-learning-mathematics
 permalink: 2024/11/23/thoughts-on-learning-mathematics/

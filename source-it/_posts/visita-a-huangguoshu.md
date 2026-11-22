@@ -1,7 +1,6 @@
 ---
 title: Viaggio | Visita a Huangguoshu
 date: 2026-07-17 23:04:21
-tags: [Viaggio, Cascate, Cina]
 lang: it
 translation_key: huangguoshu
 permalink: 2026/07/18/visita-a-huangguoshu/

@@ -1,7 +1,6 @@
 ---
 title: Guida | Qualche appunto sull'ammissione a Ingegneria al Politecnico di Milano
 date: 2026-04-04 14:33:00
-tags: [Ammissione, Italia, Esami]
 lang: it
 translation_key: polimi-engineering-tol-2026
 permalink: 2026/04/04/polimi-ingegneria-tol-2026/

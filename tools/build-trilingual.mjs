@@ -58,11 +58,8 @@ function validateTranslations() {
       if (data.lang !== language) throw new Error(`Expected lang: ${language} in ${file}`);
       if (!data.translation_key) throw new Error(`Missing translation_key in ${file}`);
       if (file.includes(`${resolve(root, directory, '_posts')}/`)) {
-        if (!Array.isArray(data.tags) || data.tags.length !== 3) {
-          throw new Error(`Expected exactly three tags in ${file}`);
-        }
-        if (language === 'zh-cn' && data.tags.some((tag) => [...String(tag)].length !== 2)) {
-          throw new Error(`Expected two-character Chinese tags in ${file}`);
+        if (data.tags && (!Array.isArray(data.tags) || data.tags.length > 0)) {
+          throw new Error(`Posts should not define tags: ${file}`);
         }
       }
       if (keys[language].has(data.translation_key)) {

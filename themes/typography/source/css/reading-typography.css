@@ -57,14 +57,17 @@
 .post-abstract td,
 .post-abstract th {
   font-family: var(--reading-serif-sc);
+}
+
+.post-abstract {
   font-kerning: normal;
 }
 
 .home-quote,
 .home-quote p {
   font-family: var(--reading-serif-tc);
+  font-size: 18.5px;
   font-weight: 400;
-  font-kerning: normal;
   text-shadow: none;
 }
 
@@ -91,6 +94,11 @@ html[lang="zh-CN"] .post-page .post-abstract {
 }
 
 /* 2. Article detail vertical rhythm & paragraph spacing */
+.post-page .post-title {
+  font-size: 26px;
+  line-height: 1.38;
+}
+
 .post-page .post-meta {
   margin: 12px 0 2.4em;
 }
@@ -108,7 +116,7 @@ html[lang="zh-CN"] .post-page .post-abstract {
 }
 
 .post-page .post-abstract {
-  font-size: 17px;
+  font-size: 18.5px;
   line-height: 1.85;
   font-weight: 400;
   text-shadow: none;
@@ -211,6 +219,15 @@ html[lang="zh-CN"] .post-page .post-abstract {
 
 /* 3. Responsive mobile rhythm */
 @media (max-width: 768px) {
+  .home-quote,
+  .home-quote p {
+    font-size: 17px;
+  }
+
+  .post-page .post-title {
+    font-size: 22px;
+  }
+
   .post-page .post-meta {
     margin: 10px 0 1.9em;
   }
@@ -224,7 +241,7 @@ html[lang="zh-CN"] .post-page .post-abstract {
   }
 
   .post-page .post-abstract {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.82;
   }
 
