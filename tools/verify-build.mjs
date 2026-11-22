@@ -196,13 +196,16 @@ check(!generatedHtml.includes('katex.min.css'),
   'Unused KaTeX CDN stylesheet is still injected in generated HTML.');
 check(!generatedHtml.includes('picx-images-hosting'),
   'External GitHub raw picx-images-hosting image reference remains in generated HTML.');
-for (const cssRel of ['css/style.css', 'css/style-dark.css']) {
+for (const cssRel of ['css/style.css', 'css/style-dark.css', 'css/reading-typography.css']) {
   const cssFile = join(output, cssRel);
   if (existsSync(cssFile)) {
     check(!readFileSync(cssFile, 'utf8').includes('fonts.googleapis.com'),
       `Render-blocking Google Fonts import remains in ${cssRel}.`);
   }
 }
+check(existsSync(join(output, 'css/reading-typography.css')), 'Missing reading-typography.css.');
+check(existsSync(join(output, 'fonts/source-serif-4-latin-400-normal.woff2')), 'Missing self-hosted Source Serif 4 regular font.');
+check(existsSync(join(output, 'fonts/source-serif-4-latin-600-normal.woff2')), 'Missing self-hosted Source Serif 4 semibold font.');
 
 const samplePost = readFileSync(join(output, '2026/07/16/游记｜遁入织金/index.html'), 'utf8');
 check(samplePost.includes('property="og:image" content="https://vesaluna.com/images/zhijin/zhijin-01.webp"'),

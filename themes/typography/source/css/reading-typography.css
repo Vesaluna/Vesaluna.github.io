@@ -1,0 +1,245 @@
+/* ==========================================================================
+   Reading Typography Override
+   - Self-hosted Latin serif (Source Serif 4) + CJK system serif stack
+   - Trilingual letter-spacing (Chinese only) & MathJax/code exclusions
+   - Article detail vertical rhythm & empty-line paragraph spacing
+   ========================================================================== */
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/source-serif-4-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/source-serif-4-latin-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/source-serif-4-latin-600-normal.woff2") format("woff2");
+}
+
+:root {
+  --reading-serif-sc: "Source Serif 4", "Songti SC", "Source Han Serif SC",
+    "Noto Serif CJK SC", "STSong", "Songti TC", "Source Han Serif TC",
+    "HiraMinProN-W6", Georgia, serif;
+  --reading-serif-tc: "Source Serif 4", "Songti TC", "HiraMinProN-W6",
+    "Source Han Serif TC", "Noto Serif CJK TC", "Songti SC", "STSong",
+    Georgia, serif;
+  --reading-mono: "JetBrains Mono", "SFMono-Regular", ui-monospace, Menlo,
+    Monaco, "Cascadia Code", Consolas, monospace;
+}
+
+/* 1. Unified serif tone for titles, epigraph quotes, and article prose */
+.post-title,
+.post-title a,
+.post-abstract,
+.post-abstract p,
+.post-abstract li,
+.post-abstract blockquote,
+.post-abstract h1,
+.post-abstract h2,
+.post-abstract h3,
+.post-abstract h4,
+.post-abstract h5,
+.post-abstract h6,
+.post-abstract figcaption,
+.post-abstract td,
+.post-abstract th {
+  font-family: var(--reading-serif-sc);
+  font-kerning: normal;
+}
+
+.home-quote,
+.home-quote p {
+  font-family: var(--reading-serif-tc);
+  font-weight: 400;
+  font-kerning: normal;
+  text-shadow: none;
+}
+
+/* Preserve monospace inside code blocks and inline code */
+.post-abstract pre,
+.post-abstract pre *,
+.post-abstract code,
+.post-abstract kbd,
+.post-abstract samp {
+  font-family: var(--reading-mono) !important;
+  letter-spacing: normal !important;
+}
+
+/* Keep MathJax formulas free from text letter-spacing */
+.post-abstract mjx-container,
+.post-abstract mjx-container * {
+  letter-spacing: normal;
+}
+
+/* Chinese-only subtle tracking so Latin kerning in EN/IT stays crisp */
+html[lang="zh-CN"] .home-quote p,
+html[lang="zh-CN"] .post-page .post-abstract {
+  letter-spacing: 0.02em;
+}
+
+/* 2. Article detail vertical rhythm & paragraph spacing */
+.post-page .post-meta {
+  margin: 12px 0 2.4em;
+}
+
+.post-page .post-meta:has(+ .translation-notice) {
+  margin-bottom: 0.65em;
+}
+
+.post-page .translation-notice {
+  margin: 0 0 2.4em;
+}
+
+.post-page .post-title + .post-abstract {
+  margin-top: 2em;
+}
+
+.post-page .post-abstract {
+  font-size: 17px;
+  line-height: 1.85;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.post-page .post-abstract p {
+  text-indent: 0;
+  margin-top: 0;
+  margin-bottom: 1.7em;
+}
+
+.post-page .post-abstract > :last-child {
+  margin-bottom: 0;
+}
+
+/* Keep screenplay dialogue and video card internal spacing intact */
+.post-page .post-abstract .screenplay p {
+  margin: 0 0 1em;
+}
+
+.post-page .post-abstract .video-card p {
+  margin: 0;
+}
+
+/* Headings, quotes, lists, code blocks, figures, and display math */
+.post-page .post-abstract h2 {
+  font-size: 1.42em;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 2.2em 0 0.9em;
+}
+
+.post-page .post-abstract h3 {
+  font-size: 1.2em;
+  line-height: 1.45;
+  font-weight: 600;
+  margin: 1.9em 0 0.75em;
+}
+
+.post-page .post-abstract h4 {
+  font-size: 1.06em;
+  line-height: 1.5;
+  font-weight: 600;
+  margin: 1.6em 0 0.65em;
+}
+
+.post-page .post-abstract > h2:first-child,
+.post-page .post-abstract > h3:first-child,
+.post-page .post-abstract > h4:first-child {
+  margin-top: 0;
+}
+
+.post-page .post-abstract blockquote {
+  margin: 1.7em 0;
+  padding: 0.2em 0 0.2em 1.25em;
+  border-left: 3px solid rgba(46, 64, 91, 0.35);
+  font-size: 0.96em;
+}
+
+.post-page .post-abstract blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.post-page .post-abstract ul,
+.post-page .post-abstract ol {
+  margin: 0 0 1.7em;
+  padding-left: 1.6em;
+}
+
+.post-page .post-abstract li {
+  margin: 0.45em 0;
+}
+
+.post-page .post-abstract li > p {
+  margin-bottom: 0.65em;
+}
+
+.post-page .post-abstract li > p:last-child {
+  margin-bottom: 0;
+}
+
+.post-page .post-abstract pre {
+  margin: 1.7em 0;
+  line-height: 1.6;
+}
+
+.post-page .post-abstract figure {
+  margin: 1.9em auto;
+}
+
+.post-page .post-abstract hr {
+  margin: 2.3em 0;
+  border: 0;
+  border-top: 1px solid rgba(46, 64, 91, 0.16);
+}
+
+.post-page .post-abstract > mjx-container[display="true"] {
+  margin: 1.6em 0;
+}
+
+/* 3. Responsive mobile rhythm */
+@media (max-width: 768px) {
+  .post-page .post-meta {
+    margin: 10px 0 1.9em;
+  }
+
+  .post-page .post-meta:has(+ .translation-notice) {
+    margin-bottom: 0.55em;
+  }
+
+  .post-page .translation-notice {
+    margin: 0 0 1.9em;
+  }
+
+  .post-page .post-abstract {
+    font-size: 16px;
+    line-height: 1.82;
+  }
+
+  .post-page .post-abstract p {
+    margin-bottom: 1.55em;
+  }
+
+  .post-page .post-abstract .screenplay p {
+    margin: 0 0 1em;
+  }
+
+  .post-page .post-abstract ul,
+  .post-page .post-abstract ol,
+  .post-page .post-abstract blockquote,
+  .post-page .post-abstract pre {
+    margin-bottom: 1.55em;
+  }
+}

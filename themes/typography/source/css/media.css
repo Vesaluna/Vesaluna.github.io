@@ -186,7 +186,8 @@
 @media (prefers-reduced-motion: reduce) {
   .media-cover { transition: none; }
 }
-.post-container > mjx-container[display="true"] {
+.post-container > mjx-container[display="true"],
+.post-abstract > mjx-container[display="true"] {
   display: block;
   text-align: center;
   margin: 1em 0;
