@@ -1,6 +1,7 @@
 ---
 title: Fanfiction | The Innkeeper
 date: 2026-06-18 13:13:28
+tags: [Script, Fanfiction, Theatre]
 lang: en
 translation_key: the-innkeeper-screenplay
 permalink: 2026/06/18/the-innkeeper-screenplay/
@@ -8,6 +9,8 @@ ai_translation: true
 screenplay: true
 video_card: true
 ---
+
+A reading version of my WebGAL script 『The Innkeeper』, arranged in three acts while retaining the original sequence and dialogue. Game instructions for waiting, character sprites and transitions have been removed. This is an alternate-future setting: the characters are adults.
 
 <div class="screenplay">
 

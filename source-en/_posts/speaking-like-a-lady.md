@@ -1,6 +1,7 @@
 ---
 title: Notes | Speaking Like a Lady
 date: 2026-09-19 16:33:00
+tags: [Notes, Japanese, Language]
 lang: en
 translation_key: ojousama-kotoba
 permalink: 2026/09/19/speaking-like-a-lady/

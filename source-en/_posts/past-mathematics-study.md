@@ -1,6 +1,7 @@
 ---
 title: Essay | How I used to study mathematics
 date: 2024-06-01 13:30:01
+tags: [Essay, Mathematics, Memory]
 lang: en
 translation_key: past-mathematics-study
 permalink: 2024/06/01/past-mathematics-study/

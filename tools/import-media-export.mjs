@@ -12,7 +12,7 @@ const output = resolve(option('--output', 'data/media.yml'));
 const manifest = option('--manifest');
 const coverBase = option(
   '--cover-base',
-  '/images/media'
+  'https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library'
 ).replace(/\/$/, '');
 const overridesFile = resolve(option('--overrides', 'data/media-overrides.yml'));
 

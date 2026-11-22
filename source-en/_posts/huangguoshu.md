@@ -1,6 +1,7 @@
 ---
 title: Travel | A Visit to Huangguoshu
 date: 2026-07-17 23:04:21
+tags: [Travel, Waterfalls, China]
 lang: en
 translation_key: huangguoshu
 permalink: 2026/07/18/visit-to-huangguoshu/
@@ -18,7 +19,7 @@ This morning I returned to the visitor centre and went to the Great Waterfall. X
 Xu Xiake wrote that it resembled ten thousand lengths of mermaid silk spread across a gate; its vertical fall could not be measured in fathoms, pearls and jade were smashed apart, and the returning spray rose like smoke into the air, fierce and magnificent. Only after standing there myself did I understand that the sight witnessed centuries ago remains unchanged today.
 
 <figure style="margin:2em auto;">
-  <img src="/images/huangguoshu/huangguoshu-01.webp" alt="The Great Waterfall">
+  <img src="https://github.com/Vesaluna/picx-images-hosting/raw/master/DSCF0685.54ygeg1r9e.webp" alt="The Great Waterfall">
   <figcaption
     style="
       text-align:center;

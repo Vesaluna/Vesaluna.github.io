@@ -19,7 +19,7 @@ showPageCount: true
 
 # Set true to show category or tags behind post titles
 showCategories: true
-showTags: false
+showTags: true
 
 # Color scheme
 themeStyle: light # light/dark

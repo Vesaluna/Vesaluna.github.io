@@ -1,6 +1,7 @@
 ---
 title: Guide | Notes on applying for Engineering at Politecnico di Milano
 date: 2026-04-04 14:33:00
+tags: [Admissions, Italy, Exams]
 lang: en
 translation_key: polimi-engineering-tol-2026
 permalink: 2026/04/04/polimi-engineering-tol-2026/

@@ -19,7 +19,7 @@
   box-shadow: 0 0 0 3px rgba(46, 64, 91, 0.1);
 }
 
-.site-search-control .search-icon { margin-left: 0.9rem; color: rgba(46, 64, 91, 0.55); flex-shrink: 0; }
+.site-search-control i { padding-left: 0.9rem; color: rgba(46, 64, 91, 0.55); }
 .site-search-control input {
   min-width: 0;
   border: 0;

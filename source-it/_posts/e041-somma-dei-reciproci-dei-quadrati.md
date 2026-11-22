@@ -1,6 +1,7 @@
 ---
 title: Appunti | E041 e la somma dei reciproci dei quadrati
 date: 2026-10-11 00:00:00
+tags: [Appunti, Matematica, Eulero]
 mathjax: true
 lang: it
 translation_key: euler-e041-reciprocal-squares

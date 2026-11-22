@@ -4,11 +4,11 @@ block site_title
     != page.title + " · " + config.title
 
 block description
-    meta(name="description", content=page_description(page))
+    meta(name="description", content=strip_html(page.content).trim())
 
 block content
     .autopagerize_page_element: .content.friends-page
-        h1.post-title= page.title
+        p.post-title= page.title
         .friends-intro!= page.content
         ul.friends-list
             each friend in friend_links(page)

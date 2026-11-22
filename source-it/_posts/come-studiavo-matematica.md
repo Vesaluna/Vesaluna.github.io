@@ -1,6 +1,7 @@
 ---
 title: Saggio | Come studiavo matematica
 date: 2024-06-01 13:30:01
+tags: [Saggio, Matematica, Memoria]
 lang: it
 translation_key: past-mathematics-study
 permalink: 2024/06/01/come-studiavo-matematica/

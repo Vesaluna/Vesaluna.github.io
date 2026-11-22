@@ -1,6 +1,6 @@
-import { rmSync, readFileSync, existsSync, writeFileSync, readdirSync, statSync } from 'node:fs';
+import { rmSync, readFileSync, existsSync, writeFileSync, readdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
-import { resolve, relative, sep } from 'node:path';
+import { resolve } from 'node:path';
 import yaml from 'js-yaml';
 
 const root = resolve(import.meta.dirname, '..');
@@ -23,14 +23,11 @@ function validateMedia() {
     if (!['book', 'game', 'movie'].includes(item.type)) throw new Error(`Invalid media type for ${item.id}.`);
     if (!item.title?.['zh-cn']) throw new Error(`Missing Chinese title for ${item.id}.`);
     if (!item.review || typeof item.review !== 'object') throw new Error(`Missing review fields for ${item.id}.`);
-    const localCover = /^\/images\/media\/[^/]+\.(webp|avif|png|jpe?g)$/i.test(item.cover || '');
+    const localCover = item.cover?.startsWith('/images/media/');
     const picxCover = item.cover?.startsWith('https://github.com/Vesaluna/picx-images-hosting/raw/master/media-library/');
     if (!localCover && !picxCover) throw new Error(`Invalid cover path for ${item.id}.`);
-    if (localCover) {
-      const coverPath = resolve(root, 'source', item.cover.replace(/^\//, ''));
-      if (!existsSync(coverPath) || !statSync(coverPath).isFile()) {
-        throw new Error(`Cover file does not exist for ${item.id}: ${item.cover}`);
-      }
+    if (localCover && !existsSync(resolve(root, 'source', item.cover.replace(/^\//, '')))) {
+      throw new Error(`Cover file does not exist for ${item.id}: ${item.cover}`);
     }
   }
 }
@@ -58,8 +55,11 @@ function validateTranslations() {
       if (data.lang !== language) throw new Error(`Expected lang: ${language} in ${file}`);
       if (!data.translation_key) throw new Error(`Missing translation_key in ${file}`);
       if (file.includes(`${resolve(root, directory, '_posts')}/`)) {
-        if (data.tags && (!Array.isArray(data.tags) || data.tags.length > 0)) {
-          throw new Error(`Posts should not define tags: ${file}`);
+        if (!Array.isArray(data.tags) || data.tags.length !== 3) {
+          throw new Error(`Expected exactly three tags in ${file}`);
+        }
+        if (language === 'zh-cn' && data.tags.some((tag) => [...String(tag)].length !== 2)) {
+          throw new Error(`Expected two-character Chinese tags in ${file}`);
         }
       }
       if (keys[language].has(data.translation_key)) {
@@ -98,44 +98,7 @@ for (const [label, config] of builds) {
   if (result.status !== 0) process.exit(result.status || 1);
 }
 
-function generateSitemap() {
-  const publicDir = resolve(root, 'public');
-  const origin = 'https://vesaluna.com';
-  const urls = [];
-
-  function walk(directory) {
-    for (const entry of readdirSync(directory, { withFileTypes: true })) {
-      const target = resolve(directory, entry.name);
-      if (entry.isDirectory()) {
-        walk(target);
-        continue;
-      }
-      if (entry.name !== 'index.html') continue;
-      const rel = relative(publicDir, target).split(sep).join('/');
-      const route = rel === 'index.html' ? '/' : `/${rel.replace(/index\.html$/, '')}`;
-      // Exclude paginated slices from sitemap; keep canonical content and index routes.
-      if (/\/page\/\d+\/$/.test(route)) continue;
-      const mtime = statSync(target).mtime.toISOString().slice(0, 10);
-      urls.push({ loc: encodeURI(`${origin}${route}`), lastmod: mtime });
-    }
-  }
-
-  walk(publicDir);
-  urls.sort((left, right) => left.loc.localeCompare(right.loc));
-
-  const xml = [
-    '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...urls.map((entry) => `  <url><loc>${entry.loc}</loc><lastmod>${entry.lastmod}</lastmod></url>`),
-    '</urlset>',
-    ''
-  ].join('\n');
-  writeFileSync(resolve(publicDir, 'sitemap.xml'), xml);
-  console.log(`Generated sitemap.xml with ${urls.length} URLs.`);
-}
-
 rmSync(resolve(root, 'db.json'), { force: true });
 rmSync(resolve(root, '_multiconfig.yml'), { force: true });
 writeFileSync(resolve(root, 'public/.nojekyll'), '');
-generateSitemap();
 console.log('\nTrilingual build completed.');

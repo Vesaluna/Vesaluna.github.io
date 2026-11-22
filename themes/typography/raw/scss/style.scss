@@ -1,13 +1,13 @@
 $backgroundColor: #ffffff !default;
 $foregroundColor: #2e405b !default;
-$fontList: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-  "Roboto", "Helvetica", "Helvetica Neue", "Source Han Sans SC",
-  "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC",
-  sans-serif !default;
+$fontList: "Source Sans Pro", "Roboto", "Helvetica", "Helvetica Neue",
+  "Source Han Sans SC", "Source Han Sans TC", "PingFang SC", "PingFang HK",
+  "PingFang TC", sans-serif !default;
 $titleFontList: "HiraMinProN-W6", "Source Han Serif CN", "Source Han Serif SC",
   "Source Han Serif TC", serif !default;
 $verticalPrimaryPaddingTopPatch: 0;
 $verticalSecondaryPaddingTopPatch: 1px;
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600");
 @import "animation";
 
 html,
@@ -376,7 +376,7 @@ li {
 }
 
 figure {
-  overflow-x: auto;
+  overflow: scroll;
 }
 
 figure > table {

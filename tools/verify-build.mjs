@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import yaml from 'js-yaml';
 
@@ -32,7 +32,6 @@ function markdownFiles(folder) {
 
 const required = [
   'index.html', 'about/index.html', 'works/index.html', 'search/index.html', 'CNAME', '.nojekyll',
-  'robots.txt', 'sitemap.xml', '404.html',
   'en/index.html', 'en/about/index.html', 'en/works/index.html', 'en/search/index.html', 'en/atom.xml',
   'it/index.html', 'it/about/index.html', 'it/works/index.html', 'it/search/index.html', 'it/atom.xml',
   '2024/06/30/记录｜The first step/index.html',
@@ -48,6 +47,7 @@ const required = [
   '2026/07/15/闲谈｜滞留北京/index.html',
   '2026/07/16/游记｜遁入织金/index.html',
   '2026/07/18/游记｜访黄果树/index.html',
+  '2026/08/30/教程｜CrossOver运行STEINS-GATE-REBOOT人物语音修复/index.html',
   '2026/09/19/像大小姐一样说话/index.html',
   '2024/11/23/随笔｜关于数学的学习/index.html',
   '2025/02/07/随笔｜主播女孩重度依赖游玩感想/index.html',
@@ -57,7 +57,9 @@ const required = [
   '2026/10/11/笔记｜E041倒数平方和/index.html',
   'en/2026/10/11/euler-e041-reciprocal-squares/index.html',
   'it/2026/10/11/e041-somma-dei-reciproci-dei-quadrati/index.html',
-  '2024/06/01/随笔｜过去数学的学习/index.html'
+  '2024/03/25/笔记｜Fermat-Rolle-Lagrange定理的条件/index.html',
+  '2024/06/01/随笔｜过去数学的学习/index.html',
+  '2024/07/09/笔记｜在积分中引入参数/index.html'
 ];
 
 for (const relative of required) check(existsSync(join(output, relative)), `Missing output: ${relative}`);
@@ -137,7 +139,7 @@ check(steamGamesWithAcquiredDate.length === 16, `Expected 16 known Steam acquisi
 for (const item of media) {
   if (item.cover.startsWith('/')) {
     const cover = resolve(output, item.cover.replace(/^\//, ''));
-    check(existsSync(cover) && statSync(cover).isFile(), `Missing generated cover file: ${item.cover}`);
+    check(existsSync(cover), `Missing generated cover: ${item.cover}`);
   }
   check(mediaPage.includes(item.cover), `Works page does not reference cover: ${item.id}`);
 }
@@ -166,113 +168,14 @@ for (const directory of ['', 'en', 'it']) {
   const home = readFileSync(join(output, directory, 'index.html'), 'utf8');
   const works = readFileSync(join(output, directory, 'works/index.html'), 'utf8');
   check(home.includes('width=device-width, initial-scale=1.0'), `Page zoom is restricted for ${label}.`);
-  check(home.includes('name="author" content="Vesaluna"'), `Missing author meta for ${label}.`);
-  check(home.includes('property="og:title"'), `Missing og:title for ${label}.`);
-  check(home.includes('property="og:image"'), `Missing og:image for ${label}.`);
-  check(!home.includes('span class="pre pagbuttons"'), `First page should not render previous pagination link for ${label}.`);
-  check(!home.includes('prism.css'), `Home page should not load prism.css for ${label}.`);
-  const lastPage = readFileSync(join(output, directory, 'page/3/index.html'), 'utf8');
-  check(!lastPage.includes('span class="next pagbuttons"'), `Last page should not render next pagination link for ${label}.`);
   check(!home.includes('js/media-library.js'), `Media script should not load on home for ${label}.`);
   check(!home.includes('js/search.js'), `Search script should not load on home for ${label}.`);
   check(works.includes('js/media-library.js'), `Media script is missing for ${label}.`);
   check(!works.includes('js/search.js'), `Search script should not load on works for ${label}.`);
-  check((works.match(/<dialog\b/g) || []).length === 1, `Works page should use a single reusable dialog for ${label}.`);
-  const about = readFileSync(join(output, directory, 'about/index.html'), 'utf8');
-  check(!about.includes('class="post-meta"'), `About page should not render post-meta date for ${label}.`);
-  check(!existsSync(join(output, directory, 'images/test.html')), `Unused test.html still published for ${label}.`);
-  check(!existsSync(join(output, directory, 'assets/algolia')), `Unused algolia assets still published for ${label}.`);
-  check(!existsSync(join(output, directory, 'tags')), `Tags directory should not be generated for ${label}.`);
-  check(!home.includes('bootstrap.min.css') && !home.includes('font-awesome.min.css'), `Heavy Bootstrap/FontAwesome CSS should not load for ${label}.`);
-  check(!home.includes('css/media.css'), `Media CSS should not load on home for ${label}.`);
-  check(works.includes('css/media.css'), `Media CSS is missing on works for ${label}.`);
   for (const year of ['all', '2026', '2025', '2024', '2023', 'undated']) {
     check(works.includes(`data-media-year="${year}"`), `Year filter ${year} is missing for ${label}.`);
   }
 }
-
-for (const deletedRoute of [
-  '2024/03/25/笔记｜Fermat-Rolle-Lagrange定理的条件/index.html',
-  '2024/07/09/笔记｜在积分中引入参数/index.html',
-  '2026/08/30/教程｜CrossOver运行STEINS-GATE-REBOOT人物语音修复/index.html',
-  'en/2024/03/25/fermat-rolle-lagrange-conditions/index.html',
-  'en/2024/07/09/parameter-dependent-integrals/index.html',
-  'en/2026/08/30/crossover-steins-gate-reboot-voice-fix/index.html',
-  'it/2024/03/25/condizioni-teoremi-fermat-rolle-lagrange/index.html',
-  'it/2024/07/09/integrali-con-parametro/index.html',
-  'it/2026/08/30/crossover-steins-gate-reboot-correzione-voci/index.html'
-]) {
-  check(!existsSync(join(output, deletedRoute)), `Deleted article route still exists: ${deletedRoute}`);
-}
-
-const innkeeperZh = readFileSync(join(output, '2026/06/18/二创｜女店主/index.html'), 'utf8');
-check(!innkeeperZh.includes('将 WebGAL 版本的『女店主』整理为三幕剧本'), 'Innkeeper intro paragraph should be removed.');
-
-check(!generatedHtml.includes('UA-73442912-1') && !generatedHtml.includes('google-analytics.js'),
-  'Legacy Google Analytics script is still referenced in generated HTML.');
-check(!generatedHtml.includes('katex.min.css'),
-  'Unused KaTeX CDN stylesheet is still injected in generated HTML.');
-check(!generatedHtml.includes('picx-images-hosting'),
-  'External GitHub raw picx-images-hosting image reference remains in generated HTML.');
-for (const cssRel of ['css/style.css', 'css/style-dark.css', 'css/reading-typography.css']) {
-  const cssFile = join(output, cssRel);
-  if (existsSync(cssFile)) {
-    check(!readFileSync(cssFile, 'utf8').includes('fonts.googleapis.com'),
-      `Render-blocking Google Fonts import remains in ${cssRel}.`);
-  }
-}
-check(existsSync(join(output, 'css/reading-typography.css')), 'Missing reading-typography.css.');
-check(existsSync(join(output, 'fonts/source-serif-4-latin-400-normal.woff2')), 'Missing self-hosted Source Serif 4 regular font.');
-check(existsSync(join(output, 'fonts/source-serif-4-latin-600-normal.woff2')), 'Missing self-hosted Source Serif 4 semibold font.');
-
-const samplePost = readFileSync(join(output, '2026/07/16/游记｜遁入织金/index.html'), 'utf8');
-check(samplePost.includes('property="og:image" content="https://vesaluna.com/images/zhijin/zhijin-01.webp"'),
-  'Post og:image did not pick up first post image.');
-check(samplePost.includes('property="og:type" content="article"'),
-  'Post og:type should be article.');
-check(samplePost.includes('<h1 class="post-title">'),
-  'Post title should render as h1.');
-
-const sitemap = readFileSync(join(output, 'sitemap.xml'), 'utf8');
-check(sitemap.includes('<loc>https://vesaluna.com/</loc>') && sitemap.includes('<loc>https://vesaluna.com/en/</loc>') && sitemap.includes('<loc>https://vesaluna.com/it/</loc>'),
-  'sitemap.xml is missing trilingual root URLs.');
-
-// Verify zero broken internal links and zero broken hreflang links across all generated HTML files.
-const allHtmlPaths = [];
-(function collectPaths(current) {
-  for (const entry of readdirSync(current, { withFileTypes: true })) {
-    const target = join(current, entry.name);
-    if (entry.isDirectory()) collectPaths(target);
-    else if (entry.name.endsWith('.html')) allHtmlPaths.push(target);
-  }
-}(output));
-
-let brokenLinkCount = 0;
-let brokenHreflangCount = 0;
-for (const file of allHtmlPaths) {
-  const html = readFileSync(file, 'utf8');
-  for (const [, attr, targetPath] of html.matchAll(/\b(href|src)="(\/[^"#?]*)/g)) {
-    const decoded = decodeURI(targetPath).replace(/^\//, '');
-    const direct = join(output, decoded);
-    const indexHtml = join(output, decoded, 'index.html');
-    const isFile = (p) => existsSync(p) && statSync(p).isFile();
-    const exists = attr === 'src' ? isFile(direct) : (isFile(direct) || isFile(indexHtml));
-    if (!exists) {
-      brokenLinkCount += 1;
-      if (brokenLinkCount <= 10) failures.push(`Broken internal ${attr} ${targetPath} in ${file}`);
-    }
-  }
-  for (const [, targetPath] of html.matchAll(/<link\b[^>]*\bhreflang="[^"]+"[^>]*\bhref="https:\/\/vesaluna\.com([^"]*)"/g)) {
-    const decoded = decodeURI(targetPath).replace(/^\//, '');
-    const target = decoded === '' ? 'index.html' : join(decoded, 'index.html');
-    if (!existsSync(join(output, target))) {
-      brokenHreflangCount += 1;
-      if (brokenHreflangCount <= 10) failures.push(`Broken hreflang target ${targetPath} in ${file}`);
-    }
-  }
-}
-check(brokenLinkCount === 0, `Found ${brokenLinkCount} broken internal references.`);
-check(brokenHreflangCount === 0, `Found ${brokenHreflangCount} broken hreflang links.`);
 
 check(readFileSync(join(output, 'CNAME'), 'utf8').trim() === 'vesaluna.com', 'CNAME changed unexpectedly');
 

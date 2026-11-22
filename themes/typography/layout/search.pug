@@ -4,7 +4,8 @@ block site_title
     != page.title + " · " + config.title
 
 block description
-    meta(name="description", content=page_description(page))
+    - var desc = page.desc || strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
+    meta(name="description", content=desc)
 
 block content
     .autopagerize_page_element
@@ -21,9 +22,7 @@ block content
             form.site-search-form(role="search")
                 label.sr-only(for="site-search-input")= __('SearchLabel')
                 .site-search-control
-                    svg.search-icon(viewBox="0 0 24 24", width="16", height="16", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round", aria-hidden="true")
-                        circle(cx="11", cy="11", r="7")
-                        line(x1="21", y1="21", x2="16.65", y2="16.65")
+                    i.fa.fa-search(aria-hidden="true")
                     input#site-search-input(
                         type="search",
                         name="q",

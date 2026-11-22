@@ -4,7 +4,8 @@ block site_title
     != page.title + " · " + config.title
 
 block description
-    meta(name="description", content=page_description(page))
+    - var desc = page.desc || strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
+    meta(name="description", content=desc)
 
 block content
     .autopagerize_page_element
@@ -39,36 +40,69 @@ block content
                         h2.media-period-title= period.label
                         .media-grid
                             each item in period.items
-                                button.media-card(type="button", data-media-type=item.type, data-media-id=item.id, aria-label=__('OpenReview', item.title))
+                                button.media-card(type="button", data-media-type=item.type, data-media-target='media-dialog-' + item.id, aria-label=__('OpenReview', item.title))
                                     if item.cover
                                         img.media-cover(src=item.cover, alt=item.title, width="320", height="480", loading="lazy", decoding="async")
                                     else
                                         span.media-cover-placeholder= item.title
                                     span.media-card-title= item.title
                 p.media-filter-empty(hidden)= __('NoMediaForFilter')
-                dialog#media-dialog.media-dialog(
-                    aria-labelledby="media-dialog-title",
-                    data-label-original-title=__('OriginalTitle'),
-                    data-label-creator=__('Creator'),
-                    data-label-year=__('Year'),
-                    data-label-finished-on=__('FinishedOn'),
-                    data-label-steam-playtime=__('SteamPlaytime'),
-                    data-label-last-played-on=__('LastPlayedOn'),
-                    data-label-steam-acquired-on=__('SteamAcquiredOn'),
-                    data-label-completed-count=__('CompletedCount'),
-                    data-label-tags=__('Tags'),
-                    data-label-chinese-only=__('ChineseOnly'),
-                    data-label-review-pending=__('ReviewPending'),
-                    data-label-related-article=__('RelatedArticle'),
-                    data-label-more-info=__('MoreInfo')
-                )
-                    .media-dialog-inner
-                        button.media-dialog-close(type="button", aria-label=__('Close')) ×
-                        .media-dialog-layout
-                            img.media-dialog-cover(src="", alt="", width="320", height="480", decoding="async", hidden)
-                            .media-dialog-copy
-                                h2#media-dialog-title
-                                .media-dialog-body
-                script#media-library-data(type="application/json")!= JSON.stringify(items).replace(/</g, '\\u003c')
+                each item in items
+                    dialog.media-dialog(id='media-dialog-' + item.id, aria-labelledby='media-title-' + item.id)
+                        .media-dialog-inner
+                            button.media-dialog-close(type="button", aria-label=__('Close')) ×
+                            .media-dialog-layout
+                                if item.cover
+                                    img.media-dialog-cover(src=item.cover, alt="", width="320", height="480", loading="lazy", decoding="async")
+                                .media-dialog-copy
+                                    h2(id='media-title-' + item.id)= item.title
+                                    if item.originalTitle
+                                        p.media-detail
+                                            strong= __('OriginalTitle') + ': '
+                                            = item.originalTitle
+                                    if item.creator
+                                        p.media-detail
+                                            strong= __('Creator') + ': '
+                                            = item.creator
+                                    if item.year
+                                        p.media-detail
+                                            strong= __('Year') + ': '
+                                            = item.year
+                                    if item.finishedOn
+                                        p.media-detail
+                                            strong= __('FinishedOn') + ': '
+                                            = item.finishedOn
+                                    if item.playtime
+                                        p.media-detail
+                                            strong= __('SteamPlaytime') + ': '
+                                            = item.playtime
+                                    if item.lastPlayedOn
+                                        p.media-detail
+                                            strong= __('LastPlayedOn') + ': '
+                                            = item.lastPlayedOn
+                                    if item.acquiredOn
+                                        p.media-detail
+                                            strong= __('SteamAcquiredOn') + ': '
+                                            = item.acquiredOn
+                                    if item.completedCount > 1
+                                        p.media-detail
+                                            strong= __('CompletedCount') + ': '
+                                            = item.completedCount
+                                    if item.tags.length
+                                        ul.media-tags(aria-label=__('Tags'))
+                                            each tag in item.tags
+                                                li= tag
+                                    if item.hasReview
+                                        if item.reviewFallback
+                                            p.media-fallback= __('ChineseOnly')
+                                        p.media-review= item.review
+                                    else
+                                        p.media-review-pending= __('ReviewPending')
+                                    if item.articleUrl
+                                        p
+                                            a(href=item.articleUrl)= __('RelatedArticle')
+                                    if item.link
+                                        p
+                                            a(href=item.link, target="_blank", rel="noopener noreferrer")= __('MoreInfo')
             else
                 p.media-empty= __('EmptyMedia')
