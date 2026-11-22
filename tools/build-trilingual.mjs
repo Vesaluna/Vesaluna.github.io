@@ -1,6 +1,6 @@
-import { rmSync, readFileSync, existsSync, writeFileSync, readdirSync } from 'node:fs';
+import { rmSync, readFileSync, existsSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
-import { resolve } from 'node:path';
+import { resolve, relative, sep } from 'node:path';
 import yaml from 'js-yaml';
 
 const root = resolve(import.meta.dirname, '..');
@@ -98,7 +98,44 @@ for (const [label, config] of builds) {
   if (result.status !== 0) process.exit(result.status || 1);
 }
 
+function generateSitemap() {
+  const publicDir = resolve(root, 'public');
+  const origin = 'https://vesaluna.com';
+  const urls = [];
+
+  function walk(directory) {
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      const target = resolve(directory, entry.name);
+      if (entry.isDirectory()) {
+        walk(target);
+        continue;
+      }
+      if (entry.name !== 'index.html') continue;
+      const rel = relative(publicDir, target).split(sep).join('/');
+      const route = rel === 'index.html' ? '/' : `/${rel.replace(/index\.html$/, '')}`;
+      // Exclude paginated slices from sitemap; keep canonical content and index routes.
+      if (/\/page\/\d+\/$/.test(route)) continue;
+      const mtime = statSync(target).mtime.toISOString().slice(0, 10);
+      urls.push({ loc: encodeURI(`${origin}${route}`), lastmod: mtime });
+    }
+  }
+
+  walk(publicDir);
+  urls.sort((left, right) => left.loc.localeCompare(right.loc));
+
+  const xml = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...urls.map((entry) => `  <url><loc>${entry.loc}</loc><lastmod>${entry.lastmod}</lastmod></url>`),
+    '</urlset>',
+    ''
+  ].join('\n');
+  writeFileSync(resolve(publicDir, 'sitemap.xml'), xml);
+  console.log(`Generated sitemap.xml with ${urls.length} URLs.`);
+}
+
 rmSync(resolve(root, 'db.json'), { force: true });
 rmSync(resolve(root, '_multiconfig.yml'), { force: true });
 writeFileSync(resolve(root, 'public/.nojekyll'), '');
+generateSitemap();
 console.log('\nTrilingual build completed.');

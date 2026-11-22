@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 记录
-subtitle: 
-description: 'Personal Blog'
-keywords:
+title: 废怯少女
+subtitle: 个人博客
+description: '废怯少女的个人博客，记录生活、数学与语言学习笔记、游记、随笔及读过的书、看过的影视与玩过的游戏。'
+keywords: 'Vesaluna, 废怯少女, 个人博客, 数学笔记, 随笔, 游记, 已阅'
 author: Vesaluna
 language: zh-cn
 timezone: Europe/Rome
@@ -31,6 +31,8 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - 404.html
+  - robots.txt
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -138,10 +140,19 @@ prism_plugin:
   theme: 'default'
   line_number: true
 
+# Search index (strip HTML/SVG tags to keep search.xml lightweight)
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: striptags
+
 # MathJax
 
 math:
   engine: mathjax
+  katex:
+    css: false
   mathjax:
     src: https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 

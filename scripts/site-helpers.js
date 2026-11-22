@@ -102,11 +102,22 @@ function origin() {
   return new URL(this.config.url).origin;
 }
 
-function commonRoute(page, targetLanguage) {
+function isLocalizedTaxonomyDetail(rawPath) {
+  const normalized = String(rawPath || '').replace(/^\/+/, '').replace(/index\.html$/, '');
+  return /^(tags|categories)\/.+/.test(normalized);
+}
+
+function commonRoute(page, targetLanguage, current) {
   const rawPath = String(page.path || '').replace(/^\/+/, '');
-  if (!rawPath || rawPath === 'index.html') return prefixRoute('/', targetLanguage);
-  if (/^(archives|tags|categories)(\/|$)/.test(rawPath)) {
-    return prefixRoute(rawPath, targetLanguage);
+  const normalized = rawPath.replace(/index\.html$/, '');
+  if (!normalized) return prefixRoute('/', targetLanguage);
+  if (isLocalizedTaxonomyDetail(normalized)) {
+    if (targetLanguage === current) return prefixRoute(normalized, targetLanguage);
+    const section = normalized.split('/')[0];
+    return prefixRoute(`${section}/`, targetLanguage);
+  }
+  if (/^(archives|tags|categories|page)(\/|$)/.test(normalized)) {
+    return prefixRoute(normalized, targetLanguage);
   }
   return prefixRoute('/', targetLanguage);
 }
@@ -116,7 +127,7 @@ hexo.extend.helper.register('language_switches', function languageSwitches(page)
   const keyedRoutes = page.translation_key ? translationMap[page.translation_key] : null;
 
   return Object.entries(LANGUAGES).map(([code, settings]) => {
-    const route = keyedRoutes ? keyedRoutes[code] : commonRoute(page, code);
+    const route = keyedRoutes ? keyedRoutes[code] : commonRoute(page, code, current);
     return {
       code,
       label: settings.label,
@@ -133,6 +144,11 @@ hexo.extend.helper.register('canonical_url', function canonicalUrl(page) {
 });
 
 hexo.extend.helper.register('alternate_links', function alternateLinks(page) {
+  const current = currentLanguage.call(this, page);
+  const rawPath = String(page.path || '').replace(/^\/+/, '');
+  if (!page.translation_key && isLocalizedTaxonomyDetail(rawPath)) {
+    return [{ lang: current, url: this.canonical_url(page) }];
+  }
   const switches = this.language_switches(page).filter((item) => item.available);
   const links = switches.map((item) => ({
     lang: item.code,
@@ -142,6 +158,59 @@ hexo.extend.helper.register('alternate_links', function alternateLinks(page) {
   if (defaultLink) links.push({ lang: 'x-default', url: defaultLink.url });
   return links;
 });
+
+function cleanExcerpt(html, maxLength = 160) {
+  const stripped = String(html || '')
+    .replace(/<mjx-container\b[^>]*>[\s\S]*?<\/mjx-container>/gi, ' ')
+    .replace(/<pre\b[^>]*>[\s\S]*?<\/pre>/gi, ' ')
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (stripped.length <= maxLength) return stripped;
+  return `${stripped.slice(0, maxLength).trim()}…`;
+}
+
+hexo.extend.helper.register('page_description', function pageDescription(page) {
+  const explicit = page && (page.description || page.desc);
+  if (explicit) return String(explicit).replace(/\s+/g, ' ').trim();
+  if (page && page.content) {
+    const excerpt = cleanExcerpt(page.content, 160);
+    if (excerpt) return excerpt;
+  }
+  return String(this.config.description || '').trim();
+});
+
+hexo.extend.helper.register('page_image', function pageImage(page) {
+  const siteOrigin = origin.call(this);
+  let raw = page && (page.cover || page.image || '');
+  if (!raw && page && page.content) {
+    const match = String(page.content).match(/<img\b[^>]*\bsrc=["']([^"']+)["']/i);
+    if (match) raw = match[1];
+  }
+  const isCustom = Boolean(raw);
+  const target = raw || '/images/favicon.png';
+  let resolved = target;
+  if (!/^https?:\/\//i.test(target)) {
+    const normalized = target.startsWith('/') ? target : `/${target}`;
+    resolved = `${siteOrigin}${normalized}`;
+  }
+  return { url: resolved, isCustom };
+});
+
+hexo.extend.helper.register('page_og_locale', function pageOgLocale(page) {
+  const lang = currentLanguage.call(this, page);
+  if (lang === 'en') return 'en_US';
+  if (lang === 'it') return 'it_IT';
+  return 'zh_CN';
+});
+
+hexo.extend.filter.register('after_render:html', function stripUnusedPrismCss(html) {
+  if (!html || /<pre\b/i.test(html)) return html;
+  return html.replace(/<link\b[^>]*href="[^"]*\/css\/prism(?:-line-numbers)?\.css"[^>]*>\s*/gi, '');
+}, 20);
 
 function localized(value, language) {
   if (value == null) return '';

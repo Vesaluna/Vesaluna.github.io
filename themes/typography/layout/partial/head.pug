@@ -1,29 +1,50 @@
 meta(charset="utf-8")
 meta(name="X-UA-Compatible", content="IE=edge")
-meta(name="author", content= theme.author)
+meta(name="author", content= theme.author || config.author || '')
 title
     block site_title
         = config.title
+- var metaTitle = page.title || (page.tag ? __('Tags') + ': ' + page.tag : page.category ? __('Categories') + ': ' + page.category : is_archive() ? __('Archive') : config.title);
+- var metaDesc = page.tag ? __('Tags') + ': ' + page.tag + ' - ' + config.title : page.category ? __('Categories') + ': ' + page.category + ' - ' + config.title : is_archive() ? __('Archive') + ' - ' + config.title : page_description(page);
+- var metaImg = page_image(page);
+- var canonicalHref = canonical_url(page);
 block description
-    meta(name="description", content= config.description ? config.description : 'A Blog Powered By Hexo')
+    meta(name="description", content= metaDesc || 'A Blog Powered By Hexo')
 
 if page.keywords
     meta(name="keywords", content= page.keywords)
 else
-    meta(name="keywords" content= config.keywords ? config.keywords : theme.keywords ? theme.keywords : "")
+    meta(name="keywords", content= config.keywords ? config.keywords : theme.keywords ? theme.keywords : "")
+
+meta(property="og:site_name", content=config.title)
+meta(property="og:type", content=is_post() ? 'article' : 'website')
+meta(property="og:title", content=metaTitle)
+meta(property="og:description", content=metaDesc)
+meta(property="og:url", content=canonicalHref)
+meta(property="og:locale", content=page_og_locale(page))
+meta(property="og:image", content=metaImg.url)
+if is_post()
+    if page.date
+        meta(property="article:published_time", content=page.date.toISOString())
+    if config.author || theme.author
+        meta(property="article:author", content=theme.author || config.author)
+meta(name="twitter:card", content=metaImg.isCustom ? 'summary_large_image' : 'summary')
+meta(name="twitter:title", content=metaTitle)
+meta(name="twitter:description", content=metaDesc)
+meta(name="twitter:image", content=metaImg.url)
 
 meta(content="width=device-width, initial-scale=1.0",name="viewport")
 meta(content="yes",name="apple-mobile-web-app-capable")
 meta(content="black",name="apple-mobile-web-app-status-bar-style")
 meta(content="telephone=no",name="format-detection")
 
-link(rel="canonical", href=canonical_url(page))
+link(rel="canonical", href=canonicalHref)
 - var languageAlternates = alternate_links(page);
 each alternate in languageAlternates
     link(rel="alternate", hreflang=alternate.lang, href=alternate.url)
 
 meta(name="renderer",content="webkit")
-link(rel="short icon", href=url_for('images/favicon.png'),type="image/x-icon")
+link(rel="icon", href=url_for('images/favicon.png'), type="image/png")
 link(rel="stylesheet", href= url_for('css/bootstrap.min.css'))
 link(rel="stylesheet", href= url_for('css/font-awesome.min.css'))
 //- link(rel="stylesheet", href= url_for('css/typography-custom-font.css'))
