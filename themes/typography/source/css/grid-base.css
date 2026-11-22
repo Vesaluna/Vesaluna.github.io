@@ -25,10 +25,11 @@ code { padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2
 pre { display: block; padding: 9.5px; margin: 0 0 10px; font-size: 13px; line-height: 1.42857143; color: #333; word-break: break-all; word-wrap: break-word; background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 4px; }
 pre code { padding: 0; font-size: inherit; color: inherit; white-space: pre-wrap; background-color: transparent; border-radius: 0; }
 
-.container { margin-right: auto; margin-left: auto; }
-@media (min-width: 768px) { .container { width: 750px; } }
-@media (min-width: 992px) { .container { width: 970px; } }
-@media (min-width: 1200px) { .container { width: 1170px; } }
+.container { width: var(--stage-width, 100%); margin-right: auto; margin-left: auto; }
+:root { --stage-width: 100%; }
+@media (min-width: 768px) { :root { --stage-width: 750px; } }
+@media (min-width: 992px) { :root { --stage-width: 970px; } }
+@media (min-width: 1200px) { :root { --stage-width: 1170px; } }
 
 .container::before, .container::after,
 .row::before, .row::after,
@@ -75,6 +76,26 @@ pre code { padding: 0; font-size: inherit; color: inherit; white-space: pre-wrap
 }
 
 #main-container { min-width: 0; }
+
+/* Align the fixed sidebar with the right edge of the article column. */
+@media (width > 768px) and (height > 600px) {
+  #side-bar {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: calc(50% - var(--stage-width) / 4);
+    height: auto;
+  }
+  #side-bar #site-nav {
+    position: absolute;
+    left: 20px;
+    right: 10px;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 768px), (max-height: 600px) {
+  #side-bar, #main-container { width: 100%; }
+}
 .post-abstract, .media-dialog-copy, .site-search-results { overflow-wrap: anywhere; }
 
 .home-quote { margin: 0 0 2.5rem; padding: 0 0 1rem; border-bottom: 1px solid rgba(128, 128, 128, 0.22); line-height: 1.8; }

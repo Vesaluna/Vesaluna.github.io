@@ -46,7 +46,7 @@ each alternate in languageAlternates
 meta(name="renderer",content="webkit")
 link(rel="icon", href=url_for('images/favicon.png'), type="image/png")
 link(rel="preload", as="font", type="font/woff2", href=url_for('fonts/source-serif-4-latin-400-normal.woff2'), crossorigin)
-link(rel="stylesheet", href= url_for('css/grid-base.css'))
+link(rel="stylesheet", href= url_for('css/grid-base.css') + '?v=20261122-sidebar')
 if theme.themeStyle == "light"
     link(rel="stylesheet", href= url_for('css/style.css'))
 if theme.themeStyle == "dark"
