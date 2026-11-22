@@ -19,7 +19,7 @@ Questa mattina sono tornato al centro visitatori e mi sono diretto alla Grande C
 Xu Xiake scrisse che pareva composta da diecimila drappi di seta di sirena stesi davanti a una porta; la caduta verticale non si poteva misurare in tese, perle e giada si frantumavano, e gli spruzzi risalivano come fumo verso il cielo, in una furia magnifica. Soltanto trovandomi lì ho capito che ciò che egli vide secoli fa è ancora presente oggi.
 
 <figure style="margin:2em auto;">
-  <img src="https://github.com/Vesaluna/picx-images-hosting/raw/master/DSCF0685.54ygeg1r9e.webp" alt="La Grande Cascata">
+  <img src="/images/huangguoshu/huangguoshu-01.webp" alt="La Grande Cascata">
   <figcaption
     style="
       text-align:center;
